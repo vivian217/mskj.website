@@ -14,7 +14,9 @@
                                 <h2>公安智能视频分析系统</h2>
                                 <h3>Video Intelligent Analysis System</h3>
                                 <div class="carousel-desc">
-                                    <div class="desc-main">用智能技术突破人眼识别极限，十亿级别的辨别精度，快速、精准的安全防护。该系统旨在实现对全社会进行全方位、立体式管控，提高社会治安防控水平，提高民众社会治安满意度。</div>
+                                    <div class="desc-main">
+                                        用智能技术突破人眼识别极限，十亿级别的辨别精度，快速、精准的安全防护。该系统旨在实现对全社会进行全方位、立体式管控，提高社会治安防控水平，提高民众社会治安满意度。
+                                    </div>
                                     <ul class="desc-points">
                                         <li>人脸识别</li>
                                         <li>轨迹分析</li>
@@ -32,7 +34,9 @@
                                 <h2>智慧小区管理系统</h2>
                                 <h3>Intelligent Community Management System </h3>
                                 <div class="carousel-desc">
-                                    <div class="desc-main">将人脸识别技术应用于门禁系统及社区安防上：人脸开门，主动预警，危险行为告警，可疑人物报警，目标任务轨迹分析等，实现无感知社区服务体验：</div>
+                                    <div class="desc-main">
+                                        将人脸识别技术应用于门禁系统及社区安防上：人脸开门，主动预警，危险行为告警，可疑人物报警，目标任务轨迹分析等，实现无感知社区服务体验：
+                                    </div>
                                     <ul class="desc-points">
                                         <li>智能门禁</li>
                                         <li>主动预警</li>
@@ -79,18 +83,20 @@
                 </Row>
                 <Row class="main-width" :gutter="16">
                     <Col span="6">
-                        <div class="index-service">
-                            <div class="index-service-img">
-                                <img src="/src/images/index/service1.png" alt="公安视频智能分析系统">
+                        <a href="#">
+                            <div class="index-service">
+                                <div class="index-service-img">
+                                    <img src="/src/images/index/service1.png" alt="公安视频智能分析系统">
+                                </div>
+                                <div class="index-service-title">
+                                    <h4>公安视频智能分析系统</h4>
+                                    <h5>Video Intelligent Analysis System</h5>
+                                </div>
+                                <div class="index-service-details">
+                                    用智能技术突破人眼识别极限，十亿级别的辨别精度，快速、精准的安全防护。该系统目的提高社会治安防控水平，提高公安系统民众社会治安满意度。
+                                </div>
                             </div>
-                            <div class="index-service-title">
-                                <h4>公安视频智能分析系统</h4>
-                                <h5>Video Intelligent Analysis System</h5>
-                            </div>
-                            <div class="index-service-details">
-                                用智能技术突破人眼识别极限，十亿级别的辨别精度，快速、精准的安全防护。该系统目的提高社会治安防控水平，提高公安系统民众社会治安满意度。
-                            </div>
-                        </div>
+                        </a>
                         <!--<Card class="index-service" :bordered="false">
                             <div class="index-service-img">
                                 <img src="/src/images/index/service1.png" alt="公安视频智能分析系统">
@@ -105,46 +111,52 @@
                         </Card>-->
                     </Col>
                     <Col span="6">
-                        <div class="index-service">
-                            <div class="index-service-img">
-                                <img src="/src/images/index/service2.png" alt="智慧小区管理系统">
+                        <a href="#">
+                            <div class="index-service">
+                                <div class="index-service-img">
+                                    <img src="/src/images/index/service2.png" alt="智慧小区管理系统">
+                                </div>
+                                <div class="index-service-title">
+                                    <h4>智慧小区管理系统</h4>
+                                    <h5>Intelligent Community Management System</h5>
+                                </div>
+                                <div class="index-service-details">
+                                    将人脸识别技术应用于门禁系统及社区安防上：人脸开门，主动预警，危险行为告警，可疑人物报警，目标任务轨迹分析等，实现无感知社区服务体验。
+                                </div>
                             </div>
-                            <div class="index-service-title">
-                                <h4>智慧小区管理系统</h4>
-                                <h5>Intelligent Community Management System</h5>
-                            </div>
-                            <div class="index-service-details">
-                                将人脸识别技术应用于门禁系统及社区安防上：人脸开门，主动预警，危险行为告警，可疑人物报警，目标任务轨迹分析等，实现无感知社区服务体验。
-                            </div>
-                        </div>
+                        </a>
                     </Col>
                     <Col span="6">
-                        <div class="index-service">
-                            <div class="index-service-img">
-                                <img src="/src/images/index/service3.png" alt="监狱点名系统">
+                        <a href="#">
+                            <div class="index-service">
+                                <div class="index-service-img">
+                                    <img src="/src/images/index/service3.png" alt="监狱点名系统">
+                                </div>
+                                <div class="index-service-title">
+                                    <h4>监狱点名系统</h4>
+                                    <h5>Prison Naming System</h5>
+                                </div>
+                                <div class="index-service-details">
+                                    将智能人脸识别技术应用于监狱系统，实现区域定时点名，自动实现人员区域调度，系统管理一体化，提高管理效率。
+                                </div>
                             </div>
-                            <div class="index-service-title">
-                                <h4>监狱点名系统</h4>
-                                <h5>Prison Naming System</h5>
-                            </div>
-                            <div class="index-service-details">
-                                将智能人脸识别技术应用于监狱系统，实现区域定时点名，自动实现人员区域调度，系统管理一体化，提高管理效率。
-                            </div>
-                        </div>
+                        </a>
                     </Col>
                     <Col span="6">
-                        <div class="index-service">
-                            <div class="index-service-img">
-                                <img src="/src/images/index/service4.png" alt="高倍率图像/视频无损压缩系统">
+                        <a href="#">
+                            <div class="index-service">
+                                <div class="index-service-img">
+                                    <img src="/src/images/index/service4.png" alt="高倍率图像/视频无损压缩系统">
+                                </div>
+                                <div class="index-service-title">
+                                    <h4>高倍率图像/视频无损压缩系统</h4>
+                                    <h5>Lossless Image/Video Compression System with High Ratio</h5>
+                                </div>
+                                <div class="index-service-details">
+                                    针对目前主流格式的图像/视频进行二次压缩，在不降低人眼视觉质量的v前提下，实现对多种视频流和图像文件的实时、高倍率压缩，节省了存储空间和投资成本。
+                                </div>
                             </div>
-                            <div class="index-service-title">
-                                <h4>高倍率图像/视频无损压缩系统</h4>
-                                <h5>Lossless Image/Video Compression System with High Ratio</h5>
-                            </div>
-                            <div class="index-service-details">
-                                针对目前主流格式的图像/视频进行二次压缩，在不降低人眼视觉质量的v前提下，实现对多种视频流和图像文件的实时、高倍率压缩，节省了存储空间和投资成本。
-                            </div>
-                        </div>
+                        </a>
                     </Col>
                 </Row>
             </Col>
@@ -171,7 +183,10 @@
                                 <div class="index-demo">
                                     <div class="index-demo-inner">
                                         <div class="inner">
-                                            <img src="/src/images/index/img-comparison.png" alt="人脸识别">
+                                            <a href="/face" target="_blank">
+                                                <img src="/src/images/index/img-comparison.png" alt="图片压缩">
+                                                <h4>图片压缩</h4>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -179,14 +194,22 @@
                             <div class="index-demo-box">
                                 <div class="index-demo">
                                     <div class="index-demo-inner">
-
+                                        <div class="inner">
+                                            <a href="/img-compress" target="_blank">
+                                                <img src="/src/images/index/face.png" alt="人脸识别">
+                                                <h4>图片压缩</h4>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="index-demo-box">
                                 <div class="index-demo">
                                     <div class="index-demo-inner">
-
+                                        <div class="inner">
+                                            <img src="/src/images/index/more.png">
+                                            <h4>More&nbsp;&gt;&gt;</h4>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -210,19 +233,46 @@
                         </div>
                     </Col>
                 </Row>
-                <Row class="main-width">
-                    <Col span="8">
-
-                    </Col>
-                    <Col span="8">
-
-                    </Col>
-                    <Col span="8">
-
-                    </Col>
-                </Row>
-                <Row>
+                <Row class="index-news">
                     <Col>
+                        <Row class="main-width">
+                            <Col span="16">
+                                <div class="index-news-img">
+                                    <img :src="newsSrc">
+                                </div>
+                            </Col>
+                            <Col span="8">
+                                <div class="index-news-box" data-src="/src/images/index/news1.png"
+                                     @mouseenter.stop.prevent="changeImg"
+                                     @mouseenter="recoverImg">
+                                    <h5><a href="#">2019年3月24日，我司正式入驻地理文化众创空间</a></h5>
+                                    <p>重庆孟山科技与地理文化众创空间正式达成入驻协议，于2019年3月24日入驻海王星D座8-21，将开启公司发展的新篇章。
+                                        <a href="#">&lt;&lt;查看详情</a>
+                                    </p>
+                                </div>
+                                <div class="index-news-box" data-src="/src/images/index/news1.png"
+                                     @mouseenter.stop.prevent="changeImg"
+                                     @mouseenter="recoverImg">
+                                    <h5><a href="#">2019年3月24日，我司正式入驻地理文化众创空间</a></h5>
+                                    <p>重庆孟山科技与地理文化众创空间正式达成入驻协议，于2019年3月24日入驻海王星D座8-21，将开启公司发展的新篇章。
+                                        <a href="#">&lt;&lt;查看详情</a>
+                                    </p>
+                                </div>
+                                <div class="index-news-box" data-src="/src/images/index/news1.png"
+                                     @mouseenter.stop.prevent="changeImg"
+                                     @mouseenter="recoverImg">
+                                    <h5><a href="#">2019年3月24日，我司正式入驻地理文化众创空间</a></h5>
+                                    <p>重庆孟山科技与地理文化众创空间正式达成入驻协议，于2019年3月24日入驻海王星D座8-21，将开启公司发展的新篇章。
+                                        <a href="#">&lt;&lt;查看详情</a>
+                                    </p>
+                                </div>
+                            </Col>
+                        </Row>
+                        <Row class="white-masking">
+                            <Col>
+
+                            </Col>
+                        </Row>
                     </Col>
                 </Row>
             </Col>
@@ -242,19 +292,25 @@
                         </div>
                     </Col>
                 </Row>
-                <Row class="main-width">
-                    <Col span="8">
-
-                    </Col>
-                    <Col span="8">
-
-                    </Col>
-                    <Col span="8">
-
-                    </Col>
-                </Row>
-                <Row>
+                <Row class="index-about">
                     <Col>
+                        <Row class="main-width">
+                            <Col span="12">
+                                <div class="index-about-text">
+                                    重庆孟山信息科技有限公司是一家专注于计算机视觉和深度学习原创技术的高科技企业，致力于做计算机视觉的全球领先者和开拓者。公司以视频智能化分析技术、视频和图像高倍率无损压缩技术为核心，提供一系列的人工智能产品和解决方案。公司拥有美国硅谷海归高性能处理器博士组成的国际尖端技术团队，在重庆、南京等多地设有研发基地和分公司。产品广泛应用于城市治安、交通监测、市政管理、机场地铁等出入口、智慧社区、教育机构等多个领域。
+                                </div>
+                            </Col>
+                            <Col span="12">
+                                <div class="index-about-img">
+                                    <img src="/src/images/index/about.png" alt="">
+                                </div>
+                            </Col>
+                        </Row>
+                        <!--<Row class="white-masking">
+                            <Col>
+
+                            </Col>
+                        </Row>-->
                     </Col>
                 </Row>
             </Col>
@@ -262,28 +318,36 @@
     </div>
 </template>
 <script>
+
     export default {
         data() {
             return {
-                carousel: 0
+                carousel: 0,
+                defaultSrc: '/src/images/index/news1.png',
+                newsSrc: '/src/images/index/news1.png'
             }
         },
-        methods: {}
+        methods: {
+            changeImg(e) {
+                console.log(e.target.dataset)
+                this.newsSrc = e.target.dataset.src
+            },
+            recoverImg() {
+                this.newsSrc = this.defaultSrc
+            }
+        }
     }
 </script>
 <style lang="less">
-    @highlight-color:#00ffff;
-    @bottom-distance:80px;
+    @highlight-color: #00ffff;
+    @bottom-distance: 80px;
     .index {
         & > div {
             margin-bottom: @bottom-distance;
         }
-        h2,h3,h4,h5{
-            font-weight: 400;
-        }
         .ivu-carousel {
             /*.ivu-carousel-item{*/
-                /*background-color: rgba(255, 255, 255, 0.1);*/
+            /*background-color: rgba(255, 255, 255, 0.1);*/
             /*}*/
             // 左右指示箭头
             .ivu-icon {
@@ -321,22 +385,22 @@
                     font-size: 26px;
                     color: @highlight-color;
                 }
-                .carousel-desc{
+                .carousel-desc {
                     width: 400px;
                     margin: 20px auto;
                     font-size: 14px;
                 }
-                .desc-main{
+                .desc-main {
                     padding: 20px 0;
                     border-bottom: 1px solid @highlight-color;
                 }
                 .desc-points {
-                    list-style:none;// square inside url("/src/images/banner/square.png");
+                    list-style: none; // square inside url("/src/images/banner/square.png");
                     li {
                         margin-top: 10px;
                         float: left;
                         width: 50%;
-                        &:before{
+                        &:before {
                             content: url("/src/images/index/square.png");
                             position: relative;
                             top: 4px;
@@ -347,28 +411,28 @@
             }
         }
         // 块header
-        .index-header{
+        .index-header {
             text-align: center;
             margin-bottom: @bottom-distance;
-            h2{
+            h2 {
                 font-size: 32px;
             }
-            .index-header-line{
+            .index-header-line {
                 height: 1px;
                 margin: 10px 0;
-                background-color: rgba(241, 241, 241,0.5);
+                background-color: rgba(241, 241, 241, 0.5);
                 position: relative;
-                .inner-line{
+                .inner-line {
                     position: absolute;
                     top: -1px;
                     left: 50%;
-                    margin-left:-30px;
+                    margin-left: -30px;
                     width: 60px;
                     height: 3px;
                     background-color: @highlight-color;
                 }
             }
-            h3{
+            h3 {
                 font-size: 20px;
             }
         }
@@ -400,9 +464,9 @@
             }
         }
         // 在线演示
-        .index-demos{
-            background:rgba(255, 255, 255, 0.1) url("/src/images/index/demos.png") no-repeat;
-            .index-demos-box{
+        .index-demos {
+            background: url("/src/images/index/demos.png") 0 e('/') 100% no-repeat;
+            .index-demos-box {
                 height: 650px;
                 display: flex;
                 align-items: center;
@@ -411,17 +475,21 @@
             .index-demo-box {
                 width: 250px;
                 height: 250px;
-                transform: rotate(45deg) translate(0px,-15px);
+                transform: rotate(45deg) translate(0px, -15px);
                 transform-origin: center;
                 background-color: rgba(255, 255, 255, 0.25);
             }
             .index-demo {
                 width: 100%;
                 height: 100%;
-                background-image: -moz-linear-gradient(90deg, rgb(4, 190, 253) 0%, rgb(0, 255, 255) 100%);
-                background-image: -webkit-linear-gradient(90deg, rgb(4, 190, 253) 0%, rgb(0, 255, 255) 100%);
-                background-image: -ms-linear-gradient(90deg, rgb(4, 190, 253) 0%, rgb(0, 255, 255) 100%);
+                background: url('/src/images/index/demo1.png') 0 e('/') 100% no-repeat;
                 transform: translate(30px, 30px);
+                &:hover {
+                    background: linear-gradient(135deg, rgb(0, 255, 255) 0%, rgb(4, 190, 253) 100%);
+                    a {
+                        color: #fff;
+                    }
+                }
             }
             .index-demo-inner {
                 width: 220px;
@@ -429,8 +497,59 @@
                 transform: translate(10px, 10px);
                 border: 1px solid rgba(255, 255, 255, 0.5);
                 .inner {
-                    transform: rotate(-45deg) translate(-55px, -20px);
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    transform: rotate(-45deg);
                     text-align: center;
+                    h4 {
+                        font-size: 16px;
+                        margin: 10px 0;
+                    }
+                }
+            }
+        }
+        // 新闻中心
+        .index-news {
+            .index-news-img {
+                height: 420px;
+                text-align: center;
+                img {
+                    max-height: 100%;
+                }
+            }
+            .index-news-box {
+                padding: 0 20px;
+                h5 {
+                    padding: 14px 6px;
+                    a {
+                        font-size: 16px;
+                        color: #fff;
+                    }
+                }
+                p {
+                    padding: 5px 6px;
+                    border-bottom: 2px solid #091e24;
+                    font-size: 14px;
+                }
+            }
+        }
+        // 关于我们
+        .index-about {
+            .index-about-text {
+                width: 70%;
+                margin: auto;
+                text-indent: 2em;
+                line-height: 2em;
+                font-size: 14px;
+            }
+            .index-about-img {
+                text-align: center;
+                height: 300px;
+                img {
+                    max-height: 100%;
                 }
             }
         }
