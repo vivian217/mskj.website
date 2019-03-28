@@ -17,6 +17,7 @@
             </div>
             <div class="loading-box bottom-center">
                 <loading-status></loading-status>
+                <Button class="center">开始比对</Button>
             </div>
             <div class="after-comparison">
                 <div class="inner">
@@ -56,8 +57,16 @@
             justify-content: space-between;
             position: relative;
             .loading-box {
-                width: 350px;
-                height: 350px;
+                width: 320px;
+                height: 320px;
+                .ivu-btn {
+                    background: transparent;
+                    border: none;
+                    color: #93fcfc;
+                    font-size: 30px;
+                    z-index: 20;
+                    left: 85px;
+                }
             }
             .after-comparison {
                 position: absolute;

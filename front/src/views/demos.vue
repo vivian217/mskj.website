@@ -4,7 +4,7 @@
             <MenuItem name="face" to="face"><span>人脸比对</span></MenuItem>
             <!--<MenuItem name="car" to="car">车辆识别</MenuItem>-->
             <MenuItem name="img-compress" to="img-compress">图片压缩</MenuItem>
-            <MenuItem name="video-compress" to="video-compress">视频压缩</MenuItem>
+            <!--<MenuItem name="video-compress" to="video-compress">视频压缩</MenuItem>-->
         </Menu>
         <div class="demos-box">
             <keep-alive>
@@ -21,6 +21,8 @@
 </script>
 <style lang="less">
     .demos {
+        width: 1200px;
+        margin: 0 auto;
         // 导航部分
         .ivu-menu-horizontal.ivu-menu-light {
             display: inline-block;
