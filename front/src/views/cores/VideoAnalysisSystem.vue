@@ -137,7 +137,7 @@
                 <div class="core-title">应用领域</div>
             </Col>
         </Row>
-        <Row class="core-application">
+        <Row class="core-applications">
             <Col span="8" offset="2">
                 <div class="application">
                     <div class="title">
@@ -166,12 +166,6 @@
         .core-car {
             height: 428px;
             background: url("/src/images/core/carRecongnition.png") 0 e('/') 100% no-repeat;
-        }
-        li {
-            &:before {
-                content: url("/src/images/core/point.png");
-                margin: 0 5px;
-            }
         }
         .core-characters {
             width: 100%;

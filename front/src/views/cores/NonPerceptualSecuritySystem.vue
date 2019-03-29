@@ -81,20 +81,32 @@
                 <div class="core-title">应用领域</div>
             </Col>
         </Row>
-        <Row class="core-application">
+        <Row class="core-applications">
             <Col>
                 <Row type="flex" justify="space-around">
-                    <Col span="4">
-
+                    <Col span="5">
+                        <div class="application">
+                            <img src="/src/images/core/app-community.jpg" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                            <div class="title"><span>--</span>住宅小区<span>--</span></div>
+                        </div>
                     </Col>
-                    <Col span="4">
-
+                    <Col span="5">
+                        <div class="application">
+                            <img src="/src/images/core/app-hospital.jpg" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                            <div class="title"><span>--</span>医院<span>--</span></div>
+                        </div>
                     </Col>
-                    <Col span="4">
-
+                    <Col span="5">
+                        <div class="application">
+                            <img src="/src/images/core/app-building.jpg" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                            <div class="title"><span>--</span>写字楼<span>--</span></div>
+                        </div>
                     </Col>
-                    <Col span="4">
-
+                    <Col span="5">
+                        <div class="application">
+                            <img src="/src/images/core/app-community.jpg" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                            <div class="title"><span>--</span>学校<span>--</span></div>
+                        </div>
                     </Col>
                 </Row>
             </Col>
@@ -110,15 +122,11 @@
 
 <style lang="less">
     .non-perceptual-security-system {
-        li {
-            margin: 15px 0;
-            &:before {
-                content: url("/src/images/core/point.png");
-                margin: 0 5px;
-            }
-        }
         .core-img {
             margin: 20px 0;
+        }
+        .application {
+
         }
     }
 </style>

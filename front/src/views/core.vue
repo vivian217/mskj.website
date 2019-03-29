@@ -14,31 +14,36 @@
                 <video-analysis-system></video-analysis-system>
             </TabPane>
             <TabPane label="无感知智慧社区/办公/楼宇安全卫士系统" name="non-perceptual-security-system">
-                <div>
-                    <h2>（二）、无感知智慧社区/办公/楼宇安全卫士系统</h2>
-                    <non-perceptual-security-system></non-perceptual-security-system>
-                </div>
+                <h2>（二）、无感知智慧社区/办公/楼宇安全卫士系统</h2>
+                <non-perceptual-security-system></non-perceptual-security-system>
             </TabPane>
             <TabPane label="智慧监狱点名系统" name="prison-naming-system">
-                <div id="anchor3"></div></TabPane>
-            <TabPane label="图片高保真压缩系统">标签三的内容</TabPane>
-            <TabPane label="视频高保真压缩系统">标签三的内容</TabPane>
+                <h2>（三）、智慧监狱点名系统</h2>
+
+            </TabPane>
+            <TabPane label="高倍率图像/视频无损压缩系统" name="image-video-compression">
+                <h2>（四）、高倍率图像/视频无损压缩系统</h2>
+                <image-video-compression-system></image-video-compression-system>
+            </TabPane>
         </Tabs>
     </div>
 </template>
 
 <script>
     import VideoAnalysisSystem from './cores/VideoAnalysisSystem'
-    import NonPerceptualSecuritySystem from'./cores/NonPerceptualSecuritySystem'
+    import NonPerceptualSecuritySystem from './cores/NonPerceptualSecuritySystem'
+    import ImageVideoCompressionSystem from './cores/ImageVideoCompressionSystem'
+
     export default {
         name: "core",
-        components:{
+        components: {
             VideoAnalysisSystem,
-            NonPerceptualSecuritySystem
+            NonPerceptualSecuritySystem,
+            ImageVideoCompressionSystem
         },
-        data(){
-            return{
-                currentTab:'video-analysis-system'
+        data() {
+            return {
+                currentTab: 'video-analysis-system'
             }
         },
         beforeRouteEnter(to, from, next) {
@@ -113,14 +118,13 @@
         .core-text {
             line-height: 2em;
             font-size: 14px;
+            text-indent: 2em;
         }
         .core-img {
             height: 300px;
             text-align: center;
-            img {
-                max-height: 100%;
-                max-width: 100%;
-            }
+            display: flex;
+            align-items: center;
         }
         .ivu-card {
             background: none;
@@ -136,13 +140,21 @@
                 width: 45px;
             }
         }
-        .core-application {
+        .core-applications {
             width: 90%;
             margin: auto;
             border: 1px solid @color-active;
             border-radius: 10px;
             .application {
                 line-height: 2em;
+                img {
+                    margin-top: 20px;
+                }
+                span {
+                    display: inline-block;
+                    padding: 0 10px;
+                    color: @color-active;
+                }
             }
             .title {
                 margin: 20px 0;
@@ -153,6 +165,46 @@
                 font-size: 14px;
                 text-indent: 2em;
             }
+        }
+        li {
+            margin: 15px 0;
+            &:before {
+                content: url("/src/images/core/point.png");
+                margin: 0 5px;
+            }
+        }
+        .core-weakness {
+            margin-bottom: 20px;
+            border: 1px dashed @color-hover;
+            display: flex;
+            align-items: center;
+            .text {
+                width: calc(~'100% - 180px');
+                padding: 20px;
+                h5 {
+                    margin: 10px 0;
+                    font-size: 20px;
+                    color: @color-active;
+                }
+                p {
+                    font-size: 14px;
+                }
+            }
+            .text-right {
+                text-align: right;
+            }
+            .img {
+                width: 180px;
+                height: 180px;
+            }
+        }
+        .core-weakness-left {
+            border-top-right-radius: 90px;
+            border-bottom-right-radius: 90px;
+        }
+        .core-weakness-right {
+            border-top-left-radius: 90px;
+            border-bottom-left-radius: 90px;
         }
     }
 </style>
