@@ -6,7 +6,7 @@
                           trigger="hover" :radius-dot="true" :height="720"
                           loop autoplay>
                     <CarouselItem>
-                        <div class="carousel-box main-width">
+                        <div class="carousel-box index-width">
                             <div class="carousel-img">
                                 <img src="/src/images/index/mskj-banner1.png" alt="公安智能视频分析系统">
                             </div>
@@ -83,7 +83,7 @@
                 </Row>
                 <Row class="main-width" :gutter="16">
                     <Col span="6">
-                        <a href="#">
+                        <router-link :to="{name:'core',params:{anchor:'video-analysis-system'}}">
                             <div class="index-service">
                                 <div class="index-service-img">
                                     <img src="/src/images/index/service1.png" alt="公安视频智能分析系统">
@@ -96,22 +96,10 @@
                                     用智能技术突破人眼识别极限，十亿级别的辨别精度，快速、精准的安全防护。该系统目的提高社会治安防控水平，提高公安系统民众社会治安满意度。
                                 </div>
                             </div>
-                        </a>
-                        <!--<Card class="index-service" :bordered="false">
-                            <div class="index-service-img">
-                                <img src="/src/images/index/service1.png" alt="公安视频智能分析系统">
-                            </div>
-                            <div class="index-service-title">
-                                <h4>公安视频智能分析系统</h4>
-                                <h5>Video Intelligent Analysis System</h5>
-                            </div>
-                            <div class="index-service-details">
-                                用智能技术突破人眼识别极限，十亿级别的辨别精度，快速、精准的安全防护。该系统目的提高社会治安防控水平，提高公安系统民众社会治安满意度。
-                            </div>
-                        </Card>-->
+                        </router-link>
                     </Col>
                     <Col span="6">
-                        <a href="#">
+                        <router-link :to="{name:'core',params:{anchor:'non-perceptual-security-system'}}">
                             <div class="index-service">
                                 <div class="index-service-img">
                                     <img src="/src/images/index/service2.png" alt="智慧小区管理系统">
@@ -124,10 +112,10 @@
                                     将人脸识别技术应用于门禁系统及社区安防上：人脸开门，主动预警，危险行为告警，可疑人物报警，目标任务轨迹分析等，实现无感知社区服务体验。
                                 </div>
                             </div>
-                        </a>
+                        </router-link>
                     </Col>
                     <Col span="6">
-                        <a href="#">
+                        <router-link :to="{name:'core',params:{anchor:'prison-naming-system'}}">
                             <div class="index-service">
                                 <div class="index-service-img">
                                     <img src="/src/images/index/service3.png" alt="监狱点名系统">
@@ -140,10 +128,10 @@
                                     将智能人脸识别技术应用于监狱系统，实现区域定时点名，自动实现人员区域调度，系统管理一体化，提高管理效率。
                                 </div>
                             </div>
-                        </a>
+                        </router-link>
                     </Col>
                     <Col span="6">
-                        <a href="#">
+                        <a href="/core">
                             <div class="index-service">
                                 <div class="index-service-img">
                                     <img src="/src/images/index/service4.png" alt="高倍率图像/视频无损压缩系统">
@@ -244,23 +232,23 @@
                             <Col span="8">
                                 <div class="index-news-box" data-src="/src/images/index/news1.png"
                                      @mouseenter.stop.prevent="changeImg"
-                                     @mouseenter="recoverImg">
+                                     @mouseleave="recoverImg">
                                     <h5><a href="#">2019年3月24日，我司正式入驻地理文化众创空间</a></h5>
                                     <p>重庆孟山科技与地理文化众创空间正式达成入驻协议，于2019年3月24日入驻海王星D座8-21，将开启公司发展的新篇章。
                                         <a href="#">&lt;&lt;查看详情</a>
                                     </p>
                                 </div>
-                                <div class="index-news-box" data-src="/src/images/index/news1.png"
+                                <div class="index-news-box" data-src="/src/images/index/news2.jpg"
                                      @mouseenter.stop.prevent="changeImg"
-                                     @mouseenter="recoverImg">
+                                     @mouseleave="recoverImg">
                                     <h5><a href="#">2019年3月24日，我司正式入驻地理文化众创空间</a></h5>
                                     <p>重庆孟山科技与地理文化众创空间正式达成入驻协议，于2019年3月24日入驻海王星D座8-21，将开启公司发展的新篇章。
                                         <a href="#">&lt;&lt;查看详情</a>
                                     </p>
                                 </div>
-                                <div class="index-news-box" data-src="/src/images/index/news1.png"
+                                <div class="index-news-box" data-src="/src/images/index/news3.jpg"
                                      @mouseenter.stop.prevent="changeImg"
-                                     @mouseenter="recoverImg">
+                                     @mouseleave="recoverImg">
                                     <h5><a href="#">2019年3月24日，我司正式入驻地理文化众创空间</a></h5>
                                     <p>重庆孟山科技与地理文化众创空间正式达成入驻协议，于2019年3月24日入驻海王星D座8-21，将开启公司发展的新篇章。
                                         <a href="#">&lt;&lt;查看详情</a>
@@ -395,7 +383,6 @@
                     border-bottom: 1px solid @highlight-color;
                 }
                 .desc-points {
-                    list-style: none; // square inside url("/src/images/banner/square.png");
                     li {
                         margin-top: 10px;
                         float: left;
