@@ -4,12 +4,18 @@
         <div class="outer-border center"></div>
         <div class="loading-border center"></div>
         <div class="inner-halo center"></div>
+        <div class="inner-text center" v-html="innerText"></div>
     </div>
 </template>
 
 <script>
     export default {
-        name: "loading-status"
+        name: "loading-status",
+        props: {
+            innerText: {
+                default: '比对中'
+            }
+        }
     }
 </script>
 
@@ -42,6 +48,13 @@
             height: 50%;
             box-shadow: 0px 0px 20px 0px rgba(0, 216, 255, 0.3);
             border-radius: 50%;
+        }
+        .inner-text {
+            color: #93fcfc;
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     }
 </style>

@@ -62,6 +62,15 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
+            .img-remove{
+                position: absolute;
+                top: 0;
+                right: 0;
+                .ivu-icon {
+                    cursor: pointer;
+                }
+            }
         }
         .img-box-inner {
             width: 500px;

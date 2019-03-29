@@ -8,7 +8,7 @@
             <div class="core-banner-line"></div>
             <h3>以人工智能核心技术，引领计算机视觉行业先行</h3>
         </div>
-        <Tabs :value="currentTab">
+        <Tabs v-model="currentTab">
             <TabPane label="视频实时分析系统" name="video-analysis-system">
                 <h2>（一）、视频实时分析系统</h2>
                 <video-analysis-system></video-analysis-system>
