@@ -171,7 +171,7 @@
                                 <div class="index-demo">
                                     <div class="index-demo-inner">
                                         <div class="inner">
-                                            <a href="/face" target="_blank">
+                                            <a @click="toFace">
                                                 <img src="@/images/index/face.png" alt="人脸识别">
                                                 <h4>人脸识别</h4>
                                             </a>
@@ -183,7 +183,7 @@
                                 <div class="index-demo">
                                     <div class="index-demo-inner">
                                         <div class="inner">
-                                            <a href="/img-compress" target="_blank">
+                                            <a @click="toImgCompress">
                                                 <img src="@/images/index/img-comparison.png" alt="图片压缩">
                                                 <h4>图片压缩</h4>
                                             </a>
@@ -328,6 +328,22 @@
             },
             recoverImg() {
                 this.newsSrc = this.news1
+            },
+            toFace() {
+                // 跳转到人脸对比页面
+                let routeData = this.$router.resolve({
+                    name: 'face'
+                })
+                // 以新标签触发
+                window.open(routeData.href, '_blank')
+            },
+            toImgCompress() {
+                // 跳转到图片压缩页面
+                let routeData = this.$router.resolve({
+                    name: 'img-compress'
+                })
+                // 以新标签触发
+                window.open(routeData.href, '_blank')
             }
         }
     }
