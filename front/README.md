@@ -1,21 +1,20 @@
-# iView-project
+# mskj.compress.elem
 
-This project is build for Vue.js 2 + vue-router + webpack2 + iView 3, just install and run.
+> 孟山科技压缩系统BS前端(Element UI)
 
 ## Install
+
 ```bush
 // install dependencies
 npm install
 ```
 ## Run
+
 ### Development
 ```bush
-// For the first time, run init to create index.html
-npm run init
 npm run dev
 ```
 ### Production(Build)
 ```bush
-npm run build
+./build.sh
 ```
-

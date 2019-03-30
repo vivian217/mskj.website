@@ -8,7 +8,7 @@
                     <CarouselItem>
                         <div class="carousel-box index-width">
                             <div class="carousel-img">
-                                <img src="/src/images/index/mskj-banner1.png" alt="公安智能视频分析系统">
+                                <img src="@/images/index/mskj-banner1.png" alt="公安智能视频分析系统">
                             </div>
                             <div class="carousel-text">
                                 <h2>公安智能视频分析系统</h2>
