@@ -32,8 +32,8 @@
                 <img src="@/images/core/leftLine.png" alt="无感知智慧社区/办公/楼宇安全卫士系统">
             </Col>
             <Col span="5">
-                <Card>
-                    <div slot="title">
+                <div class="core-card">
+                    <div class="core-card-title">
                         <img src="@/images/core/monitor.png" alt="无感知智慧社区/办公/楼宇安全卫士系统">
                         <span>监控系统</span>
                     </div>
@@ -41,13 +41,13 @@
                         <li>用作被动的事后取证 ，利用率低，调阅取 证效率低下</li>
                         <li>无法及时有效地进行</li>
                     </ul>
-                </Card>
+                </div>
             </Col>
         </Row>
         <Row type="flex" justify="center" align="middle">
             <Col span="5">
-                <Card>
-                    <div slot="title">
+                <div class="core-card">
+                    <div class="core-card-title">
                         <img src="@/images/core/entrance.png" alt="无感知智慧社区/办公/楼宇安全卫士系统">
                         <span>门禁系统</span>
                     </div>
@@ -55,7 +55,7 @@
                         <li>门卡、指纹、闸机，不方便，有延时</li>
                         <li>门卫/保安手动登记，不便于管理。</li>
                     </ul>
-                </Card>
+                </div>
             </Col>
             <Col span="3">
                 <img src="@/images/core/rightLine.png" alt="无感知智慧社区/办公/楼宇安全卫士系统">
@@ -104,7 +104,7 @@
                     </Col>
                     <Col span="5">
                         <div class="application">
-                            <img src="@/images/core/app-community.jpg" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                            <img src="@/images/core/app-school.jpg" alt="无感知智慧社区/办公/楼宇安全卫士系统">
                             <div class="title"><span>--</span>学校<span>--</span></div>
                         </div>
                     </Col>

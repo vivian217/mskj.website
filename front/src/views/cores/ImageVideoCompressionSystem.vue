@@ -86,9 +86,9 @@
         </Row>
         <Row type="flex" justify="center" align="middle">
             <Col span="5">
-                <Card>
-                    <div slot="title">
-                        <img src="@/images/core/face.png" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                <div class="core-card">
+                    <div class="core-card-title">
+                        <img src="@/images/core/face.png" alt="高倍率图像/视频无损压缩系统">
                         <span>图片/视频压缩</span>
                     </div>
                     <ul>
@@ -97,27 +97,27 @@
                         <li>压缩前后视觉无损，效果保持一致</li>
                         <li>创新自动压缩程序，实现无人监管任务。</li>
                     </ul>
-                </Card>
+                </div>
             </Col>
             <Col span="3">
-                <img src="@/images/core/rightLine.png" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                <img src="@/images/core/rightLine.png" alt="高倍率图像/视频无损压缩系统">
             </Col>
             <Col span="14">
                 <div class="core-img">
-                    <img src="@/images/core/imageVideoSystem.png" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                    <img src="@/images/core/imageVideoSystem.png" alt="高倍率图像/视频无损压缩系统">
                 </div>
             </Col>
         </Row>
         <Row type="flex" justify="center" align="middle" style="margin-top: 20px">
             <Col span="15">
                 <div class="core-img">
-                    <img src="@/images/core/imageVideoSystem2.png" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                    <img src="@/images/core/imageVideoSystem2.png" alt="高倍率图像/视频无损压缩系统">
                 </div>
             </Col>
             <Col span="5">
-                <Card>
-                    <div slot="title">
-                        <img src="@/images/core/face.png" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                <div class="core-card">
+                    <div class="core-card-title">
+                        <img src="@/images/core/face.png" alt="高倍率图像/视频无损压缩系统">
                         <span>图片/视频压缩</span>
                     </div>
                     <ul>
@@ -126,7 +126,7 @@
                         <li>压缩前后视觉无损，效果保持一致</li>
                         <li>创新自动压缩程序，实现无人监管任务。</li>
                     </ul>
-                </Card>
+                </div>
             </Col>
         </Row>
         <Row>
@@ -139,25 +139,25 @@
                 <Row type="flex" justify="space-around">
                     <Col span="5">
                         <div class="application">
-                            <img src="@/images/core/app-community.jpg" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                            <img src="@/images/core/app-community.jpg" alt="高倍率图像/视频无损压缩系统">
                             <div class="title"><span>--</span>图书档案<span>--</span></div>
                         </div>
                     </Col>
                     <Col span="5">
                         <div class="application">
-                            <img src="@/images/core/app-community.jpg" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                            <img src="@/images/core/app-community.jpg" alt="高倍率图像/视频无损压缩系统">
                             <div class="title"><span>--</span>安防监控<span>--</span></div>
                         </div>
                     </Col>
                     <Col span="5">
                         <div class="application">
-                            <img src="@/images/core/app-community.jpg" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                            <img src="@/images/core/app-community.jpg" alt="高倍率图像/视频无损压缩系统">
                             <div class="title"><span>--</span>医学成像<span>--</span></div>
                         </div>
                     </Col>
                     <Col span="5">
                         <div class="application">
-                            <img src="@/images/core/app-community.jpg" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                            <img src="@/images/core/app-community.jpg" alt="高倍率图像/视频无损压缩系统">
                             <div class="title"><span>--</span>地理信息<span>--</span></div>
                         </div>
                     </Col>
@@ -165,25 +165,25 @@
                 <Row type="flex" justify="space-around">
                     <Col span="5">
                         <div class="application">
-                            <img src="@/images/core/app-community.jpg" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                            <img src="@/images/core/app-community.jpg" alt="高倍率图像/视频无损压缩系统">
                             <div class="title"><span>--</span>遥感影像<span>--</span></div>
                         </div>
                     </Col>
                     <Col span="5">
                         <div class="application">
-                            <img src="@/images/core/app-community.jpg" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                            <img src="@/images/core/app-community.jpg" alt="高倍率图像/视频无损压缩系统">
                             <div class="title"><span>--</span>矿产勘探<span>--</span></div>
                         </div>
                     </Col>
                     <Col span="5">
                         <div class="application">
-                            <img src="@/images/core/app-community.jpg" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                            <img src="@/images/core/app-community.jpg" alt="高倍率图像/视频无损压缩系统">
                             <div class="title"><span>--</span>国防军事<span>--</span></div>
                         </div>
                     </Col>
                     <Col span="5">
                         <div class="application">
-                            <img src="@/images/core/app-community.jpg" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                            <img src="@/images/core/app-community.jpg" alt="高倍率图像/视频无损压缩系统">
                             <div class="title"><span>--</span>建筑设计<span>--</span></div>
                         </div>
                     </Col>

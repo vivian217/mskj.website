@@ -32,19 +32,19 @@
                 <img src="@/images/core/arrow.png" alt="人脸识别">
             </Col>
             <Col span="5" offset="2">
-                <Card>
-                    <div slot="title">
+                <div class="core-card">
+                    <div class="core-card-title">
                         <img src="@/images/core/face.png" alt="人脸识别">
                         <span>人脸识别</span>
                     </div>
                     <p>智能识别人脸及人身特征，衣物颜色、背包、眼镜等</p>
-                </Card>
+                </div>
             </Col>
         </Row>
         <Row class="core-car" type="flex" align="middle">
             <Col span="5" offset="4">
-                <Card>
-                    <div slot="title">
+                <div class="core-card">
+                    <div class="core-card-title">
                         <img src="@/images/core/car.png" alt="车辆识别">
                         <span>车辆识别</span>
                     </div>
@@ -54,7 +54,7 @@
                         <li>车型</li>
                         <li>车牌号码</li>
                     </ul>
-                </Card>
+                </div>
             </Col>
             <Col>
                 <img src="@/images/core/rightLine.png" alt="车辆识别">
@@ -70,13 +70,13 @@
                 <img src="@/images/core/leftLine.png" alt="轨迹分析">
             </Col>
             <Col span="5">
-                <Card>
-                    <div slot="title">
+                <div class="core-card">
+                    <div class="core-card-title">
                         <img src="@/images/core/trajectoryAnalysis.png" alt="轨迹分析">
                         <span>轨迹分析</span>
                     </div>
                     <p>智能识别人脸及人身特征，衣物颜色、背包、眼镜等</p>
-                </Card>
+                </div>
             </Col>
         </Row>
         <Row>

@@ -1,0 +1,2 @@
+webpackJsonp([11],{"07yn":function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var a={render:function(){var e=this.$createElement;return(this._self._c||e)("div",{staticClass:"news-detail"})},staticRenderFns:[]};var s=n("VU/8")({name:"news-detail"},a,!1,function(e){n("bW6I")},"data-v-0cd3bc92",null);t.default=s.exports},bW6I:function(e,t){}});
+//# sourceMappingURL=11.114ce857e3526e1e078d.js.map
