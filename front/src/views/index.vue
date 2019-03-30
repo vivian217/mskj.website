@@ -75,7 +75,7 @@
                         <div class="carousel-box carousel-box4">
                             <div class="index-width">
                                 <div class="carousel-text">
-                                    <h2>智慧小区管理系统</h2>
+                                    <h2>智慧监狱管理系统</h2>
                                     <h3>Intelligent Prison Naming System</h3>
                                     <div class="carousel-desc">
                                         <div class="desc-main">
@@ -273,16 +273,16 @@
                                 <div class="index-news-box" :data-src="news2"
                                      @mouseenter.stop.prevent="changeImg"
                                      @mouseleave="recoverImg">
-                                    <h5><a href="#">2019年3月24日，我司正式入驻地理文化众创空间</a></h5>
-                                    <p>重庆孟山科技与地理文化众创空间正式达成入驻协议，于2019年3月24日入驻海王星D座8-21，将开启公司发展的新篇章。
+                                    <h5><a href="#">孟山科技与海南省数据大厅与海南省工信厅进行交流</a></h5>
+                                    <p>11月15日，宋扬博士在海南省数据大厅与海南省工信厅、公安厅领导交流，并得到充分认可。已经在海南省试点。
                                         <a href="#">&lt;&lt;查看详情</a>
                                     </p>
                                 </div>
                                 <div class="index-news-box" :data-src="news3"
                                      @mouseenter.stop.prevent="changeImg"
                                      @mouseleave="recoverImg">
-                                    <h5><a href="#">2019年3月24日，我司正式入驻地理文化众创空间</a></h5>
-                                    <p>重庆孟山科技与地理文化众创空间正式达成入驻协议，于2019年3月24日入驻海王星D座8-21，将开启公司发展的新篇章。
+                                    <h5><a href="#">重庆市人大领导参访孟山科技</a></h5>
+                                    <p>2017年5月18日，在江北区进行工作调研的重庆市委常委、常务副市长吴存荣一行，在重庆市江北区委书记杜和平、江北区区长代小红的陪同下考察江北高层次创业园区。
                                         <a href="#">&lt;&lt;查看详情</a>
                                     </p>
                                 </div>
@@ -341,7 +341,7 @@
 
     // 编译后, 变量是动态的不知道图片地址中@代表什么, 因此需要先在此import
     import news1 from '@/images/index/news1.png';
-    import news2 from '@/images/index/news2.jpg';
+    import news2 from '@/images/index/news2.png';
     import news3 from '@/images/index/news3.jpg';
     export default {
         data() {
