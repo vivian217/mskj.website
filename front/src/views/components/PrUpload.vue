@@ -95,11 +95,12 @@
                 return true
             },
             // 上传成功
-            success(resp, file) {
-                let fileInfo = resp.file
-                fileInfo['uid'] = file.uid
-                // 加入文件列表
-                this.files.push(fileInfo)
+            success(resp) {
+                if (resp['code'] === 200) {
+                    let fileInfo = resp['data'];
+                    // 加入文件列表
+                    this.files.push(fileInfo)
+                }
             },
             // 点击预览
             preview(file) {
@@ -131,14 +132,14 @@
             // 点击删除
             remove(file) {
                 for (let i = 0, len = this.files.length; i < len; i++) {
-                    if (this.files[i].uid == file.uid) {
+                    if (this.files[i]['uuid'] === file['uuid']) {
                         this.files.splice(i, 1)
                         break
                     }
                 }
             },
             // 清理所有文件
-            removeAll(){
+            removeAll() {
                 // 文件列表置空
                 this.files = []
                 // 删除组件内部文件

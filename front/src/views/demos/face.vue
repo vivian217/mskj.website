@@ -3,21 +3,35 @@
         <div class="face-box">
             <div class="img-box">
                 <div class="img-box-inner">
-                    <pr-upload ref="person-upload"
+                    <pr-upload v-if="!showSource"
+                               ref="source"
+                               @fileChange="sourceChange"
+                               :progress="false"
                                :url="uploadUrl"
-                               :format="['jpg','png','tif']"></pr-upload>
+                               :format="['jpg','jpeg','tif','tif']"></pr-upload>
+                    <pr-image-responsive v-if="showSource"
+                                         :preview="true"
+                                         :url="source['preview']"/>
                 </div>
             </div>
             <div class="img-box">
                 <div class="img-box-inner">
-                    <pr-upload ref="person-upload"
+                    <pr-upload v-if="!showTarget"
+                               ref="target-upload"
+                               @fileChange="targetChange"
+                               :progress="false"
                                :url="uploadUrl"
-                               :format="['jpg','png','tif']"></pr-upload>
+                               :format="['jpg','jpeg','tif','tif']"></pr-upload>
+                    <pr-image-responsive v-if="showTarget"
+                                         :preview="true"
+                                         :url="target['preview']"/>
                 </div>
             </div>
             <div class="loading-box bottom-center">
                 <loading-status></loading-status>
-                <Button class="center">开始比对</Button>
+                <Button class="center"
+                        @click="doCompare">开始比对
+                </Button>
             </div>
             <div class="after-comparison">
                 <div class="inner">
@@ -33,18 +47,78 @@
 </template>
 
 <script>
-    import PrUpload from '../components/PrUpload'
-    import LoadingStatus from '../components/LoadingStatus'
+    import axios from 'axios';
+
+    import PrUpload from '../components/PrUpload';
+    import PrImageResponsive from '../components/PrImageResponsive';
+    import LoadingStatus from '../components/LoadingStatus';
 
     export default {
         name: "face",
         components: {
             PrUpload,
+            PrImageResponsive,
             LoadingStatus
         },
         data() {
             return {
-                uploadUrl: '/api/v1/upload/file'
+                uploadUrl: 'http://192.168.1.158:10010/api/v1/upload/file',
+                compareUrl: 'http://192.168.1.158:10010/api/v1/compare',
+                showSource: false,
+                source: {},
+                showTarget: false,
+                target: {},
+            }
+        },
+        methods: {
+            sourceChange(files) {
+                if (files && files.length === 1) {
+                    this.source = files[0];
+                    this.showSource = true;
+                } else {
+                    this.source = {};
+                    this.showSource = false
+                }
+            },
+            targetChange(files) {
+                if (files && files.length === 1) {
+                    this.target = files[0];
+                    this.showTarget = true
+                } else {
+                    this.target = {};
+                    this.showTarget = false
+                }
+            },
+            // 开始比对
+            doCompare() {
+                if (this.source['preview'] === '') {
+                    this.$Message.error({
+                        content: '请选择源文件',
+                        duration: 10,
+                        closable: true
+                    });
+                    return
+                } else if (this.target['preview'] === '') {
+                    this.$Message.error({
+                        content: '请选择目标文件 ',
+                        duration: 10,
+                        closable: true
+                    });
+                    return
+                }
+                console.log('开始比对');
+                axios({
+                    url: this.compareUrl,
+                    params: {
+                        source: this.source['uuid'],
+                        target: this.target['uuid'],
+                    }
+                }).then(resp => {
+                    let dataRes = resp['data'];
+                    if (dataRes && dataRes['code'] === 200) {
+                        console.log(dataRes['data']);
+                    }
+                });
             }
         }
     }
