@@ -2,65 +2,95 @@
     <div class="index">
         <Row>
             <Col>
-                <Carousel v-model="carousel" class="white-masking"
+                <Carousel v-model="carousel"
                           trigger="hover" :radius-dot="true" :height="720"
                           loop autoplay>
                     <CarouselItem>
-                        <div class="carousel-box index-width">
-                            <div class="carousel-img">
-                                <img src="@/images/index/mskj-banner1.png" alt="公安智能视频分析系统">
-                            </div>
-                            <div class="carousel-text">
-                                <h2>公安智能视频分析系统</h2>
-                                <h3>Video Intelligent Analysis System</h3>
-                                <div class="carousel-desc">
-                                    <div class="desc-main">
-                                        用智能技术突破人眼识别极限，十亿级别的辨别精度，快速、精准的安全防护。该系统旨在实现对全社会进行全方位、立体式管控，提高社会治安防控水平，提高民众社会治安满意度。
+                        <div class="carousel-box carousel-box1">
+                            <div class="index-width">
+                                <div class="carousel-text" style="float: right">
+                                    <h2>公安智能视频分析系统</h2>
+                                    <h3>Video Intelligent Analysis System</h3>
+                                    <div class="carousel-desc">
+                                        <div class="desc-main">
+                                            用智能技术突破人眼识别极限，十亿级别的辨别精度，快速、精准的安全防护。该系统旨在实现对全社会进行全方位、立体式管控，提高社会治安防控水平，提高民众社会治安满意度。
+                                        </div>
+                                        <ul class="desc-points">
+                                            <li>人脸识别</li>
+                                            <li>轨迹分析</li>
+                                            <li>数据研判</li>
+                                            <li>车辆识别</li>
+                                            <li>更多&nbsp;&gt;&gt;&nbsp;</li>
+                                        </ul>
                                     </div>
-                                    <ul class="desc-points">
-                                        <li>人脸识别</li>
-                                        <li>轨迹分析</li>
-                                        <li>数据研判</li>
-                                        <li>车辆识别</li>
-                                        <li>更多&nbsp;&gt;&gt;&nbsp;</li>
-                                    </ul>
                                 </div>
                             </div>
                         </div>
                     </CarouselItem>
                     <CarouselItem>
-                        <div class="carousel-box">
-                            <div class="carousel-text">
-                                <h2>智慧小区管理系统</h2>
-                                <h3>Intelligent Community Management System </h3>
-                                <div class="carousel-desc">
-                                    <div class="desc-main">
-                                        将人脸识别技术应用于门禁系统及社区安防上：人脸开门，主动预警，危险行为告警，可疑人物报警，目标任务轨迹分析等，实现无感知社区服务体验：
+                        <div class="carousel-box carousel-box2">
+                            <div class="index-width">
+                                <div class="carousel-text">
+                                    <h2>智慧小区管理系统</h2>
+                                    <h3>Intelligent Community Management System </h3>
+                                    <div class="carousel-desc">
+                                        <div class="desc-main">
+                                            将人脸识别技术应用于门禁系统及社区安防上：人脸开门，主动预警，危险行为告警，可疑人物报警，目标任务轨迹分析等，实现无感知社区服务体验：
+                                        </div>
+                                        <ul class="desc-points">
+                                            <li>智能门禁</li>
+                                            <li>主动预警</li>
+                                            <li>轨迹分析</li>
+                                            <li>自动告警</li>
+                                            <li>更多&nbsp;&gt;&gt;&nbsp;</li>
+                                        </ul>
                                     </div>
-                                    <ul class="desc-points">
-                                        <li>智能门禁</li>
-                                        <li>主动预警</li>
-                                        <li>轨迹分析</li>
-                                        <li>自动告警</li>
-                                        <li>更多&nbsp;&gt;&gt;&nbsp;</li>
-                                    </ul>
                                 </div>
                             </div>
-                            <div class="carousel-img">
-                                <img src="@/images/index/mskj-banner2.png" alt="智慧小区管理系统">
+                        </div>
+                    </CarouselItem>
+                    <CarouselItem>
+                        <div class="carousel-box carousel-box3">
+                            <div class="index-width">
+                                <div class="carousel-text" style="float: right">
+                                    <h2>高倍率图像/视频无损压缩系统</h2>
+                                    <h3>Lossless Image/Video Compression System with High Ratio</h3>
+                                    <div class="carousel-desc">
+                                        <div class="desc-main">
+                                            针对目前主流格式的图像/视频进行二次压缩，在不降低人眼视觉质量的v前提下，实现对多种视频流和图像文件的实时、高倍率压缩，节省了存储空间和投资成本。
+                                        </div>
+                                        <ul class="desc-points">
+                                            <li>图片压缩</li>
+                                            <li>图像压缩</li>
+                                            <li>高倍保真</li>
+                                            <li>自动压缩</li>
+                                            <li>更多&nbsp;&gt;&gt;&nbsp;</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </CarouselItem>
                     <CarouselItem>
-                        <div class="carousel-box">
-                            <div class="carousel-img"></div>
-                            <div class="carousel-text"></div>
-                        </div>
-                    </CarouselItem>
-                    <CarouselItem>
-                        <div class="carousel-box">
-                            <div class="carousel-img"></div>
-                            <div class="carousel-text"></div>
+                        <div class="carousel-box carousel-box4">
+                            <div class="index-width">
+                                <div class="carousel-text">
+                                    <h2>智慧小区管理系统</h2>
+                                    <h3>Intelligent Prison Naming System</h3>
+                                    <div class="carousel-desc">
+                                        <div class="desc-main">
+                                            将智能人脸识别技术应用于监狱系统，实现区域定时点名，自动实现人员区域调度，系统管理一体化，提高管理效率。
+                                        </div>
+                                        <ul class="desc-points">
+                                            <li>前端抓拍</li>
+                                            <li>自动点名</li>
+                                            <li>异常告警</li>
+                                            <li>数据汇总</li>
+                                            <li>更多&nbsp;&gt;&gt;&nbsp;</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </CarouselItem>
                 </Carousel>
@@ -172,7 +202,7 @@
                                     <div class="index-demo-inner">
                                         <div class="inner">
                                             <a @click="toFace">
-                                                <img src="@/images/index/face.png" alt="人脸识别">
+                                                <Icon custom="iconfont icon-face" size="60"></Icon>
                                                 <h4>人脸识别</h4>
                                             </a>
                                         </div>
@@ -184,7 +214,7 @@
                                     <div class="index-demo-inner">
                                         <div class="inner">
                                             <a @click="toImgCompress">
-                                                <img src="@/images/index/img-comparison.png" alt="图片压缩">
+                                                <Icon custom="iconfont icon-img" size="60"></Icon>
                                                 <h4>图片压缩</h4>
                                             </a>
                                         </div>
@@ -195,8 +225,10 @@
                                 <div class="index-demo">
                                     <div class="index-demo-inner">
                                         <div class="inner">
-                                            <img src="@/images/index/more.png">
-                                            <h4>More&nbsp;&gt;&gt;</h4>
+                                            <a @click="toFace">
+                                                <Icon custom="iconfont icon-more" size="60"></Icon>
+                                                <h4>More&nbsp;&gt;&gt;</h4>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -382,13 +414,11 @@
         .carousel-box {
             height: 100%;
             display: flex;
-            justify-content: space-around;
-            align-items: center;
             .carousel-text {
                 width: 520px;
                 text-align: center;
                 h2 {
-                    font-size: 50px;
+                    font-size: 38px;
                     color: @highlight-color;
                 }
                 h3 {
@@ -418,6 +448,18 @@
                     }
                 }
             }
+        }
+        .carousel-box1 {
+            background: url("~@/images/index/mskj-banner1.png") 0 e('/') 100% no-repeat;
+        }
+        .carousel-box2 {
+            background: url("~@/images/index/mskj-banner2.png") 0 e('/') 100% no-repeat;
+        }
+        .carousel-box3 {
+            background: url("~@/images/index/mskj-banner3.png") 0 e('/') 100% no-repeat;
+        }
+        .carousel-box4 {
+            background: url("~@/images/index/mskj-banner4.png") 0 e('/') 100% no-repeat;
         }
         // 块header
         .index-header {
@@ -493,6 +535,10 @@
                 height: 100%;
                 background: url('~@/images/index/demo1.png') 0 e('/') 100% no-repeat;
                 transform: translate(30px, 30px);
+                color: @highlight-color;
+                a {
+                    color: @highlight-color;
+                }
                 &:hover {
                     background: linear-gradient(135deg, rgb(0, 255, 255) 0%, rgb(4, 190, 253) 100%);
                     a {

@@ -135,29 +135,37 @@
             </Col>
         </Row>
         <Row class="core-applications core-content">
-            <Col>
+            <Col style="width: 100%">
                 <Row type="flex" justify="space-around">
                     <Col span="5">
                         <div class="application">
-                            <img src="@/images/core/app-community.jpg" alt="高倍率图像/视频无损压缩系统">
+                            <div class="img">
+                                <img src="@/images/core/app-library.jpg" alt="高倍率图像/视频无损压缩系统">
+                            </div>
                             <div class="title"><span>--</span>图书档案<span>--</span></div>
                         </div>
                     </Col>
                     <Col span="5">
                         <div class="application">
-                            <img src="@/images/core/app-community.jpg" alt="高倍率图像/视频无损压缩系统">
+                            <div class="img">
+                                <img src="@/images/core/app-anfang.jpg" alt="高倍率图像/视频无损压缩系统">
+                            </div>
                             <div class="title"><span>--</span>安防监控<span>--</span></div>
                         </div>
                     </Col>
                     <Col span="5">
                         <div class="application">
-                            <img src="@/images/core/app-community.jpg" alt="高倍率图像/视频无损压缩系统">
+                            <div class="img">
+                                <img src="@/images/core/app-yixue.png" alt="高倍率图像/视频无损压缩系统">
+                            </div>
                             <div class="title"><span>--</span>医学成像<span>--</span></div>
                         </div>
                     </Col>
                     <Col span="5">
                         <div class="application">
-                            <img src="@/images/core/app-community.jpg" alt="高倍率图像/视频无损压缩系统">
+                            <div class="img">
+                                <img src="@/images/core/app-dili.jpg" alt="高倍率图像/视频无损压缩系统">
+                            </div>
                             <div class="title"><span>--</span>地理信息<span>--</span></div>
                         </div>
                     </Col>
@@ -165,25 +173,33 @@
                 <Row type="flex" justify="space-around">
                     <Col span="5">
                         <div class="application">
-                            <img src="@/images/core/app-community.jpg" alt="高倍率图像/视频无损压缩系统">
+                            <div class="img">
+                                <img src="@/images/core/app-yaogan.jpg" alt="高倍率图像/视频无损压缩系统">
+                            </div>
                             <div class="title"><span>--</span>遥感影像<span>--</span></div>
                         </div>
                     </Col>
                     <Col span="5">
                         <div class="application">
-                            <img src="@/images/core/app-community.jpg" alt="高倍率图像/视频无损压缩系统">
+                            <div class="img">
+                                <img src="@/images/core/app-kuang.jpg" alt="高倍率图像/视频无损压缩系统">
+                            </div>
                             <div class="title"><span>--</span>矿产勘探<span>--</span></div>
                         </div>
                     </Col>
                     <Col span="5">
                         <div class="application">
-                            <img src="@/images/core/app-community.jpg" alt="高倍率图像/视频无损压缩系统">
+                            <div class="img">
+                                <img src="@/images/core/app-guofang.jpg" alt="高倍率图像/视频无损压缩系统">
+                            </div>
                             <div class="title"><span>--</span>国防军事<span>--</span></div>
                         </div>
                     </Col>
                     <Col span="5">
                         <div class="application">
-                            <img src="@/images/core/app-community.jpg" alt="高倍率图像/视频无损压缩系统">
+                            <div class="img">
+                                <img src="@/images/core/app-jianzhu.jpg" alt="高倍率图像/视频无损压缩系统">
+                            </div>
                             <div class="title"><span>--</span>建筑设计<span>--</span></div>
                         </div>
                     </Col>

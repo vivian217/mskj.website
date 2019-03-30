@@ -163,8 +163,10 @@
             border-radius: 10px;
             .application {
                 line-height: 2em;
-                img {
+                .img {
                     margin-top: 20px;
+                    height: 150px;
+                    text-align: center;
                 }
                 span {
                     display: inline-block;

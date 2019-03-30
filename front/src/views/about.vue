@@ -1,20 +1,20 @@
 <template>
-    <div class="about main-width">
-        <Row class="intro">
+    <div class="about main-width white-masking">
+        <Row class="intro" type="flex" align="middle">
             <Col span="14">
                 <div class="title">企业介绍 ( Company Introduction )</div>
                 <div class="details">重庆孟山信息科技有限公司是一家专注于计算机智能视觉的高科技企业，提供世界领先水平的目标物体识别、检测、分析技术，主要产品包括智能视频分析服务器，视频及图片无损高倍率压缩服务器，低带宽高清视频传输设备及服务器，云计算技术应用，物联网技术的开发应用，远程教育及医疗系统软件的集成及应用等。企业拥有专业化的服务队伍，能够为客户提供领域内从咨询规划、系统实施到运营支撑的专业服务。重视和客户建立长久的合作，始终把满足和超越满足客户要求作为每个员工竭力实现的目标。凭借雄厚的技术实力和优质的客户服务，赢得了大量客户的广泛信任与支持。公司在美国硅谷、重庆、南京等地都设有办公研发地点。</div>
             </Col>
             <Col span="10">
                 <div class="img">
-                    <img src="" alt="">
+                    <img src="@/images/about/company.png" alt="">
                 </div>
             </Col>
         </Row>
-        <Row class="culture">
+        <Row class="culture" type="flex" align="middle">
             <Col span="10">
                 <div class="img">
-                    <img src="" alt="">
+                    <img src="@/images/about/culture.jpg" alt="">
                 </div>
             </Col>
             <Col span="14">
@@ -28,7 +28,44 @@
         </Row>
         <Row class="stretch">
             <Col>
-                <div></div>
+                <Row>
+                    <Col>
+                        <div class="title">研发实力 ( R & D Strength )</div>
+                    </Col>
+                </Row>
+                <Row type="flex" justify="space-around" class="stretch-row">
+                    <Col span="7">
+                        <img src="@/images/about/patent1.jpg" alt="">
+                    </Col>
+                    <Col span="7">
+                        <img src="@/images/about/patent2.jpg" alt="">
+                    </Col>
+                    <Col span="7">
+                        <img src="@/images/about/patent3.jpg" alt="">
+                    </Col>
+                </Row>
+                <Row type="flex" justify="space-around" class="stretch-row">
+                    <Col span="7">
+                        <img src="@/images/about/patent4.jpg" alt="">
+                    </Col>
+                    <Col span="7">
+                        <img src="@/images/about/patent4.jpg" alt="">
+                    </Col>
+                    <Col span="7">
+                        <img src="@/images/about/patent6.jpg" alt="">
+                    </Col>
+                </Row>
+                <Row type="flex" justify="space-around" class="stretch-row">
+                    <Col span="7">
+                        <img src="@/images/about/patent7.jpg" alt="">
+                    </Col>
+                    <Col span="7">
+                        <img src="@/images/about/patent8.jpg" alt="">
+                    </Col>
+                    <Col span="7">
+                        <img src="@/images/about/patent9.jpg" alt="">
+                    </Col>
+                </Row>
             </Col>
         </Row>
         <Row class="location">
@@ -66,6 +103,11 @@
         }
         .img {
             height: 250px;
+        }
+        .stretch {
+            .stretch-row {
+                margin: 10px 0;
+            }
         }
     }
 </style>
