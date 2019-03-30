@@ -59,7 +59,7 @@
             return {
                 // 文件大小
                 maxSize: 102400,
-                uploadUrl: 'http://192.168.1.158:10010/api/v1/upload/file',
+                uploadUrl: 'http://online.mengshankeji.com/api/v1/upload/file',
                 showSource: false,
                 source: {},
                 showCompress: false,
