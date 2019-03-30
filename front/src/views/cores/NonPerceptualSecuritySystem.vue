@@ -13,7 +13,7 @@
             </Col>
             <Col span="8">
                 <div class="core-img">
-                    <img src="/src/images/core/community.png" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                    <img src="@/images/core/community.png" alt="无感知智慧社区/办公/楼宇安全卫士系统">
                 </div>
             </Col>
         </Row>
@@ -25,16 +25,16 @@
         <Row type="flex" justify="center" align="middle">
             <Col span="9">
                 <div class="core-img">
-                    <img src="/src/images/core/searchVideo.png" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                    <img src="@/images/core/searchVideo.png" alt="无感知智慧社区/办公/楼宇安全卫士系统">
                 </div>
             </Col>
             <Col span="3">
-                <img src="/src/images/core/leftLine.png" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                <img src="@/images/core/leftLine.png" alt="无感知智慧社区/办公/楼宇安全卫士系统">
             </Col>
             <Col span="5">
                 <Card>
                     <div slot="title">
-                        <img src="/src/images/core/monitor.png" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                        <img src="@/images/core/monitor.png" alt="无感知智慧社区/办公/楼宇安全卫士系统">
                         <span>监控系统</span>
                     </div>
                     <ul>
@@ -48,7 +48,7 @@
             <Col span="5">
                 <Card>
                     <div slot="title">
-                        <img src="/src/images/core/entrance.png" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                        <img src="@/images/core/entrance.png" alt="无感知智慧社区/办公/楼宇安全卫士系统">
                         <span>门禁系统</span>
                     </div>
                     <ul>
@@ -58,11 +58,11 @@
                 </Card>
             </Col>
             <Col span="3">
-                <img src="/src/images/core/rightLine.png" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                <img src="@/images/core/rightLine.png" alt="无感知智慧社区/办公/楼宇安全卫士系统">
             </Col>
             <Col span="9">
                 <div class="core-img" style="background-color: rgba(0,0,0,0.2)">
-                    <img src="/src/images/core/entranceGuard.png" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                    <img src="@/images/core/entranceGuard.png" alt="无感知智慧社区/办公/楼宇安全卫士系统">
                 </div>
             </Col>
         </Row>
@@ -73,7 +73,7 @@
         </Row>
         <Row type="flex" justify="space-around" align="middle">
             <Col>
-                <img src="/src/images/core/intelligentCommunity.png" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                <img src="@/images/core/intelligentCommunity.png" alt="无感知智慧社区/办公/楼宇安全卫士系统">
             </Col>
         </Row>
         <Row>
@@ -86,25 +86,25 @@
                 <Row type="flex" justify="space-around">
                     <Col span="5">
                         <div class="application">
-                            <img src="/src/images/core/app-community.jpg" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                            <img src="@/images/core/app-community.jpg" alt="无感知智慧社区/办公/楼宇安全卫士系统">
                             <div class="title"><span>--</span>住宅小区<span>--</span></div>
                         </div>
                     </Col>
                     <Col span="5">
                         <div class="application">
-                            <img src="/src/images/core/app-hospital.jpg" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                            <img src="@/images/core/app-hospital.jpg" alt="无感知智慧社区/办公/楼宇安全卫士系统">
                             <div class="title"><span>--</span>医院<span>--</span></div>
                         </div>
                     </Col>
                     <Col span="5">
                         <div class="application">
-                            <img src="/src/images/core/app-building.jpg" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                            <img src="@/images/core/app-building.jpg" alt="无感知智慧社区/办公/楼宇安全卫士系统">
                             <div class="title"><span>--</span>写字楼<span>--</span></div>
                         </div>
                     </Col>
                     <Col span="5">
                         <div class="application">
-                            <img src="/src/images/core/app-community.jpg" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                            <img src="@/images/core/app-community.jpg" alt="无感知智慧社区/办公/楼宇安全卫士系统">
                             <div class="title"><span>--</span>学校<span>--</span></div>
                         </div>
                     </Col>

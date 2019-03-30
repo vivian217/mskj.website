@@ -1,5 +1,5 @@
 <style lang="less">
-    @import 'styles/common.less';
+    @import '~@/styles/common.less';
     html, body, #app {
         height: 100%;
         width: 100%;
@@ -12,7 +12,7 @@
     </div>
 </template>
 <script>
-    import Background from './views/components/Background'
+    import Background from '@/views/components/Background'
     export default {
         components:{
             Background

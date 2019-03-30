@@ -47,7 +47,7 @@
                                 </div>
                             </div>
                             <div class="carousel-img">
-                                <img src="/src/images/index/mskj-banner2.png" alt="智慧小区管理系统">
+                                <img src="@/images/index/mskj-banner2.png" alt="智慧小区管理系统">
                             </div>
                         </div>
                     </CarouselItem>
@@ -86,7 +86,7 @@
                         <router-link :to="{name:'core',params:{anchor:'video-analysis-system'}}">
                             <div class="index-service">
                                 <div class="index-service-img">
-                                    <img src="/src/images/index/service1.png" alt="公安视频智能分析系统">
+                                    <img src="@/images/index/service1.png" alt="公安视频智能分析系统">
                                 </div>
                                 <div class="index-service-title">
                                     <h4>公安视频智能分析系统</h4>
@@ -102,7 +102,7 @@
                         <router-link :to="{name:'core',params:{anchor:'non-perceptual-security-system'}}">
                             <div class="index-service">
                                 <div class="index-service-img">
-                                    <img src="/src/images/index/service2.png" alt="智慧小区管理系统">
+                                    <img src="@/images/index/service2.png" alt="智慧小区管理系统">
                                 </div>
                                 <div class="index-service-title">
                                     <h4>智慧小区管理系统</h4>
@@ -118,7 +118,7 @@
                         <router-link :to="{name:'core',params:{anchor:'prison-naming-system'}}">
                             <div class="index-service">
                                 <div class="index-service-img">
-                                    <img src="/src/images/index/service3.png" alt="监狱点名系统">
+                                    <img src="@/images/index/service3.png" alt="监狱点名系统">
                                 </div>
                                 <div class="index-service-title">
                                     <h4>监狱点名系统</h4>
@@ -134,7 +134,7 @@
                         <router-link :to="{name:'core',params:{anchor:'image-video-compression'}}">
                             <div class="index-service">
                                 <div class="index-service-img">
-                                    <img src="/src/images/index/service4.png" alt="高倍率图像/视频无损压缩系统">
+                                    <img src="@/images/index/service4.png" alt="高倍率图像/视频无损压缩系统">
                                 </div>
                                 <div class="index-service-title">
                                     <h4>高倍率图像/视频无损压缩系统</h4>
@@ -172,7 +172,7 @@
                                     <div class="index-demo-inner">
                                         <div class="inner">
                                             <a href="/face" target="_blank">
-                                                <img src="/src/images/index/face.png" alt="人脸识别">
+                                                <img src="@/images/index/face.png" alt="人脸识别">
                                                 <h4>人脸识别</h4>
                                             </a>
                                         </div>
@@ -184,7 +184,7 @@
                                     <div class="index-demo-inner">
                                         <div class="inner">
                                             <a href="/img-compress" target="_blank">
-                                                <img src="/src/images/index/img-comparison.png" alt="图片压缩">
+                                                <img src="@/images/index/img-comparison.png" alt="图片压缩">
                                                 <h4>图片压缩</h4>
                                             </a>
                                         </div>
@@ -195,7 +195,7 @@
                                 <div class="index-demo">
                                     <div class="index-demo-inner">
                                         <div class="inner">
-                                            <img src="/src/images/index/more.png">
+                                            <img src="@/images/index/more.png">
                                             <h4>More&nbsp;&gt;&gt;</h4>
                                         </div>
                                     </div>
@@ -226,11 +226,11 @@
                         <Row class="main-width">
                             <Col span="16">
                                 <div class="index-news-img">
-                                    <img :src="newsSrc">
+                                    <img :src="news1">
                                 </div>
                             </Col>
                             <Col span="8">
-                                <div class="index-news-box" data-src="/src/images/index/news1.png"
+                                <div class="index-news-box" :data-src="news1"
                                      @mouseenter.stop.prevent="changeImg"
                                      @mouseleave="recoverImg">
                                     <h5><a href="#">2019年3月24日，我司正式入驻地理文化众创空间</a></h5>
@@ -238,7 +238,7 @@
                                         <a href="#">&lt;&lt;查看详情</a>
                                     </p>
                                 </div>
-                                <div class="index-news-box" data-src="/src/images/index/news2.jpg"
+                                <div class="index-news-box" :data-src="news2"
                                      @mouseenter.stop.prevent="changeImg"
                                      @mouseleave="recoverImg">
                                     <h5><a href="#">2019年3月24日，我司正式入驻地理文化众创空间</a></h5>
@@ -246,7 +246,7 @@
                                         <a href="#">&lt;&lt;查看详情</a>
                                     </p>
                                 </div>
-                                <div class="index-news-box" data-src="/src/images/index/news3.jpg"
+                                <div class="index-news-box" :data-src="news3"
                                      @mouseenter.stop.prevent="changeImg"
                                      @mouseleave="recoverImg">
                                     <h5><a href="#">2019年3月24日，我司正式入驻地理文化众创空间</a></h5>
@@ -290,7 +290,7 @@
                             </Col>
                             <Col span="12">
                                 <div class="index-about-img">
-                                    <img src="/src/images/index/about.png" alt="">
+                                    <img src="@/images/index/about.png" alt="">
                                 </div>
                             </Col>
                         </Row>
@@ -307,12 +307,18 @@
 </template>
 <script>
 
+    // 编译后, 变量是动态的不知道图片地址中@代表什么, 因此需要先在此import
+    import news1 from '@/images/index/news1.png';
+    import news2 from '@/images/index/news2.jpg';
+    import news3 from '@/images/index/news3.jpg';
     export default {
         data() {
             return {
                 carousel: 0,
-                defaultSrc: '/src/images/index/news1.png',
-                newsSrc: '/src/images/index/news1.png'
+                newsSrc: news1,
+                news1: news1,
+                news2: news2,
+                news3: news3,
             }
         },
         methods: {
@@ -321,7 +327,7 @@
                 this.newsSrc = e.target.dataset.src
             },
             recoverImg() {
-                this.newsSrc = this.defaultSrc
+                this.newsSrc = this.news1
             }
         }
     }
@@ -388,7 +394,7 @@
                         float: left;
                         width: 50%;
                         &:before {
-                            content: url("/src/images/index/square.png");
+                            content: url("~@/images/index/square.png");
                             position: relative;
                             top: 4px;
                             margin-right: 15px;
@@ -452,7 +458,7 @@
         }
         // 在线演示
         .index-demos {
-            background: url("/src/images/index/demos.png") 0 e('/') 100% no-repeat;
+            background: url("~@/images/index/demos.png") 0 e('/') 100% no-repeat;
             .index-demos-box {
                 height: 650px;
                 display: flex;
@@ -469,7 +475,7 @@
             .index-demo {
                 width: 100%;
                 height: 100%;
-                background: url('/src/images/index/demo1.png') 0 e('/') 100% no-repeat;
+                background: url('~@/images/index/demo1.png') 0 e('/') 100% no-repeat;
                 transform: translate(30px, 30px);
                 &:hover {
                     background: linear-gradient(135deg, rgb(0, 255, 255) 0%, rgb(4, 190, 253) 100%);

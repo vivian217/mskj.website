@@ -2,7 +2,7 @@
     <div class="core white-masking main-width">
         <div class="core-banner">
             <h2>
-                <img src="/src/images/core/target.png" alt="">
+                <img src="@/images/core/target.png" alt="">
                 <span>核心业务</span>
             </h2>
             <div class="core-banner-line"></div>
@@ -72,7 +72,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background: url("/src/images/core/coreBanner.png") 0 e('/') 100% no-repeat;
+            background: url("~@/images/core/coreBanner.png") 0 e('/') 100% no-repeat;
             h2 {
                 color: @color-active;
                 font-size: 40px;
@@ -169,7 +169,7 @@
         li {
             margin: 15px 0;
             &:before {
-                content: url("/src/images/core/point.png");
+                content: url("~@/images/core/point.png");
                 margin: 0 5px;
             }
         }
