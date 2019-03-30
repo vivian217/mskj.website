@@ -26,7 +26,7 @@
         </Row>
         <Row>
             <Col>
-                <Row type="flex" justify="space-around">
+                <Row class="core-content">
                     <Col span="11">
                         <div class="core-weakness core-weakness-left">
                             <div class="text text-right">
@@ -38,7 +38,7 @@
                             </div>
                         </div>
                     </Col>
-                    <Col span="11">
+                    <Col span="11" offset="2">
                         <div class="core-weakness core-weakness-right">
                             <div class="img">
                                 <img src="@/images/core/prisonWeakness2.png" alt="智慧监狱点名系统">
@@ -50,7 +50,7 @@
                         </div>
                     </Col>
                 </Row>
-                <Row type="flex" justify="space-around">
+                <Row class="core-content">
                     <Col span="11">
                         <div class="core-weakness core-weakness-left">
                             <div class="text text-right">
@@ -62,7 +62,7 @@
                             </div>
                         </div>
                     </Col>
-                    <Col span="11">
+                    <Col span="11" offset="2">
                         <div class="core-weakness core-weakness-right">
                             <div class="img">
                                 <img src="@/images/core/prisonWeakness4.png" alt="智慧监狱点名系统">
@@ -81,7 +81,7 @@
                 <div class="core-title">功能简介</div>
             </Col>
         </Row>
-        <Row type="flex" justify="center" align="middle">
+        <Row class="core-content">
             <Col span="5">
                 <div class="core-card">
                     <div class="core-card-title">
@@ -114,7 +114,7 @@
             <Col span="3">
                 <img src="@/images/core/rightLine.png" alt="智慧监狱点名系统">
             </Col>
-            <Col span="14">
+            <Col span="16">
                 <div class="core-img">
                     <img src="@/images/core/prisonNamingSystem.png" alt="智慧监狱点名系统">
                 </div>
@@ -125,21 +125,27 @@
                 <div class="core-title">产品优势</div>
             </Col>
         </Row>
-        <Row>
-            <Col span="12">
+        <Row class="core-content">
+            <Col span="11">
                 <div class="core-advantage">
                     <div class="img">
-                        <img src="/src/images" alt="智慧监狱点名系统">
+                        <img src="@/images/core/prisonAdvantage1.png" alt="智慧监狱点名系统">
+                        <div class="innerText">
+                            精准识别
+                        </div>
                     </div>
                     <div class="text">
                         本系统充分利用人工智能技术，在摄像头逆光、有严重遮挡物、角度高度均不理想情况下，做到100% 完成监舍点名任务，做到不漏报、不误报。
                     </div>
                 </div>
             </Col>
-            <Col span="12">
+            <Col span="11" offset="2">
                 <div class="core-advantage">
                     <div class="img">
-                        <img src="/src/images" alt="智慧监狱点名系统">
+                        <img src="@/images/core/prisonAdvantage2.png" alt="智慧监狱点名系统">
+                        <div class="innerText">
+                            速度快
+                        </div>
                     </div>
                     <div class="text">
                         点名速度快，每个监舍平均不超过2分钟就能完成点名，且各监舍可同时点名。
@@ -152,7 +158,7 @@
                 <div class="core-title">应用领域</div>
             </Col>
         </Row>
-        <Row class="core-applications">
+        <Row class="core-applications core-content">
             <Col span="8" offset="2">
                 <div class="application">
                     <div class="title">
@@ -179,7 +185,7 @@
 <style lang="less">
     .prison-naming-system {
         .core-img {
-            height: 350px;
+            height: 390px;
         }
     }
 </style>

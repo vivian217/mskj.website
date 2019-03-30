@@ -29,7 +29,7 @@
         </Row>
         <Row>
             <Col>
-                <Row type="flex" justify="space-around">
+                <Row class="core-content">
                     <Col span="11">
                         <div class="core-weakness core-weakness-left">
                             <div class="text text-right">
@@ -41,7 +41,7 @@
                             </div>
                         </div>
                     </Col>
-                    <Col span="11">
+                    <Col span="11" offset="2">
                         <div class="core-weakness core-weakness-right">
                             <div class="img">
                                 <img src="@/images/core/imageVideoWeakness2.png" alt="高倍率图像/视频无损压缩系统">
@@ -53,7 +53,7 @@
                         </div>
                     </Col>
                 </Row>
-                <Row type="flex" justify="space-around">
+                <Row class="core-content">
                     <Col span="11">
                         <div class="core-weakness core-weakness-left">
                             <div class="text text-right">
@@ -65,7 +65,7 @@
                             </div>
                         </div>
                     </Col>
-                    <Col span="11">
+                    <Col span="11" offset="2">
                         <div class="core-weakness core-weakness-right">
                             <div class="img">
                                 <img src="@/images/core/imageVideoWeakness1.png" alt="高倍率图像/视频无损压缩系统">
@@ -134,7 +134,7 @@
                 <div class="core-title">应用领域</div>
             </Col>
         </Row>
-        <Row class="core-applications">
+        <Row class="core-applications core-content">
             <Col>
                 <Row type="flex" justify="space-around">
                     <Col span="5">
@@ -202,7 +202,7 @@
 <style lang="less">
     .image-video-compression-system {
         .core-img {
-            height: 350px;
+            height: 375px;
         }
     }
 </style>

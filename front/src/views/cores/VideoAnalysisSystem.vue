@@ -137,7 +137,7 @@
                 <div class="core-title">应用领域</div>
             </Col>
         </Row>
-        <Row class="core-applications">
+        <Row class="core-applications core-content">
             <Col span="8" offset="2">
                 <div class="application">
                     <div class="title">

@@ -117,6 +117,12 @@
             border-radius: 10px;
             font-size: 16px;
         }
+        .core-content {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+        }
         .core-text {
             line-height: 2em;
             font-size: 14px;
@@ -127,20 +133,6 @@
             text-align: center;
             display: flex;
             align-items: center;
-        }
-        .ivu-card {
-            background: none;
-            border-color: @color-hover;
-            .ivu-card-head {
-                text-align: center;
-                border-bottom-color: @color-hover;
-            }
-            &:hover {
-                border-color: @color-hover;
-            }
-            img {
-                width: 45px;
-            }
         }
         .core-card {
             border: 1px solid @color-hover;
@@ -167,8 +159,6 @@
             }
         }
         .core-applications {
-            width: 90%;
-            margin: auto;
             border: 1px solid @color-active;
             border-radius: 10px;
             .application {
@@ -233,20 +223,31 @@
             border-top-left-radius: 90px;
             border-bottom-left-radius: 90px;
         }
-        .core-advantage{
+        .core-advantage {
+            padding: 20px;
             border-radius: 20px;
             border: 1px dashed @color-hover;
             display: flex;
             align-items: center;
             justify-content: space-around;
-            .ing{
-                width: 40%;
+            .img {
+                position: relative;
+                .innerText {
+                    width: 100%;
+                    text-align: center;
+                    color: @color-active;
+                    font-size: 20px;
+                    position: absolute;
+                    top: 50%;
+                    margin-top: -10px;
+                }
             }
-            .text{
+            .text {
                 width: 50%;
             }
-            &:hover{
-                background:linear-gradient(0deg,rgba(64,150,230,1) 0%,rgba(0,252,255,1) 100%,rgba(64,150,230,1) 100%,rgba(1,250,255,1) 100%);
+            &:hover {
+                background: linear-gradient(0deg, rgba(64, 150, 230, 1) 0%, rgba(0, 252, 255, 1) 100%, rgba(64, 150, 230, 1) 100%, rgba(1, 250, 255, 1) 100%);
+                color: #fff;
             }
         }
     }
