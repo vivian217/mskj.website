@@ -213,27 +213,25 @@
             justify-content: space-between;
             position: relative;
             .loading-box {
-                width: 320px;
-                height: 320px;
+                width: 280px;
+                height: 280px;
                 .ivu-btn {
                     background: transparent;
                     border: none;
                     color: #93fcfc;
                     font-size: 30px;
                     z-index: 20;
-                    left: 85px;
+                    left: 65px;
                     &:focus {
                         box-shadow: none;
                     }
                 }
-
             }
             .after-comparison {
                 position: absolute;
                 left: 0;
                 right: 0;
                 margin: 0 auto;
-                bottom: -30px;
             }
         }
     }

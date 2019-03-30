@@ -90,7 +90,7 @@
         }
         // 比对之后结果显示
         .after-comparison {
-            width: 350px;
+            width: 280px;
             padding: 10px;
             margin-left: 20px;
             border: 2px solid rgba(0, 216, 255, 0.45);
@@ -106,6 +106,13 @@
                 text-align: center;
                 font-size: 18px;
                 color: #02edef;
+                background: url("~@/images/resultTitle.png") bottom center no-repeat;
+            }
+            .detail {
+                font-size: 14px;
+                p {
+                    padding: 5px 20px;
+                }
             }
         }
     }
