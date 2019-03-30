@@ -18,7 +18,7 @@
             </Col>
             <Col span="8">
                 <div class="core-img">
-                    <img src="/src/images/core/imageVideo.jpg" alt="高倍率图像/视频无损压缩系统">
+                    <img src="@/images/core/imageVideo.jpg" alt="高倍率图像/视频无损压缩系统">
                 </div>
             </Col>
         </Row>
@@ -37,14 +37,14 @@
                                 <p>市场普遍的压缩技术不具备较强兼容性，无论是硬件兼容还是软件系统兼容，都存在很大的问题，压缩格式相对较少，压缩市场有局限性</p>
                             </div>
                             <div class="img">
-                                <img src="/src/images/core/imageVideoWeakness1.png" alt="高倍率图像/视频无损压缩系统">
+                                <img src="@/images/core/imageVideoWeakness1.png" alt="高倍率图像/视频无损压缩系统">
                             </div>
                         </div>
                     </Col>
                     <Col span="11">
                         <div class="core-weakness core-weakness-right">
                             <div class="img">
-                                <img src="/src/images/core/imageVideoWeakness2.png" alt="高倍率图像/视频无损压缩系统">
+                                <img src="@/images/core/imageVideoWeakness2.png" alt="高倍率图像/视频无损压缩系统">
                             </div>
                             <div class="text">
                                 <h5>压缩比率低</h5>
@@ -61,14 +61,14 @@
                                 <p>目前而言，国内压缩技术分很多种类，市场需求技术得不到统一，造成压缩市场混乱，用户经济流失，从而成本费用增高，产生成本浪费</p>
                             </div>
                             <div class="img">
-                                <img src="/src/images/core/imageVideoWeakness3.png" alt="高倍率图像/视频无损压缩系统">
+                                <img src="@/images/core/imageVideoWeakness3.png" alt="高倍率图像/视频无损压缩系统">
                             </div>
                         </div>
                     </Col>
                     <Col span="11">
                         <div class="core-weakness core-weakness-right">
                             <div class="img">
-                                <img src="/src/images/core/imageVideoWeakness1.png" alt="高倍率图像/视频无损压缩系统">
+                                <img src="@/images/core/imageVideoWeakness1.png" alt="高倍率图像/视频无损压缩系统">
                             </div>
                             <div class="text">
                                 <h5>技术相对于落后</h5>
@@ -88,7 +88,7 @@
             <Col span="5">
                 <Card>
                     <div slot="title">
-                        <img src="/src/images/core/face.png" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                        <img src="@/images/core/face.png" alt="无感知智慧社区/办公/楼宇安全卫士系统">
                         <span>图片/视频压缩</span>
                     </div>
                     <ul>
@@ -100,24 +100,24 @@
                 </Card>
             </Col>
             <Col span="3">
-                <img src="/src/images/core/rightLine.png" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                <img src="@/images/core/rightLine.png" alt="无感知智慧社区/办公/楼宇安全卫士系统">
             </Col>
             <Col span="14">
                 <div class="core-img">
-                    <img src="/src/images/core/imageVideoSystem.png" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                    <img src="@/images/core/imageVideoSystem.png" alt="无感知智慧社区/办公/楼宇安全卫士系统">
                 </div>
             </Col>
         </Row>
         <Row type="flex" justify="center" align="middle" style="margin-top: 20px">
             <Col span="15">
                 <div class="core-img">
-                    <img src="/src/images/core/imageVideoSystem2.png" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                    <img src="@/images/core/imageVideoSystem2.png" alt="无感知智慧社区/办公/楼宇安全卫士系统">
                 </div>
             </Col>
             <Col span="5">
                 <Card>
                     <div slot="title">
-                        <img src="/src/images/core/face.png" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                        <img src="@/images/core/face.png" alt="无感知智慧社区/办公/楼宇安全卫士系统">
                         <span>图片/视频压缩</span>
                     </div>
                     <ul>
@@ -139,25 +139,25 @@
                 <Row type="flex" justify="space-around">
                     <Col span="5">
                         <div class="application">
-                            <img src="/src/images/core/app-community.jpg" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                            <img src="@/images/core/app-community.jpg" alt="无感知智慧社区/办公/楼宇安全卫士系统">
                             <div class="title"><span>--</span>图书档案<span>--</span></div>
                         </div>
                     </Col>
                     <Col span="5">
                         <div class="application">
-                            <img src="/src/images/core/app-community.jpg" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                            <img src="@/images/core/app-community.jpg" alt="无感知智慧社区/办公/楼宇安全卫士系统">
                             <div class="title"><span>--</span>安防监控<span>--</span></div>
                         </div>
                     </Col>
                     <Col span="5">
                         <div class="application">
-                            <img src="/src/images/core/app-community.jpg" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                            <img src="@/images/core/app-community.jpg" alt="无感知智慧社区/办公/楼宇安全卫士系统">
                             <div class="title"><span>--</span>医学成像<span>--</span></div>
                         </div>
                     </Col>
                     <Col span="5">
                         <div class="application">
-                            <img src="/src/images/core/app-community.jpg" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                            <img src="@/images/core/app-community.jpg" alt="无感知智慧社区/办公/楼宇安全卫士系统">
                             <div class="title"><span>--</span>地理信息<span>--</span></div>
                         </div>
                     </Col>
@@ -165,25 +165,25 @@
                 <Row type="flex" justify="space-around">
                     <Col span="5">
                         <div class="application">
-                            <img src="/src/images/core/app-community.jpg" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                            <img src="@/images/core/app-community.jpg" alt="无感知智慧社区/办公/楼宇安全卫士系统">
                             <div class="title"><span>--</span>遥感影像<span>--</span></div>
                         </div>
                     </Col>
                     <Col span="5">
                         <div class="application">
-                            <img src="/src/images/core/app-community.jpg" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                            <img src="@/images/core/app-community.jpg" alt="无感知智慧社区/办公/楼宇安全卫士系统">
                             <div class="title"><span>--</span>矿产勘探<span>--</span></div>
                         </div>
                     </Col>
                     <Col span="5">
                         <div class="application">
-                            <img src="/src/images/core/app-community.jpg" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                            <img src="@/images/core/app-community.jpg" alt="无感知智慧社区/办公/楼宇安全卫士系统">
                             <div class="title"><span>--</span>国防军事<span>--</span></div>
                         </div>
                     </Col>
                     <Col span="5">
                         <div class="application">
-                            <img src="/src/images/core/app-community.jpg" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                            <img src="@/images/core/app-community.jpg" alt="无感知智慧社区/办公/楼宇安全卫士系统">
                             <div class="title"><span>--</span>建筑设计<span>--</span></div>
                         </div>
                     </Col>

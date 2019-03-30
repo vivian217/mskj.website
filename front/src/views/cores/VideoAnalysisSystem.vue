@@ -13,7 +13,7 @@
             </Col>
             <Col span="8">
                 <div class="core-img">
-                    <img src="/src/images/core/videoAnalysis.png" alt="视频实时分析系统">
+                    <img src="@/images/core/videoAnalysis.png" alt="视频实时分析系统">
                 </div>
             </Col>
         </Row>
@@ -25,16 +25,16 @@
         <Row type="flex" justify="center" align="middle">
             <Col span="6">
                 <div class="core-img">
-                    <img src="/src/images/core/faceRecognition.png" alt="人脸识别">
+                    <img src="@/images/core/faceRecognition.png" alt="人脸识别">
                 </div>
             </Col>
             <Col span="1" offset="2">
-                <img src="/src/images/core/arrow.png" alt="人脸识别">
+                <img src="@/images/core/arrow.png" alt="人脸识别">
             </Col>
             <Col span="5" offset="2">
                 <Card>
                     <div slot="title">
-                        <img src="/src/images/core/face.png" alt="人脸识别">
+                        <img src="@/images/core/face.png" alt="人脸识别">
                         <span>人脸识别</span>
                     </div>
                     <p>智能识别人脸及人身特征，衣物颜色、背包、眼镜等</p>
@@ -45,7 +45,7 @@
             <Col span="5" offset="4">
                 <Card>
                     <div slot="title">
-                        <img src="/src/images/core/car.png" alt="车辆识别">
+                        <img src="@/images/core/car.png" alt="车辆识别">
                         <span>车辆识别</span>
                     </div>
                     <p>智能识别车辆</p>
@@ -57,22 +57,22 @@
                 </Card>
             </Col>
             <Col>
-                <img src="/src/images/core/rightLine.png" alt="车辆识别">
+                <img src="@/images/core/rightLine.png" alt="车辆识别">
             </Col>
         </Row>
         <Row type="flex" justify="center" align="middle">
             <Col span="9" offset="2">
                 <div class="core-img">
-                    <img src="/src/images/core/trajectory.png" alt="轨迹分析">
+                    <img src="@/images/core/trajectory.png" alt="轨迹分析">
                 </div>
             </Col>
             <Col span="3">
-                <img src="/src/images/core/leftLine.png" alt="轨迹分析">
+                <img src="@/images/core/leftLine.png" alt="轨迹分析">
             </Col>
             <Col span="5">
                 <Card>
                     <div slot="title">
-                        <img src="/src/images/core/trajectoryAnalysis.png" alt="轨迹分析">
+                        <img src="@/images/core/trajectoryAnalysis.png" alt="轨迹分析">
                         <span>轨迹分析</span>
                     </div>
                     <p>智能识别人脸及人身特征，衣物颜色、背包、眼镜等</p>
@@ -149,7 +149,7 @@
                 </div>
             </Col>
             <Col span="12" offset="2">
-                <img src="/src/images/core/coreApplication1.png" alt="视频实时分析系统">
+                <img src="@/images/core/coreApplication1.png" alt="视频实时分析系统">
             </Col>
         </Row>
     </div>
@@ -165,7 +165,7 @@
     .video-analysis-system {
         .core-car {
             height: 428px;
-            background: url("/src/images/core/carRecongnition.png") 0 e('/') 100% no-repeat;
+            background: url("~@/images/core/carRecongnition.png") 0 e('/') 100% no-repeat;
         }
         .core-characters {
             width: 100%;
@@ -174,7 +174,7 @@
             .char-key-point {
                 width: 72px;
                 height: 60px;
-                background: url("/src/images/core/coreChars.png") 0 e('/') 100% no-repeat;
+                background: url("~@/images/core/coreChars.png") 0 e('/') 100% no-repeat;
                 text-align: center;
                 line-height: 60px;
                 font-size: 20px;

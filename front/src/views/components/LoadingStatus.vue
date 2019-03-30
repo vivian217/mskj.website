@@ -41,7 +41,7 @@
         .loading-border {
             width: 68%;
             height: 68%;
-            background: url("/src/images/loading.png") 0 0 e('/') 100% 100% no-repeat;
+            background: url("~@/images/loading.png") 0 0 e('/') 100% 100% no-repeat;
         }
         .inner-halo {
             width: 50%;

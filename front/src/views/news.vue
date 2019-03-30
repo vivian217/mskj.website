@@ -12,7 +12,7 @@
             </Col>
             <Col span="10">
                 <div class="news-img">
-                    <img src="/src/images/news/news1.png" alt="">
+                    <img src="@/images/news/news1.png" alt="">
                 </div>
             </Col>
         </Row>
@@ -28,7 +28,7 @@
             </Col>
             <Col span="10">
                 <div class="news-img">
-                    <img src="/src/images/news/news2.jpg" alt="">
+                    <img src="@/images/news/news2.jpg" alt="">
                 </div>
             </Col>
         </Row>
@@ -44,7 +44,7 @@
             </Col>
             <Col span="10">
                 <div class="news-img">
-                    <img src="/src/images/news/news3.jpg" alt="">
+                    <img src="@/images/news/news3.jpg" alt="">
                 </div>
             </Col>
         </Row>
