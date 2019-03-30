@@ -1,0 +1,41 @@
+#!/bin/bash
+
+WORKSPACE=$(cd $(dirname $0)/; pwd)
+cd $WORKSPACE
+
+module=$(basename $WORKSPACE)
+
+ls_date=$(date +%Y-%m-%d)
+company=孟山科技
+app=$ls_date日$company官网
+
+function help() {
+    echo "$0 build|pack"
+}
+
+function build() {
+    cd $WORKSPACE/front
+    ./build.sh
+    if [ $? -ne 0 ]; then
+        echo "build front error"
+        exit $?
+    fi
+    echo "系统构建完成"
+}
+
+function pack() {
+    build
+    cd $WORKSPACE
+    git log -1 --pretty=%h > gitversion
+    file_list="static control service.zip gitversion"
+    echo "...zip $app.zip <= $file_list"
+    zip -r $app.zip $file_list
+}
+
+if [ "$1" == "build" ];then
+    build
+elif [ "$1" == "pack" ];then
+    pack
+else
+    help
+fi
