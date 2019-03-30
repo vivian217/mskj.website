@@ -131,7 +131,7 @@
                         </router-link>
                     </Col>
                     <Col span="6">
-                        <a href="/core">
+                        <router-link :to="{name:'core',params:{anchor:'image-video-compression'}}">
                             <div class="index-service">
                                 <div class="index-service-img">
                                     <img src="/src/images/index/service4.png" alt="高倍率图像/视频无损压缩系统">
@@ -144,7 +144,7 @@
                                     针对目前主流格式的图像/视频进行二次压缩，在不降低人眼视觉质量的v前提下，实现对多种视频流和图像文件的实时、高倍率压缩，节省了存储空间和投资成本。
                                 </div>
                             </div>
-                        </a>
+                        </router-link>
                     </Col>
                 </Row>
             </Col>
@@ -172,8 +172,8 @@
                                     <div class="index-demo-inner">
                                         <div class="inner">
                                             <a href="/face" target="_blank">
-                                                <img src="/src/images/index/img-comparison.png" alt="图片压缩">
-                                                <h4>图片压缩</h4>
+                                                <img src="/src/images/index/face.png" alt="人脸识别">
+                                                <h4>人脸识别</h4>
                                             </a>
                                         </div>
                                     </div>
@@ -184,7 +184,7 @@
                                     <div class="index-demo-inner">
                                         <div class="inner">
                                             <a href="/img-compress" target="_blank">
-                                                <img src="/src/images/index/face.png" alt="人脸识别">
+                                                <img src="/src/images/index/img-comparison.png" alt="图片压缩">
                                                 <h4>图片压缩</h4>
                                             </a>
                                         </div>
