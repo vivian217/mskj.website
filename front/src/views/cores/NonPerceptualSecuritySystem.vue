@@ -71,9 +71,101 @@
                 <div class="core-title">解决方案</div>
             </Col>
         </Row>
-        <Row type="flex" justify="space-around" align="middle">
-            <Col>
-                <img src="@/images/core/intelligentCommunity.png" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+        <Row class="solution">
+            <Col class="core-content">
+                <div style="width: 100%">
+                    <div class="solution-process">
+                        <div class="process-item">
+                            <div class="process-point">
+                                <img src="@/images/core/face.png" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                                <p>人脸门禁</p>
+                            </div>
+                            <div class="process-detail">
+                                <p>业主人脸识别</p>
+                                <p>无感知进入</p>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="@/images/core/arrowRight.png" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                        </div>
+                        <div class="process-item">
+                            <div class="process-point">
+                                <img src="@/images/core/authorize.png" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                                <p>访客授权</p>
+                            </div>
+                            <div class="process-detail">
+                                <p>访客身份登记</p>
+                                <p>限时出入，轨迹记录</p>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="@/images/core/arrowRight.png" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                        </div>
+                        <div class="process-item">
+                            <div class="process-point">
+                                <img src="@/images/core/alarm.png" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                                <p>实时告警</p>
+                            </div>
+                            <div class="process-detail">
+                                <p>可疑人物，异常进入</p>
+                                <p>主动预警，实时报警</p>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="@/images/core/arrowRight.png" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                        </div>
+                        <div class="process-item">
+                            <div class="process-point">
+                                <img src="@/images/core/trajectoryAnalysis.png" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                                <p>轨迹追踪</p>
+                            </div>
+                            <div class="process-detail">
+                                <p>实时告警轨迹分析</p>
+                                <p>以图搜人，查询历史轨迹</p>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="@/images/core/arrowRight.png" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                        </div>
+                        <div class="process-item">
+                            <div class="process-point">
+                                <img src="@/images/core/data.png" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                                <p>大数据分析</p>
+                            </div>
+                            <div class="process-detail">
+                                <p>记录历史核心数据</p>
+                                <p>大数据分析</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="solution-system">
+                        <img src="@/images/core/intelligentCommunity.png" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                        <div class="system-detail" style="top: 0;">
+                            <div class="core-card">
+                                <div class="core-card-title">人流量统计</div>
+                                <p>异常人员告警统计</p>
+                            </div>
+                        </div>
+                        <div class="system-detail" style="top: 0;right: 0;">
+                            <div class="core-card">
+                                <div class="core-card-title">告警列表</div>
+                                <p>实时弹出告警人员列表详情</p>
+                            </div>
+                        </div>
+                        <div class="system-detail" style="top: 190px;">
+                            <div class="core-card">
+                                <div class="core-card-title">流量热力图</div>
+                                <p>反映人流量大小及告警高频区域</p>
+                            </div>
+                        </div>
+                        <div class="system-detail" style="right: 0;top: 190px;">
+                            <div class="core-card">
+                                <div class="core-card-title">小区数据</div>
+                                <p>男女比例、年龄分布、房屋空置率</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </Col>
         </Row>
         <Row>
@@ -81,7 +173,7 @@
                 <div class="core-title">应用领域</div>
             </Col>
         </Row>
-        <Row class="core-applications">
+        <Row class="core-applications core-content">
             <Col>
                 <Row type="flex" justify="space-around">
                     <Col span="5">
@@ -125,8 +217,43 @@
         .core-img {
             margin: 20px 0;
         }
-        .application {
-
+        .solution {
+            background: url("~@/images/core/communitySolutionBg.png") 0 e('/') 100% no-repeat;
+            .solution-process {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 40px 20px;
+            }
+            .process-point{
+                width: 120px;
+                height: 120px;
+                background: url("~@/images/core/solutionBg.png") 0 e('/') 100% no-repeat;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                img{
+                    width: 35px;
+                }
+                p{
+                    font-size: 16px;
+                }
+            }
+            .process-detail {
+                text-align: center;
+            }
+            .solution-system {
+                text-align: center;
+                position: relative;
+                img {
+                    width: 750px;
+                }
+                .system-detail {
+                    position: absolute;
+                    width: 165px;
+                }
+            }
         }
     }
 </style>

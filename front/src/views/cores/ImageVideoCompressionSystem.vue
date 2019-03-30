@@ -68,7 +68,7 @@
                     <Col span="11" offset="2">
                         <div class="core-weakness core-weakness-right">
                             <div class="img">
-                                <img src="@/images/core/imageVideoWeakness1.png" alt="高倍率图像/视频无损压缩系统">
+                                <img src="@/images/core/imageVideoWeakness4.png" alt="高倍率图像/视频无损压缩系统">
                             </div>
                             <div class="text">
                                 <h5>技术相对于落后</h5>

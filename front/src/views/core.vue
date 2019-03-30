@@ -130,9 +130,9 @@
         }
         .core-img {
             height: 300px;
-            text-align: center;
             display: flex;
             align-items: center;
+            justify-content: center;
         }
         .core-card {
             border: 1px solid @color-hover;
