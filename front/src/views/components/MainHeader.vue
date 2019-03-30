@@ -2,7 +2,7 @@
     <div class="main-header">
         <header>
             <div class="logo">
-                <img src="/src/images/logo.png" alt="">
+                <img src="@/images/logo.png" alt="">
             </div>
             <Menu ref="top-menu" mode="horizontal" :active-name="$route.name">
                 <MenuItem name="index" to="index">首页</MenuItem>
