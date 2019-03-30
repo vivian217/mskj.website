@@ -46,14 +46,14 @@ module.exports = {
 
   build: {
     // Template for index.html
-    index: path.resolve(__dirname, '../dist/index.html'),
+    index: path.resolve(__dirname, '../../static/index.html'),
 
     // Paths
-    assetsRoot: path.resolve(__dirname, '../dist'),
+    assetsRoot: path.resolve(__dirname, '../../static/dist'),
     // 是否需要生成子目录
-    assetsSubDirectory: 'static',
+    assetsSubDirectory: '',
     // 静态资源访问时URL前缀
-    assetsPublicPath: '',
+    assetsPublicPath: '/dist/',
 
     /**
      * Source Maps
