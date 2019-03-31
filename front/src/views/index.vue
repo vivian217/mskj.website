@@ -226,7 +226,7 @@
                         <Row class="main-width">
                             <Col span="16">
                                 <div class="index-news-img">
-                                    <img :src="news1">
+                                    <img :src="newsSrc">
                                 </div>
                             </Col>
                             <Col span="8">
