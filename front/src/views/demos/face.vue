@@ -8,7 +8,8 @@
                                @fileChange="sourceChange"
                                :progress="false"
                                :url="uploadUrl"
-                               :format="['jpg','jpeg','tif']"></pr-upload>
+                               :maxSize="maxSize"
+                               :format="['jpg','jpeg']"></pr-upload>
                     <pr-image-responsive v-if="showSource"
                                          :preview="true"
                                          :url="source['preview']"/>
@@ -24,7 +25,8 @@
                                @fileChange="targetChange"
                                :progress="false"
                                :url="uploadUrl"
-                               :format="['jpg','jpeg','tif']"></pr-upload>
+                               :maxSize="maxSize"
+                               :format="['jpg','jpeg']"></pr-upload>
                     <pr-image-responsive v-if="showTarget"
                                          :preview="true"
                                          :url="target['preview']"/>
@@ -47,8 +49,8 @@
             </div>-->
         </div>
         <div class="prompt">
-            <p>* 上传两张人脸图片，每张大小不超过5M，保证露出五官，提高对比精度。</p>
-            <p>* 图片只支持jpg、jpeg、tif 格式</p>
+            <p>* 上传两张人脸图片，建议每张大小不超过5M，保证露出五官，提高对比精度。</p>
+            <p>* 图片只支持jpg、jpeg格式</p>
         </div>
     </div>
 </template>
@@ -69,6 +71,10 @@
         },
         data() {
             return {
+                // 是否可用
+                disabled: true,
+                // 文件大小
+                maxSize: 102400,
                 uploadUrl: 'http://192.168.1.158:10010/api/v1/upload/file',
                 compareUrl: 'http://192.168.1.158:10010/api/v1/compare',
                 showSource: false,
@@ -109,17 +115,25 @@
             },
             // 开始比对
             doCompare() {
+                if (this.disabled) {
+                  this.$Message.error({
+                    content: '比对服务未开启, 请检查系统配置',
+                    duration: 3,
+                    closable: true
+                  });
+                  return
+                }
                 if (!this.source['preview'] || this.source['preview'] === '') {
                     this.$Message.error({
                         content: '请选择源文件',
-                        duration: 10,
+                        duration: 3,
                         closable: true
                     });
                     return
                 } else if (!this.target['preview'] || this.target['preview'] === '') {
                     this.$Message.error({
-                        content: '请选择目标文件 ',
-                        duration: 10,
+                        content: '请选择目标文件',
+                        duration: 3,
                         closable: true
                     });
                     return
@@ -133,13 +147,61 @@
                         target: this.target['uuid'],
                     }
                 }).then(resp => {
-                    let dataRes = resp['data'];
-                    if (dataRes && dataRes['code'] === 200) {
-                        console.log(dataRes['data']);
-                        this.loadingText = Math.ceil(dataRes['data']['similarity']) + '%<br>相似度'
+                  let dataRes = resp['data'];
+                  if (dataRes) {
+                    if (dataRes['code'] === 200) {
+                      this.loadingText = Math.ceil(dataRes['data']['similarity']) + '%<br>相似度'
+                    } else if (dataRes['code'] === 400 || dataRes['code'] === 500) {
+                      this.$Message.error({
+                        content: dataRes['msg'],
+                        duration: 3,
+                        closable: true
+                      });
                     }
+                    this.loadingText = '比对失败';
+                  } else {
+                    this.$Message.error({
+                      content: '网络错误',
+                      duration: 3,
+                      closable: true
+                    });
+                    this.loadingText = '比对失败';
+                  }
+                }).catch((error) => {
+                  const response = error['response'];
+                  const message = error['message'];
+                  if (message === 'Network Error') {
+                    this.$Message.error({
+                      content: '网络错误',
+                      duration: 3,
+                      closable: true
+                    });
+                  } else if (response) {
+                    let dataRes = response['data'];
+                    if (dataRes && (dataRes['code'] === 400 || dataRes['code'] === 500)) {
+                      this.$Message.error({
+                        content: dataRes['msg'],
+                        duration: 3,
+                        closable: true
+                      });
+                    }
+                  }
+                  this.loadingText = '比对失败';
                 });
             }
+        },
+        created() {
+          axios({
+            url: this.compareUrl,
+          }).catch((error) => {
+            const response = error['response'];
+            const message = error['message'];
+            if (message === 'Network Error') {
+              console.error('比对服务初始化失败, 请检查配置');
+            } else if (response) {
+              this.disabled = false;
+            }
+          });
         }
     }
 </script>

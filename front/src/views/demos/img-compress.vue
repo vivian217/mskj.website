@@ -8,7 +8,8 @@
                                @fileChange="sourceChange"
                                :progress="false"
                                :url="uploadUrl"
-                               :format="['jpg','jpeg','tif','tif']"></pr-upload>
+                               :maxSize="maxSize"
+                               :format="['jpg','jpeg']"></pr-upload>
                     <pr-image-responsive v-if="showSource"
                                          :preview="true"
                                          :url="source['preview']"/>
@@ -34,8 +35,8 @@
             </div>
         </div>
         <div class="prompt">
-            <p>* 上传两张人脸图片，每张大小不超过5M，保证露出五官，提高对比精度。</p>
-            <p>* 图片只支持jpg、tif 格式</p>
+            <p>* 上传两张人脸图片，建议每张大小不超过5M，保证露出五官，提高对比精度。</p>
+            <p>* 图片只支持jpg、jpeg格式</p>
         </div>
     </div>
 </template>
@@ -56,6 +57,8 @@
         },
         data() {
             return {
+                // 文件大小
+                maxSize: 102400,
                 uploadUrl: 'http://192.168.1.158:10010/api/v1/upload/file',
                 showSource: false,
                 source: {},
@@ -96,6 +99,25 @@
                         this.compress = {};
                         this.showCompress = false;
                     }
+                }).catch((error) => {
+                  const response = error['response'];
+                  const message = error['message'];
+                  if (message === 'Network Error') {
+                    this.$Message.error({
+                      content: '网络错误',
+                      duration: 3,
+                      closable: true
+                    });
+                  } else if (response) {
+                    let dataRes = response['data'];
+                    if (dataRes && (dataRes['code'] === 400 || dataRes['code'] === 500)) {
+                      this.$Message.error({
+                        content: dataRes['msg'],
+                        duration: 3,
+                        closable: true
+                      });
+                    }
+                  }
                 });
             }
         }
