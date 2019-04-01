@@ -34,7 +34,7 @@
             </div>
             <div class="after-comparison" v-show="showCompressResult">
                 <div class="inner">
-                    <p class="title">比对结果</p>
+                    <p class="title">压缩结果</p>
                     <div class="detail">
                         <p v-for="item in compressResult" :key="item.key">
                             {{item.name+'：'+item.value}}
@@ -113,7 +113,7 @@
                 }).then(resp => {
                     let dataRes = resp['data'];
                     if (dataRes && dataRes['code'] === 200) {
-                        console.log(dataRes['data']);
+                        //console.log(dataRes['data']);
                         this.compress = dataRes['data'];
                         this.showCompress = true;
                         this.loadingText = dataRes['data']['compress_ratio'] + '<br>压缩率'
@@ -137,6 +137,7 @@
                     } else {
                         this.compress = {};
                         this.showCompress = false;
+                        this.loadingText = '压缩失败'
                     }
                 }).catch((error) => {
                     const response = error['response'];
@@ -157,6 +158,7 @@
                             });
                         }
                     }
+                    this.loadingText = '压缩失败'
                 });
             }
         }

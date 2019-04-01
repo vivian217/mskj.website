@@ -139,7 +139,7 @@
                     return
                 }
                 // console.log('开始比对');
-                this.loadingText='比对中'
+                this.loadingText = '比对中'
                 axios({
                     url: this.compareUrl,
                     params: {
@@ -147,46 +147,46 @@
                         target: this.target['uuid'],
                     }
                 }).then(resp => {
-                  let dataRes = resp['data'];
-                  if (dataRes) {
-                    if (dataRes['code'] === 200) {
-                      this.loadingText = Math.ceil(dataRes['data']['similarity']) + '%<br>相似度'
-                    } else if (dataRes['code'] === 400 || dataRes['code'] === 500) {
-                      this.$Message.error({
-                        content: dataRes['msg'],
-                        duration: 3,
-                        closable: true
-                      });
+                    let dataRes = resp['data'];
+                    if (dataRes) {
+                        if (dataRes['code'] === 200) {
+                            this.loadingText = Math.ceil(dataRes['data']['similarity']) + '%<br>相似度'
+                        } else if (dataRes['code'] === 400 || dataRes['code'] === 500) {
+                            this.$Message.error({
+                                content: dataRes['msg'],
+                                duration: 3,
+                                closable: true
+                            });
+                            this.loadingText = '比对失败';
+                        }
+                    } else {
+                        this.$Message.error({
+                            content: '网络错误',
+                            duration: 3,
+                            closable: true
+                        });
+                        this.loadingText = '比对失败';
                     }
-                    this.loadingText = '比对失败';
-                  } else {
-                    this.$Message.error({
-                      content: '网络错误',
-                      duration: 3,
-                      closable: true
-                    });
-                    this.loadingText = '比对失败';
-                  }
                 }).catch((error) => {
-                  const response = error['response'];
-                  const message = error['message'];
-                  if (message === 'Network Error') {
-                    this.$Message.error({
-                      content: '网络错误',
-                      duration: 3,
-                      closable: true
-                    });
-                  } else if (response) {
-                    let dataRes = response['data'];
-                    if (dataRes && (dataRes['code'] === 400 || dataRes['code'] === 500)) {
-                      this.$Message.error({
-                        content: dataRes['msg'],
-                        duration: 3,
-                        closable: true
-                      });
+                    const response = error['response'];
+                    const message = error['message'];
+                    if (message === 'Network Error') {
+                        this.$Message.error({
+                            content: '网络错误',
+                            duration: 3,
+                            closable: true
+                        });
+                    } else if (response) {
+                        let dataRes = response['data'];
+                        if (dataRes && (dataRes['code'] === 400 || dataRes['code'] === 500)) {
+                            this.$Message.error({
+                                content: dataRes['msg'],
+                                duration: 3,
+                                closable: true
+                            });
+                        }
                     }
-                  }
-                  this.loadingText = '比对失败';
+                    this.loadingText = '比对失败';
                 });
             }
         },
