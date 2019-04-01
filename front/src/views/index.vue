@@ -92,7 +92,7 @@
                                         <h3>Lossless Image/Video Compression System with High Ratio</h3>
                                         <div class="carousel-desc">
                                             <div class="desc-main">
-                                                针对目前主流格式的图像/视频进行二次压缩，在不降低人眼视觉质量的v前提下，实现对多种视频流和图像文件的实时、高倍率压缩，节省了存储空间和投资成本。
+                                                针对目前主流格式的图像/视频进行二次压缩，在不降低人眼视觉质量的前提下，实现对多种视频流和图像文件的实时、高倍率压缩，节省了存储空间和投资成本。
                                             </div>
                                             <ul class="desc-points">
                                                 <li>图片压缩</li>
@@ -187,7 +187,7 @@
                                     <h5>Lossless Image/Video Compression System with High Ratio</h5>
                                 </div>
                                 <div class="index-service-details">
-                                    针对目前主流格式的图像/视频进行二次压缩，在不降低人眼视觉质量的v前提下，实现对多种视频流和图像文件的实时、高倍率压缩，节省了存储空间和投资成本。
+                                    针对目前主流格式的图像/视频进行二次压缩，在不降低人眼视觉质量的前提下，实现对多种视频流和图像文件的实时、高倍率压缩，节省了存储空间和投资成本。
                                 </div>
                             </div>
                         </router-link>
