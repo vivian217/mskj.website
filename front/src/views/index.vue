@@ -4,8 +4,7 @@
             <Col>
                 <Carousel v-model="carousel"
                           trigger="hover" :radius-dot="true" :height="720"
-                          :autoplay-speed="8000"
-                          loop autoplay>
+                          >
                     <CarouselItem>
                         <router-link :to="{name:'core',params:{anchor:'video-analysis-system'}}">
                             <div class="carousel-box carousel-box1">
