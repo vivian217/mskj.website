@@ -4,94 +4,111 @@
             <Col>
                 <Carousel v-model="carousel"
                           trigger="hover" :radius-dot="true" :height="720"
+                          :autoplay-speed="8000"
                           loop autoplay>
                     <CarouselItem>
-                        <div class="carousel-box carousel-box1">
-                            <div class="index-width">
-                                <div class="carousel-text" style="float: right">
-                                    <h2>公安智能视频分析系统</h2>
-                                    <h3>Video Intelligent Analysis System</h3>
-                                    <div class="carousel-desc">
-                                        <div class="desc-main">
-                                            用智能技术突破人眼识别极限，十亿级别的辨别精度，快速、精准的安全防护。该系统旨在实现对全社会进行全方位、立体式管控，提高社会治安防控水平，提高民众社会治安满意度。
+                        <router-link :to="{name:'core',params:{anchor:'video-analysis-system'}}">
+                            <div class="carousel-box carousel-box1">
+                                <div class="index-width">
+                                    <div class="carousel-text" style="float: right">
+                                        <h2>公安智能视频分析系统</h2>
+                                        <h3>Video Intelligent Analysis System</h3>
+                                        <div class="carousel-desc">
+                                            <div class="desc-main">
+                                                用智能技术突破人眼识别极限，十亿级别的辨别精度，快速、精准的安全防护。该系统旨在实现对全社会进行全方位、立体式管控，提高社会治安防控水平，提高民众社会治安满意度。
+                                            </div>
+                                            <ul class="desc-points">
+                                                <li>人脸识别</li>
+                                                <li>轨迹分析</li>
+                                                <li>数据研判</li>
+                                                <li>车辆识别</li>
+                                                <li>
+                                                    <router-link :to="{name:'core',params:{anchor:'video-analysis-system'}}">更多&nbsp;&gt;&gt;&nbsp;</router-link>
+                                                </li>
+                                            </ul>
                                         </div>
-                                        <ul class="desc-points">
-                                            <li>人脸识别</li>
-                                            <li>轨迹分析</li>
-                                            <li>数据研判</li>
-                                            <li>车辆识别</li>
-                                            <li>更多&nbsp;&gt;&gt;&nbsp;</li>
-                                        </ul>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </router-link>
                     </CarouselItem>
                     <CarouselItem>
-                        <div class="carousel-box carousel-box2">
-                            <div class="index-width">
-                                <div class="carousel-text">
-                                    <h2>智慧小区管理系统</h2>
-                                    <h3>Intelligent Community Management System </h3>
-                                    <div class="carousel-desc">
-                                        <div class="desc-main">
-                                            将人脸识别技术应用于门禁系统及社区安防上：人脸开门，主动预警，危险行为告警，可疑人物报警，目标任务轨迹分析等，实现无感知社区服务体验：
+                        <router-link :to="{name:'core',params:{anchor:'non-perceptual-security-system'}}">
+                            <div class="carousel-box carousel-box2">
+                                <div class="index-width">
+                                    <div class="carousel-text">
+                                        <h2>智慧小区管理系统</h2>
+                                        <h3>Intelligent Community Management System </h3>
+                                        <div class="carousel-desc">
+                                            <div class="desc-main">
+                                                将人脸识别技术应用于门禁系统及社区安防上：人脸开门，主动预警，危险行为告警，可疑人物报警，目标任务轨迹分析等，实现无感知社区服务体验：
+                                            </div>
+                                            <ul class="desc-points">
+                                                <li>智能门禁</li>
+                                                <li>主动预警</li>
+                                                <li>轨迹分析</li>
+                                                <li>自动告警</li>
+                                                <li>
+                                                    <router-link :to="{name:'core',params:{anchor:'non-perceptual-security-system'}}">更多&nbsp;&gt;&gt;&nbsp;</router-link>
+                                                </li>
+                                            </ul>
                                         </div>
-                                        <ul class="desc-points">
-                                            <li>智能门禁</li>
-                                            <li>主动预警</li>
-                                            <li>轨迹分析</li>
-                                            <li>自动告警</li>
-                                            <li>更多&nbsp;&gt;&gt;&nbsp;</li>
-                                        </ul>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </router-link>
                     </CarouselItem>
                     <CarouselItem>
-                        <div class="carousel-box carousel-box3">
-                            <div class="index-width">
-                                <div class="carousel-text" style="float: right">
-                                    <h2>高倍率图像/视频无损压缩系统</h2>
-                                    <h3>Lossless Image/Video Compression System with High Ratio</h3>
-                                    <div class="carousel-desc">
-                                        <div class="desc-main">
-                                            针对目前主流格式的图像/视频进行二次压缩，在不降低人眼视觉质量的v前提下，实现对多种视频流和图像文件的实时、高倍率压缩，节省了存储空间和投资成本。
+                        <router-link :to="{name:'core',params:{anchor:'prison-naming-system'}}">
+                            <div class="carousel-box carousel-box3">
+                                <div class="index-width">
+                                    <div class="carousel-text" style="float: right">
+                                        <h2>智慧监狱点名系统</h2>
+                                        <h3>Intelligent Prison Naming System</h3>
+                                        <div class="carousel-desc">
+                                            <div class="desc-main">
+                                                将智能人脸识别技术应用于监狱系统，实现区域定时点名，自动实现人员区域调度，系统管理一体化，提高管理效率。
+                                            </div>
+                                            <ul class="desc-points">
+                                                <li>前端抓拍</li>
+                                                <li>自动点名</li>
+                                                <li>异常告警</li>
+                                                <li>数据汇总</li>
+                                                <li>
+                                                    <router-link :to="{name:'core',params:{anchor:'prison-naming-system'}}"> 更多&nbsp;&gt;&gt;&nbsp;</router-link>
+                                                </li>
+                                            </ul>
                                         </div>
-                                        <ul class="desc-points">
-                                            <li>图片压缩</li>
-                                            <li>图像压缩</li>
-                                            <li>高倍保真</li>
-                                            <li>自动压缩</li>
-                                            <li>更多&nbsp;&gt;&gt;&nbsp;</li>
-                                        </ul>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </router-link>
                     </CarouselItem>
                     <CarouselItem>
-                        <div class="carousel-box carousel-box4">
-                            <div class="index-width">
-                                <div class="carousel-text">
-                                    <h2>智慧监狱管理系统</h2>
-                                    <h3>Intelligent Prison Naming System</h3>
-                                    <div class="carousel-desc">
-                                        <div class="desc-main">
-                                            将智能人脸识别技术应用于监狱系统，实现区域定时点名，自动实现人员区域调度，系统管理一体化，提高管理效率。
+                        <router-link :to="{name:'core',params:{anchor:'image-video-compression'}}">
+                            <div class="carousel-box carousel-box4">
+                                <div class="index-width">
+                                    <div class="carousel-text">
+                                        <h2>高倍率图像/视频无损压缩系统</h2>
+                                        <h3>Lossless Image/Video Compression System with High Ratio</h3>
+                                        <div class="carousel-desc">
+                                            <div class="desc-main">
+                                                针对目前主流格式的图像/视频进行二次压缩，在不降低人眼视觉质量的v前提下，实现对多种视频流和图像文件的实时、高倍率压缩，节省了存储空间和投资成本。
+                                            </div>
+                                            <ul class="desc-points">
+                                                <li>图片压缩</li>
+                                                <li>图像压缩</li>
+                                                <li>高倍保真</li>
+                                                <li>自动压缩</li>
+                                                <li>
+                                                    <router-link :to="{name:'core',params:{anchor:'image-video-compression'}}">更多&nbsp;&gt;&gt;&nbsp;</router-link>
+                                                </li>
+                                            </ul>
                                         </div>
-                                        <ul class="desc-points">
-                                            <li>前端抓拍</li>
-                                            <li>自动点名</li>
-                                            <li>异常告警</li>
-                                            <li>数据汇总</li>
-                                            <li>更多&nbsp;&gt;&gt;&nbsp;</li>
-                                        </ul>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </router-link>
                     </CarouselItem>
                 </Carousel>
             </Col>
@@ -267,7 +284,7 @@
                                      @mouseleave="recoverImg">
                                     <h5><a href="#">2019年3月24日，我司正式入驻地理文化众创空间</a></h5>
                                     <p>重庆孟山科技与地理文化众创空间正式达成入驻协议，于2019年3月24日入驻海王星D座8-21，将开启公司发展的新篇章。
-                                        <a href="#">&lt;&lt;查看详情</a>
+                                        <a href="#">&gt;&gt;查看详情</a>
                                     </p>
                                 </div>
                                 <div class="index-news-box" :data-src="news2"
@@ -275,7 +292,7 @@
                                      @mouseleave="recoverImg">
                                     <h5><a href="#">孟山科技与海南省数据大厅与海南省工信厅进行交流</a></h5>
                                     <p>11月15日，宋扬博士在海南省数据大厅与海南省工信厅、公安厅领导交流，并得到充分认可。已经在海南省试点。
-                                        <a href="#">&lt;&lt;查看详情</a>
+                                        <a href="#">&gt;&gt;查看详情</a>
                                     </p>
                                 </div>
                                 <div class="index-news-box" :data-src="news3"
@@ -283,7 +300,7 @@
                                      @mouseleave="recoverImg">
                                     <h5><a href="#">重庆市人大领导参访孟山科技</a></h5>
                                     <p>2017年5月18日，在江北区进行工作调研的重庆市委常委、常务副市长吴存荣一行，在重庆市江北区委书记杜和平、江北区区长代小红的陪同下考察江北高层次创业园区。
-                                        <a href="#">&lt;&lt;查看详情</a>
+                                        <a href="#">&gt;&gt;查看详情</a>
                                     </p>
                                 </div>
                             </Col>
@@ -355,7 +372,7 @@
         },
         methods: {
             changeImg(e) {
-                console.log(e.target.dataset)
+                //console.log(e.target.dataset)
                 this.newsSrc = e.target.dataset.src
             },
             recoverImg() {
@@ -444,6 +461,11 @@
                             position: relative;
                             top: 4px;
                             margin-right: 15px;
+                        }
+                        a {
+                            &:hover {
+                                color: @highlight-color;
+                            }
                         }
                     }
                 }
