@@ -94,6 +94,7 @@
                 this.showCompress = false;
                 this.loadingText = '';
                 this.showCompressResult = false;
+                this.compressResult = [];
             },
             // 开始压缩
             doCompress() {
