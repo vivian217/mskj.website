@@ -627,6 +627,7 @@
                 height: 300px;
                 img {
                     max-height: 100%;
+                    height: 100%;
                 }
             }
         }
