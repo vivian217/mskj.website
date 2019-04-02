@@ -1,5 +1,15 @@
 <template>
     <div class="img-compress">
+        <div class="choice">
+            <div class="btn-group">
+                <span>选择压缩品质：</span>
+                <RadioGroup v-model="buttonSize" type="button">
+                    <Radio label="large">高</Radio>
+                    <Radio label="default">中</Radio>
+                    <Radio label="small">低</Radio>
+                </RadioGroup>
+            </div>
+        </div>
         <div class="face-box">
             <div class="img-box">
                 <div class="img-box-inner">
@@ -74,7 +84,8 @@
                 compress: {},
                 loadingText: '',
                 compressResult: [],
-                showCompressResult: false
+                showCompressResult: false,
+                buttonSize: 'large'
             }
         },
         methods: {

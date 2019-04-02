@@ -22,7 +22,7 @@
 <style lang="less">
     .demos {
         width: 1200px;
-        margin: 0 auto;
+        margin: 100px auto 0;
         // 导航部分
         .ivu-menu-horizontal.ivu-menu-light {
             display: inline-block;
@@ -48,7 +48,11 @@
         }
         // 演示主体部分
         .demos-box {
-            padding: 40px 0;
+            padding: 20px 0;
+        }
+        // 演示选项
+        .choice {
+            margin-bottom: 20px;
         }
         // 底部提示
         .prompt {

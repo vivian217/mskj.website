@@ -1,6 +1,7 @@
 @main-width:1200px;
 @index-width: 1320px;
 @color-active: #93fcfc;
+@color-highlight: #0ff;
 @font-color: #c6c6c6;
 // 统一样式
 h1, h2, h3, h4, h5, h6 {
@@ -43,6 +44,8 @@ ul {
 // 导航栏
 .main-header {
   width: 100%;
+  position: fixed;
+  z-index: 100;
   background-color: rgba(6, 24, 52, 0.7);
   header {
     width: @main-width;
@@ -90,15 +93,39 @@ ul {
     }
   }
 }
-
+.header-bg {
+    background: rgba(6, 24, 52, 1);
+}
 // 主体区域
 .single-page {
   width: 100%;
   //min-height: calc(~'100% - 261px'); //less的计算方式跟calc方法有重叠，两者在一起有冲突，需要用~进行转义
-  margin: 20px auto;
+  margin: 0 auto;
   color: @font-color;
 }
-
+// 页面内banner图
+.main-banner {
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h2 {
+        color: @color-highlight;
+        font-size: 40px;
+    }
+    h3 {
+        font-size: 18px;
+    }
+    .main-banner-line {
+        height: 5px;
+        width: 98%;
+        margin-top: 10px;
+        border-top: 1px solid @color-active;
+        margin-bottom: 20px;
+        border-bottom: 1px dashed @color-active;
+    }
+}
 // 底部
 .main-footer {
   width: 100%;

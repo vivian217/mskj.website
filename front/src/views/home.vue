@@ -1,6 +1,6 @@
 <template>
     <div class="main">
-        <main-header></main-header>
+        <main-header :class="bgChange?'header-bg':''"></main-header>
         <div class="single-page">
             <keep-alive>
                 <router-view></router-view>
@@ -19,6 +19,24 @@
         components: {
             MainHeader,
             MainFooter
+        },
+        data() {
+            return {
+                bgChange: false
+            }
+        },
+        methods: {
+            handleScroll() {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+                if (scrollTop >= 80) {
+                    this.bgChange = true
+                } else {
+                    this.bgChange = false
+                }
+            }
+        },
+        mounted() {
+            window.addEventListener('scroll', this.handleScroll)
         }
     }
 </script>

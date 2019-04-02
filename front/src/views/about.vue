@@ -1,5 +1,13 @@
 <template>
     <div class="about main-width white-masking">
+        <div class="main-banner">
+            <h2>
+                <!--<img src="@/images/news/banner.jpg" alt="">-->
+                <span>关于我们</span>
+            </h2>
+            <!--<div class="core-banner-line"></div>-->
+            <!--<h3>以人工智能核心技术，引领计算机视觉行业先行</h3>-->
+        </div>
         <Row class="intro" type="flex" align="middle">
             <Col span="14">
                 <div class="title">企业介绍 ( Company Introduction )</div>
@@ -84,9 +92,12 @@
 
 <style scoped lang="less">
     .about {
-        & > div {
+        & > div:not(:first-child) {
             margin: 20px 0;
             padding: 20px;
+        }
+        .main-banner {
+            background: url("~@/images/about/banner.jpg") 0 e('/') cover no-repeat;
         }
         .title {
             font-size: 24px;

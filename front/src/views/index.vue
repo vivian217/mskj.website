@@ -135,7 +135,7 @@
                                     <img src="@/images/index/service1.png" alt="公安视频智能分析系统">
                                 </div>
                                 <div class="index-service-title">
-                                    <h4>公安视频智能分析系统</h4>
+                                    <h4>公安智能视频分析系统</h4>
                                     <h5>Video Intelligent Analysis System</h5>
                                 </div>
                                 <div class="index-service-details">
@@ -167,8 +167,8 @@
                                     <img src="@/images/index/service3.png" alt="监狱点名系统">
                                 </div>
                                 <div class="index-service-title">
-                                    <h4>监狱点名系统</h4>
-                                    <h5>Prison Naming System</h5>
+                                    <h4>智慧监狱点名系统</h4>
+                                    <h5>Intelligent Prison Naming System</h5>
                                 </div>
                                 <div class="index-service-details">
                                     将智能人脸识别技术应用于监狱系统，实现区域定时点名，自动实现人员区域调度，系统管理一体化，提高管理效率。
@@ -442,9 +442,11 @@
                     color: @highlight-color;
                 }
                 .carousel-desc {
-                    width: 400px;
+                    //width: 400px;
                     margin: 20px auto;
-                    font-size: 14px;
+                    font-size: 16px;
+                    text-align: left;
+                    text-indent: 2em;
                 }
                 .desc-main {
                     padding: 20px 0;
@@ -455,6 +457,7 @@
                         margin-top: 10px;
                         float: left;
                         width: 50%;
+                        text-align: center;
                         &:before {
                             content: url("~@/images/index/square.png");
                             position: relative;

@@ -1,16 +1,16 @@
 <template>
     <div class="core white-masking main-width">
-        <div class="core-banner">
+        <div class="main-banner">
             <h2>
                 <img src="@/images/core/target.png" alt="">
                 <span>核心业务</span>
             </h2>
-            <div class="core-banner-line"></div>
+            <div class="main-banner-line"></div>
             <h3>以人工智能核心技术，引领计算机视觉行业先行</h3>
         </div>
         <Tabs v-model="currentTab">
-            <TabPane label="视频实时分析系统" name="video-analysis-system">
-                <h2>（一）、视频实时分析系统</h2>
+            <TabPane label="公安智能视频分析系统" name="video-analysis-system">
+                <h2>（一）、公安智能视频分析系统</h2>
                 <video-analysis-system></video-analysis-system>
             </TabPane>
             <TabPane label="无感知智慧社区/办公/楼宇安全卫士系统" name="non-perceptual-security-system">
@@ -64,29 +64,8 @@
     @color-active: #0ff;
     @color-hover: #93fcfc;
     .core {
-        h2 {
-            text-align: center;
-            color: @color-active;
-        }
-        .core-banner {
-            height: 300px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background: url("~@/images/core/coreBanner.png") 0 e('/') 100% no-repeat;
-            h2 {
-                color: @color-active;
-                font-size: 40px;
-            }
-            .core-banner-line {
-                height: 5px;
-                width: 98%;
-                margin-top: 10px;
-                border-top: 1px solid @color-active;
-                margin-bottom: 20px;
-                border-bottom: 1px dashed @color-active;
-            }
+        .main-banner {
+            background: url("~@/images/core/coreBanner.png") 0 e('/') cover no-repeat;
         }
         .ivu-tabs {
             color: #c6c6c6;

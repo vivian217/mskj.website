@@ -1,5 +1,13 @@
 <template>
     <div class="news main-width">
+        <div class="main-banner">
+            <h2>
+                <!--<img src="@/images/news/banner.jpg" alt="">-->
+                <span>新闻中心</span>
+            </h2>
+            <!--<div class="core-banner-line"></div>-->
+            <!--<h3>以人工智能核心技术，引领计算机视觉行业先行</h3>-->
+        </div>
         <Row class="news-item" type="flex" justify="space-around">
             <Col span="12">
                 <div class="item">
@@ -75,6 +83,9 @@
 
 <style lang="less">
     .news {
+        .main-banner {
+            background: url("~@/images/news/banner.jpg") 0 e('/') cover no-repeat;
+        }
         .news-item {
             background: #000;
             border: 1px solid rgba(0, 255, 255, 0.3);
