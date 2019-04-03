@@ -75,7 +75,7 @@
                         <img src="@/images/core/trajectoryAnalysis.png" alt="轨迹分析">
                         <span>轨迹分析</span>
                     </div>
-                    <p>实时告警轨迹分析，以图搜人，查询历史轨迹</p>
+                    <p>实时告警人脸轨迹分析，以图搜人，查询历史轨迹</p>
                 </div>
             </Col>
         </Row>

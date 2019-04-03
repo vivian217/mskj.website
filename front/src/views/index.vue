@@ -40,7 +40,7 @@
                                         <h3>Intelligent Community Management System </h3>
                                         <div class="carousel-desc">
                                             <div class="desc-main">
-                                                将人脸识别技术应用于门禁系统及社区安防上：人脸开门，主动预警，危险行为告警，可疑人物报警，目标任务轨迹分析等，实现无感知社区服务体验：
+                                                将智能人脸识别技术应用于门禁系统及社区安防上：人脸开门，主动预警，危险行为告警，可疑人物报警，目标任务轨迹分析等，实现无感知社区服务体验。
                                             </div>
                                             <ul class="desc-points">
                                                 <li>智能门禁</li>
@@ -88,15 +88,15 @@
                             <div class="carousel-box carousel-box4">
                                 <div class="index-width">
                                     <div class="carousel-text">
-                                        <h2>高倍率图像/视频无损压缩系统</h2>
+                                        <h2>高倍率图片/视频无损压缩系统</h2>
                                         <h3>Lossless Image/Video Compression System with High Ratio</h3>
                                         <div class="carousel-desc">
                                             <div class="desc-main">
-                                                针对目前主流格式的图像/视频进行二次压缩，在不降低人眼视觉质量的前提下，实现对多种视频流和图像文件的实时、高倍率压缩，节省了存储空间和投资成本。
+                                                针对目前主流格式的图片/视频进行二次压缩，在不降低人眼视觉质量的前提下，实现对多种视频流和图像文件的实时、高倍率压缩，节省了存储空间和投资成本。
                                             </div>
                                             <ul class="desc-points">
                                                 <li>图片压缩</li>
-                                                <li>图像压缩</li>
+                                                <li>视频压缩</li>
                                                 <li>高倍保真</li>
                                                 <li>自动压缩</li>
                                                 <li>
@@ -155,7 +155,7 @@
                                     <h5>Intelligent Community Management System</h5>
                                 </div>
                                 <div class="index-service-details">
-                                    将人脸识别技术应用于门禁系统及社区安防上：人脸开门，主动预警，危险行为告警，可疑人物报警，目标任务轨迹分析等，实现无感知社区服务体验。
+                                    将智能人脸识别技术应用于门禁系统及社区安防上：人脸开门，主动预警，危险行为告警，可疑人物报警，目标任务轨迹分析等，实现无感知社区服务体验。
                                 </div>
                             </div>
                         </router-link>
@@ -183,11 +183,11 @@
                                     <img src="@/images/index/service4.png" alt="高倍率图像/视频无损压缩系统">
                                 </div>
                                 <div class="index-service-title">
-                                    <h4>高倍率图像/视频无损压缩系统</h4>
+                                    <h4>高倍率图片/视频无损压缩系统</h4>
                                     <h5>Lossless Image/Video Compression System</h5>
                                 </div>
                                 <div class="index-service-details">
-                                    针对目前主流格式的图像/视频进行二次压缩，在不降低人眼视觉质量的前提下，实现对多种视频流和图像文件的实时、高倍率压缩，节省了存储空间和投资成本。
+                                    针对目前主流格式的图片/视频进行二次压缩，在不降低人眼视觉质量的前提下，实现对多种视频流和图像文件的实时、高倍率压缩，节省了存储空间和投资成本。
                                 </div>
                             </div>
                         </router-link>
@@ -282,7 +282,7 @@
                                      @mouseenter.stop.prevent="changeImg"
                                      @mouseleave="recoverImg">
                                     <h5 style="padding-top: 0"><a @click="toNewsDetail(1)">2019年3月24日，我司正式入驻地理文化众创空间</a></h5>
-                                    <p>重庆孟山科技与地理文化众创空间正式达成入驻协议，于2019年3月24日入驻海王星D座8-21，将开启公司发展的新篇章。
+                                    <p>重庆孟山科技与地理文化众创空间正式达成入驻协议，于2019年3月24日入驻海王星D区8-15，将开启公司发展的新篇章。
                                         <a @click="toNewsDetail(1)">&gt;&gt;查看详情</a>
                                     </p>
                                 </div>
@@ -298,7 +298,7 @@
                                      @mouseenter.stop.prevent="changeImg"
                                      @mouseleave="recoverImg">
                                     <h5><a @click="toNewsDetail(3)">重庆市人大领导参访孟山科技</a></h5>
-                                    <p>2017年5月18日，在江北区进行工作调研的重庆市委常委、常务副市长吴存荣一行，在重庆市江北区委书记杜和平、江北区区长代小红的陪同下考察江北高层次创业园区。
+                                    <p>2017年5月18日，在江北区进行工作调研的重庆市委常委、常务副市长吴存荣一行，在重庆市前江北区委书记杜和平、江北区区长代小红的陪同下考察江北高层次创业园区。
                                         <a @click="toNewsDetail(3)">&gt;&gt;查看详情</a>
                                     </p>
                                 </div>

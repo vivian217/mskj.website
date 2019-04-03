@@ -29,8 +29,8 @@
                 <Row class="core-content">
                     <Col span="11">
                         <div class="core-weakness core-weakness-left">
-                            <div class="text text-right">
-                                <h5>硬件设备不可控</h5>
+                            <div class="text">
+                                <h5 class="text-right">硬件设备不可控</h5>
                                 <p>监舍摄像头方向都是固定，不可调节、变焦摄像头大部分是大角度向下倾斜，且高度较高。</p>
                             </div>
                             <div class="img">
@@ -53,9 +53,9 @@
                 <Row class="core-content">
                     <Col span="11">
                         <div class="core-weakness core-weakness-left">
-                            <div class="text text-right">
-                                <h5>物理环境特殊</h5>
-                                <p>监舍房间小，里面有很多高低床，遮挡严重。</p>
+                            <div class="text">
+                                <h5 class="text-right">物理环境特殊</h5>
+                                <p>监舍房间小，内有很多高低床，遮挡严重。</p>
                             </div>
                             <div class="img">
                                 <img src="@/images/core/prisonWeakness3.png" alt="智慧监狱点名系统">

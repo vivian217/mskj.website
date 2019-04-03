@@ -53,7 +53,7 @@
                     </div>
                     <ul>
                         <li>门卡、指纹、闸机，不方便，有延时</li>
-                        <li>门卫/保安手动登记，不便于管理。</li>
+                        <li>门卫/保安手动登记，不便于管理</li>
                     </ul>
                 </div>
             </Col>
@@ -174,29 +174,37 @@
             </Col>
         </Row>
         <Row class="core-applications core-content">
-            <Col>
+            <Col style="width: 100%">
                 <Row type="flex" justify="space-around">
                     <Col span="5">
                         <div class="application">
-                            <img src="@/images/core/app-community.jpg" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                            <div class="img">
+                                <img src="@/images/core/app-community.jpg" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                            </div>
                             <div class="title"><span>--</span>住宅小区<span>--</span></div>
                         </div>
                     </Col>
                     <Col span="5">
                         <div class="application">
-                            <img src="@/images/core/app-hospital.jpg" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                            <div class="img">
+                                <img src="@/images/core/app-hospital.jpg" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                            </div>
                             <div class="title"><span>--</span>医院<span>--</span></div>
                         </div>
                     </Col>
                     <Col span="5">
                         <div class="application">
-                            <img src="@/images/core/app-building.jpg" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                            <div class="img">
+                                <img src="@/images/core/app-building.jpg" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                            </div>
                             <div class="title"><span>--</span>写字楼<span>--</span></div>
                         </div>
                     </Col>
                     <Col span="5">
                         <div class="application">
-                            <img src="@/images/core/app-school.jpg" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                            <div class="img">
+                                <img src="@/images/core/app-school.jpg" alt="无感知智慧社区/办公/楼宇安全卫士系统">
+                            </div>
                             <div class="title"><span>--</span>学校<span>--</span></div>
                         </div>
                     </Col>

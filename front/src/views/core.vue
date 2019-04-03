@@ -20,8 +20,8 @@
                 <h2>（三）、智慧监狱点名系统</h2>
                 <prison-naming-system></prison-naming-system>
             </TabPane>
-            <TabPane label="高倍率图像/视频无损压缩系统" name="image-video-compression">
-                <h2>（四）、高倍率图像/视频无损压缩系统</h2>
+            <TabPane label="高倍率图片/视频无损压缩系统" name="image-video-compression">
+                <h2>（四）、高倍率图片/视频无损压缩系统</h2>
                 <image-video-compression-system></image-video-compression-system>
             </TabPane>
         </Tabs>

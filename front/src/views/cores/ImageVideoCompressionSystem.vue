@@ -32,9 +32,9 @@
                 <Row class="core-content">
                     <Col span="11">
                         <div class="core-weakness core-weakness-left">
-                            <div class="text text-right">
-                                <h5>兼容性能低</h5>
-                                <p>市场普遍的压缩技术不具备较强兼容性，无论是硬件兼容还是软件系统兼容，都存在很大的问题，压缩格式相对较少，压缩市场有局限性</p>
+                            <div class="text">
+                                <h5 class="text-right">兼容性能低</h5>
+                                <p>市场普遍的压缩技术不具备较强兼容性，无论是硬件兼容还是软件系统兼容，都存在很大的问题，压缩格式相对较少，压缩市场有局限性。</p>
                             </div>
                             <div class="img">
                                 <img src="@/images/core/imageVideoWeakness1.png" alt="高倍率图像/视频无损压缩系统">
@@ -48,7 +48,7 @@
                             </div>
                             <div class="text">
                                 <h5>压缩比率低</h5>
-                                <p>国内压缩技术，以主流格式而言压缩比率一般都在3倍左右，且几年时间都没有突破这个瓶颈，压缩技术发展得不到长远的提高</p>
+                                <p>国内压缩技术，以主流格式而言压缩比率一般都在3倍左右，且几年时间都没有突破这个瓶颈，压缩技术发展得不到长远的提高。</p>
                             </div>
                         </div>
                     </Col>
@@ -56,9 +56,9 @@
                 <Row class="core-content">
                     <Col span="11">
                         <div class="core-weakness core-weakness-left">
-                            <div class="text text-right">
-                                <h5>成本费用高</h5>
-                                <p>目前而言，国内压缩技术分很多种类，市场需求技术得不到统一，造成压缩市场混乱，用户经济流失，从而成本费用增高，产生成本浪费</p>
+                            <div class="text">
+                                <h5 class="text-right">成本费用高</h5>
+                                <p>目前而言，国内压缩技术分很多种类，市场需求技术得不到统一，造成压缩市场混乱，用户经济流失，从而成本费用增高，产生成本浪费。</p>
                             </div>
                             <div class="img">
                                 <img src="@/images/core/imageVideoWeakness3.png" alt="高倍率图像/视频无损压缩系统">
@@ -88,14 +88,14 @@
             <Col span="5">
                 <div class="core-card">
                     <div class="core-card-title">
-                        <img src="@/images/core/face.png" alt="高倍率图像/视频无损压缩系统">
-                        <span>图片/视频压缩</span>
+                        <img src="@/images/core/img.png" alt="高倍率图像/视频无损压缩系统">
+                        <span>图片压缩</span>
                     </div>
                     <ul>
                         <li>支持JPEG/TIFF/BMP/GIF/PNG等主流格式</li>
                         <li>智能选择压缩比率和图像格式</li>
                         <li>压缩前后视觉无损，效果保持一致</li>
-                        <li>创新自动压缩程序，实现无人监管任务。</li>
+                        <li>创新自动压缩程序，实现无人监管任务</li>
                     </ul>
                 </div>
             </Col>
@@ -117,14 +117,13 @@
             <Col span="5">
                 <div class="core-card">
                     <div class="core-card-title">
-                        <img src="@/images/core/face.png" alt="高倍率图像/视频无损压缩系统">
-                        <span>图片/视频压缩</span>
+                        <img src="@/images/core/video.png" alt="高倍率图像/视频无损压缩系统">
+                        <span>视频压缩</span>
                     </div>
                     <ul>
-                        <li>支持JPEG/TIFF/BMP/GIF/PNG等主流格式</li>
-                        <li>智能选择压缩比率和图像格式</li>
+                        <li>支持H.264和H.265编码，支持RTSP等网络协议</li>
+                        <li>支持软件集成的开放式API，支持标准ONVIF协议</li>
                         <li>压缩前后视觉无损，效果保持一致</li>
-                        <li>创新自动压缩程序，实现无人监管任务。</li>
                     </ul>
                 </div>
             </Col>
