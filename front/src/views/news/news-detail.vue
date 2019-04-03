@@ -21,7 +21,7 @@
             }
         },
         mounted() {
-            this.nid = this.$route.params.nid
+            this.nid = this.$route.query.nid
             this.newsItem = newsData['data'][this.nid - 1]
         }
     }

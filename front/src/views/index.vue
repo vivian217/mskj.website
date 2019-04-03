@@ -397,7 +397,7 @@
                 // 跳转到新闻详情页面
                 let routeData = this.$router.resolve({
                     name: 'news_details',
-                    params: {
+                    query: {
                         nid: nid
                     }
                 })

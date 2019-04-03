@@ -79,13 +79,12 @@ const routers = [
                         component: (resolve) => require(['./views/news/news-main.vue'], resolve)
                     },
                     {
-                        path: '/news-detail/:nid',
+                        path: '/news-detail',
                         name: 'news_details',
                         meta: {
                             title: ''
                         },
-                        component: (resolve) => require(['./views/news/news-detail.vue'], resolve),
-                        props: true
+                        component: (resolve) => require(['./views/news/news-detail.vue'], resolve)
                     },
                 ]
             },
