@@ -203,6 +203,9 @@ ul {
             background-color: transparent;
             border-color: rgba(9, 78, 101, 0.5);
             color: @font-color;
+            &:first-child {
+                border-color: rgba(9, 78, 101, 0.5);
+            }
             &:before {
                 background-color: rgba(9, 78, 101, 0.5);
             }
@@ -213,6 +216,9 @@ ul {
         .ivu-radio-wrapper-checked {
             color: @color-active;
             border-color: @color-active;
+            &:first-child {
+                border-color: @color-active;
+            }
             &:before {
                 background: @color-active;
                 opacity: 1;
