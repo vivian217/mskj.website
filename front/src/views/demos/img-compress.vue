@@ -42,19 +42,19 @@
                         @click="doCompress">开始压缩
                 </Button>
             </div>
-            <div class="after-comparison" v-show="showCompressResult">
-                <div class="inner">
-                    <p class="title">压缩结果</p>
-                    <div class="detail">
-                        <p v-for="item in compressResult" :key="item.key">
-                            {{item.name+'：'+item.value}}
-                        </p>
-                    </div>
-                </div>
-            </div>
         </div>
         <div class="prompt">
             <p>* 图片只支持jpg、jpeg格式</p>
+        </div>
+        <div class="after-comparison" v-show="showCompressResult">
+            <div class="inner">
+                <p class="title">压缩结果</p>
+                <div class="detail">
+                    <p v-for="item in compressResult" :key="item.key">
+                        {{item.name+'：'+item.value}}
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -197,13 +197,11 @@
                     }
                 }
             }
-            .after-comparison {
-                position: absolute;
-                left: 0;
-                right: 0;
-                margin: 0 auto;
-                bottom: -155px;
-            }
+        }
+        .after-comparison {
+            position: relative;
+            margin: 0 auto;
+            bottom: 100px;
         }
     }
 </style>

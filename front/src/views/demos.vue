@@ -20,6 +20,7 @@
     }
 </script>
 <style lang="less">
+    @color-active:#93fcfc;
     .demos {
         width: 1200px;
         margin: 100px auto 0;
@@ -38,9 +39,9 @@
                 border-top: 1px solid transparent;
             }
             .ivu-menu-item-active, .ivu-menu-item:hover, .ivu-menu-submenu-active, .ivu-menu-submenu:hover {
-                color: #93fcfc;
+                color: @color-active;
                 border-bottom: none;
-                border-top-color: #93fcfc;
+                border-top-color: @color-active;
             }
             &:after {
                 height: 0;
@@ -49,6 +50,7 @@
         // 演示主体部分
         .demos-box {
             padding: 20px 0;
+            font-size: 15px;
         }
         // 演示选项
         .choice {
@@ -67,7 +69,7 @@
             justify-content: center;
             align-items: center;
             position: relative;
-            .img-remove{
+            .img-remove {
                 position: absolute;
                 top: 0;
                 right: 0;

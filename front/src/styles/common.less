@@ -23,7 +23,7 @@ ul {
 }
 // 背景
 .background {
-  background: url("~@/images/bg.png") no-repeat fixed;
+  background: url("~@/images/bg.png") 0 e('/') 100% fixed;
   // background-image: radial-gradient(ellipse farthest-corner at center top, #000d4d 0%, #000105 100%);
   position: fixed;
   &, #canvas {
@@ -45,7 +45,7 @@ ul {
 .main-header {
   width: 100%;
   position: fixed;
-  z-index: 100;
+  z-index: 1000;
   background-color: rgba(6, 24, 52, 0.7);
   header {
     width: @main-width;
@@ -193,4 +193,28 @@ ul {
 .main-width {
   width: @main-width;
   margin: auto !important;
+}
+// 按钮组
+.btn-group {
+    .ivu-radio-group-button {
+        .ivu-radio-wrapper {
+            background-color: transparent;
+            border-color: rgba(9, 78, 101, 0.5);
+            color: @font-color;
+            &:before {
+                background-color: rgba(9, 78, 101, 0.5);
+            }
+            &:hover {
+                color: @color-active;
+            }
+        }
+        .ivu-radio-wrapper-checked {
+            color: @color-active;
+            border-color: @color-active;
+            &:before {
+                background: @color-active;
+                opacity: 1;
+            }
+        }
+    }
 }
