@@ -1,14 +1,13 @@
 <template>
-    <div class="core white-masking main-width">
+    <div class="core">
         <div class="main-banner">
             <h2>
-                <img src="@/images/core/target.png" alt="">
-                <span>核心业务</span>
+                <!--<img src="@/images/core/target.png" alt="">-->
+                <span>Core/核心业务</span>
             </h2>
-            <div class="main-banner-line"></div>
             <h3>以人工智能核心技术，引领计算机视觉行业先行</h3>
         </div>
-        <Tabs v-model="currentTab">
+        <Tabs v-model="currentTab" class="white-masking main-width">
             <TabPane label="公安智能视频分析系统" name="video-analysis-system">
                 <h2>（一）、公安智能视频分析系统</h2>
                 <video-analysis-system></video-analysis-system>
@@ -67,10 +66,6 @@
         .main-banner {
             background: url("~@/images/core/coreBanner.png") 0 e('/') cover no-repeat;
         }
-        h2 {
-            text-align: center;
-            color: @color-active;
-        }
         .ivu-tabs {
             color: #c6c6c6;
             .ivu-tabs-nav-container {
@@ -90,6 +85,10 @@
             }
             .ivu-tabs-content {
                 padding: 20px 0;
+            }
+            h2 {
+                text-align: center;
+                color: @color-active;
             }
         }
         .core-title {
