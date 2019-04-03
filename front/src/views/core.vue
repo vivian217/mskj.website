@@ -67,6 +67,10 @@
         .main-banner {
             background: url("~@/images/core/coreBanner.png") 0 e('/') cover no-repeat;
         }
+        h2 {
+            text-align: center;
+            color: @color-active;
+        }
         .ivu-tabs {
             color: #c6c6c6;
             .ivu-tabs-nav-container {

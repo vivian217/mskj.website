@@ -184,7 +184,7 @@
                                 </div>
                                 <div class="index-service-title">
                                     <h4>高倍率图像/视频无损压缩系统</h4>
-                                    <h5>Lossless Image/Video Compression System with High Ratio</h5>
+                                    <h5>Lossless Image/Video Compression System</h5>
                                 </div>
                                 <div class="index-service-details">
                                     针对目前主流格式的图像/视频进行二次压缩，在不降低人眼视觉质量的前提下，实现对多种视频流和图像文件的实时、高倍率压缩，节省了存储空间和投资成本。
@@ -271,7 +271,7 @@
                 </Row>
                 <Row class="index-news">
                     <Col>
-                        <Row class="main-width">
+                        <Row class="main-width" type="flex" align="middle">
                             <Col span="16">
                                 <div class="index-news-img">
                                     <img :src="newsSrc">
@@ -281,7 +281,7 @@
                                 <div class="index-news-box" :data-src="news1"
                                      @mouseenter.stop.prevent="changeImg"
                                      @mouseleave="recoverImg">
-                                    <h5><a href="#">2019年3月24日，我司正式入驻地理文化众创空间</a></h5>
+                                    <h5 style="padding-top: 0"><a href="#">2019年3月24日，我司正式入驻地理文化众创空间</a></h5>
                                     <p>重庆孟山科技与地理文化众创空间正式达成入驻协议，于2019年3月24日入驻海王星D座8-21，将开启公司发展的新篇章。
                                         <a href="#">&gt;&gt;查看详情</a>
                                     </p>
@@ -330,7 +330,7 @@
                 </Row>
                 <Row class="index-about">
                     <Col>
-                        <Row class="main-width">
+                        <Row class="main-width" type="flex" align="middle">
                             <Col span="12">
                                 <div class="index-about-text">
                                     重庆孟山信息科技有限公司是一家专注于计算机视觉和深度学习原创技术的高科技企业，致力于做计算机视觉的全球领先者和开拓者。公司以视频智能化分析技术、视频和图像高倍率无损压缩技术为核心，提供一系列的人工智能产品和解决方案。公司拥有美国硅谷海归高性能处理器博士组成的国际尖端技术团队，在重庆、南京等多地设有研发基地和分公司。产品广泛应用于城市治安、交通监测、市政管理、机场地铁等出入口、智慧社区、教育机构等多个领域。
