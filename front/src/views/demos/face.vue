@@ -107,7 +107,9 @@
                 target: {},
                 showTargetProgress: false,
                 targetProgress: 0,
-                loadingText: ''
+                loadingText: '',
+                // 比对请求取消
+                compareCancel: null
             }
         },
         methods: {
@@ -166,14 +168,20 @@
                 this.showSource = false;
                 this.sourceProgress = 0;
                 this.showSourceProgress = false;
-                this.loadingText = ''
+                this.loadingText = '';
+                if (typeof this.compareCancel === 'function'){
+                  this.compareCancel();
+                }
             },
             removeTarget() {
                 this.target = {};
                 this.showTarget = false;
                 this.targetProgress = 0;
                 this.showTargetProgress = false;
-                this.loadingText = ''
+                this.loadingText = '';
+                if (typeof this.compareCancel === 'function'){
+                  this.compareCancel();
+                }
             },
             // 开始比对
             doCompare() {
@@ -200,6 +208,9 @@
                     });
                     return
                 }
+                if (typeof this.compareCancel === 'function'){
+                  this.compareCancel();
+                }
                 // console.log('开始比对');
                 this.loadingText = '比对中';
                 axios({
@@ -207,7 +218,10 @@
                     params: {
                         source: this.source['uuid'],
                         target: this.target['uuid'],
-                    }
+                    },
+                    cancelToken: new axios.CancelToken((c)=>{
+                        this.compareCancel = c;
+                    })
                 }).then(resp => {
                     let dataRes = resp['data'];
                     if (dataRes) {
@@ -232,6 +246,11 @@
                 }).catch((error) => {
                     const response = error['response'];
                     const message = error['message'];
+                    if (axios.isCancel(error)) {
+                      console.warn('用户手动取消请求');
+                      this.loadingText = '';
+                      return
+                    }
                     if (message === 'Network Error') {
                         this.$Message.error({
                             content: '网络错误',
@@ -264,6 +283,11 @@
               this.disabled = false;
             }
           });
+        },
+        destroyed(){
+          if (typeof this.compareCancel === 'function'){
+            this.compareCancel();
+          }
         }
     }
 </script>

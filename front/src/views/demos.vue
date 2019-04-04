@@ -7,9 +7,7 @@
             <!--<MenuItem name="video-compress" to="video-compress">视频压缩</MenuItem>-->
         </Menu>
         <div class="demos-box">
-            <keep-alive>
-                <router-view></router-view>
-            </keep-alive>
+          <router-view></router-view>
         </div>
     </div>
 </template>

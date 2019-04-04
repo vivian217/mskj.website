@@ -108,7 +108,9 @@
                 compressResult: [],
                 showCompressResult: false,
                 // 压缩模式
-                mode: 0
+                mode: 0,
+                // 压缩请求取消
+                compressCancel: null
             }
         },
         methods: {
@@ -149,6 +151,9 @@
                 this.showSource = false;
                 this.sourceProgress = 0;
                 this.showSourceProgress = false;
+                if (typeof this.compressCancel === 'function'){
+                  this.compressCancel();
+                }
                 this.clearResult();
             },
             // 清除压缩结果
@@ -161,6 +166,9 @@
             },
             // 开始压缩
             doCompress() {
+              if (typeof this.compressCancel === 'function'){
+                this.compressCancel();
+              }
               // 压缩前清除之前的压缩记录
               this.clearResult();
               if (!this.source['preview'] || this.source['preview'] === '') {
@@ -174,6 +182,9 @@
                 this.loadingText = '压缩中';
                 axios({
                     url: this.source['compress'] + '?mode=' + this.mode,
+                    cancelToken: new axios.CancelToken((c)=>{
+                      this.compressCancel = c;
+                    })
                 }).then(resp => {
                     let dataRes = resp['data'];
                     if (dataRes && dataRes['code'] === 200) {
@@ -209,12 +220,18 @@
                 }).catch((error) => {
                     const response = error['response'];
                     const message = error['message'];
+                    if (axios.isCancel(error)) {
+                      console.warn('用户手动取消请求');
+                      this.loadingText = '';
+                      return
+                    }
                     if (message === 'Network Error') {
                         this.$Message.error({
                             content: '网络错误',
                             duration: 5,
                             closable: true
                         });
+                        this.loadingText = '压缩失败';
                     } else if (response) {
                         let dataRes = response['data'];
                         if (dataRes && (dataRes['code'] === 400 || dataRes['code'] === 500)) {
@@ -239,6 +256,11 @@
                   return '相似度低, 压缩率高';
               }
             }
+        },
+        destroyed(){
+          if (typeof this.compressCancel === 'function'){
+            this.compressCancel();
+          }
         }
     }
 </script>

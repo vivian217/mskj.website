@@ -2,9 +2,7 @@
     <div class="main">
         <main-header :class="bgChange?'header-bg':''"></main-header>
         <div class="single-page">
-            <keep-alive>
-                <router-view></router-view>
-            </keep-alive>
+          <router-view></router-view>
         </div>
         <main-footer></main-footer>
     </div>
