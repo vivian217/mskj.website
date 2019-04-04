@@ -157,7 +157,7 @@
                 }
             }
             .title {
-                margin: 20px 0;
+                margin-bottom: 20px;
                 font-size: 17px;
                 text-align: center;
             }
@@ -209,6 +209,7 @@
             border-bottom-left-radius: 90px;
         }
         .core-advantage {
+            height: 165px;
             padding: 20px;
             border-radius: 20px;
             border: 1px dashed @color-hover;
