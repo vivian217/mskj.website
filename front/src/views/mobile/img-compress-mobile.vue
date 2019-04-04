@@ -41,7 +41,7 @@
                            :progress="false"
                            :url="uploadUrl"
                            :maxSize="maxSize"
-                           :format="['jpg','jpeg']"></pr-upload>
+                           :format="['jpg','jpeg','JPG','JPEG','jPG','jpG']"></pr-upload>
                 <template v-if="showSourceProgress">
                     <Progress class="upload-progress" v-if="sourceProgress < 100" :percent="sourceProgress" :stroke-width="5" />
                     <Progress class="upload-progress" v-else :percent="100" :stroke-width="5">

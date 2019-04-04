@@ -218,7 +218,7 @@
                                     <div class="index-demo-inner">
                                         <div class="inner">
                                             <a @click="toFace">
-                                                <Icon custom="iconfont icon-face" size="60"></Icon>
+                                                <Icon custom="iconfont icon-face" size="70"></Icon>
                                                 <h4>人脸识别</h4>
                                             </a>
                                         </div>
@@ -230,7 +230,7 @@
                                     <div class="index-demo-inner">
                                         <div class="inner">
                                             <a @click="toImgCompress">
-                                                <Icon custom="iconfont icon-img" size="60"></Icon>
+                                                <Icon custom="iconfont icon-img" size="70"></Icon>
                                                 <h4>图片压缩</h4>
                                             </a>
                                         </div>
@@ -242,7 +242,7 @@
                                     <div class="index-demo-inner">
                                         <div class="inner">
                                             <a @click="toFace">
-                                                <Icon custom="iconfont icon-more" size="60"></Icon>
+                                                <Icon custom="iconfont icon-more" size="70"></Icon>
                                                 <h4>More&nbsp;&gt;&gt;</h4>
                                             </a>
                                         </div>
@@ -298,7 +298,7 @@
                                      @mouseenter.stop.prevent="changeImg"
                                      @mouseleave="recoverImg">
                                     <h5><a @click="toNewsDetail(3)">重庆市人大领导参访孟山科技</a></h5>
-                                    <p>2017年5月18日，在江北区进行工作调研的重庆市委常委、常务副市长吴存荣一行，在重庆市前江北区委书记杜和平、江北区区长代小红的陪同下考察江北高层次创业园区。
+                                    <p>2017年5月18日，在江北区进行工作调研的重庆市委常委、常务副市长吴存荣一行，在重庆市江北区委书记杜和平、江北区区长代小红的陪同下考察江北高层次创业园区。
                                         <a @click="toNewsDetail(3)">&gt;&gt;查看详情</a>
                                     </p>
                                 </div>
@@ -455,7 +455,7 @@
                 .carousel-desc {
                     //width: 400px;
                     margin: 20px auto;
-                    font-size: 16px;
+                    font-size: 18px;
                     text-align: left;
                     text-indent: 2em;
                 }
@@ -524,7 +524,7 @@
         }
         // 核心业务
         .index-service {
-            height: 420px;
+            height: 460px;
             padding: 40px 20px;
             background: rgba(0, 0, 0, 0.8);
             box-shadow: 0 0 20px rgba(0, 255, 255, 0.3) inset;
@@ -538,7 +538,10 @@
                 text-align: center;
                 h4 {
                     color: @highlight-color;
-                    font-size: 16px;
+                    font-size: 18px;
+                }
+                h5 {
+                    font-size: 12px;
                 }
             }
             &:hover {
@@ -595,7 +598,7 @@
                     transform: rotate(-45deg);
                     text-align: center;
                     h4 {
-                        font-size: 16px;
+                        font-size: 18px;
                         margin: 10px 0;
                     }
                 }
@@ -615,14 +618,14 @@
                 h5 {
                     padding: 14px 6px;
                     a {
-                        font-size: 16px;
+                        font-size: 18px;
                         color: #fff;
                     }
                 }
                 p {
                     padding: 5px 6px;
                     border-bottom: 2px solid #091e24;
-                    font-size: 14px;
+                    font-size: 16px;
                 }
             }
         }
@@ -633,7 +636,7 @@
                 margin: auto;
                 text-indent: 2em;
                 line-height: 2em;
-                font-size: 14px;
+                font-size: 16px;
             }
             .index-about-img {
                 text-align: center;

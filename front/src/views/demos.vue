@@ -18,7 +18,7 @@
     }
 </script>
 <style lang="less">
-    @color-active:#93fcfc;
+    @color-active: #0ff;
     .demos {
         width: 1200px;
         margin: 100px auto 0;
@@ -31,7 +31,7 @@
             .ivu-menu-item, .ivu-menu-submenu {
                 margin: 0 20px;
                 padding: 0;
-                color: #c6c6c6;
+                color: #fff;
                 font-size: 16px;
                 border-bottom: none;
                 border-top: 1px solid transparent;
@@ -67,7 +67,7 @@
             justify-content: center;
             align-items: center;
             position: relative;
-            .img-remove {
+            .img-remove, .img-down {
                 position: absolute;
                 top: 0;
                 right: 0;

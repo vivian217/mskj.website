@@ -69,7 +69,7 @@
         .ivu-tabs {
             color: #c6c6c6;
             .ivu-tabs-nav-container {
-                font-size: 18px;
+                font-size: 20px;
             }
             .ivu-tabs-tab {
                 padding: 16px;
@@ -97,7 +97,7 @@
             margin: 20px;
             border: 1px solid @color-hover;
             border-radius: 10px;
-            font-size: 16px;
+            font-size: 17px;
         }
         .core-content {
             width: 90%;
@@ -107,7 +107,7 @@
         }
         .core-text {
             line-height: 2em;
-            font-size: 14px;
+            font-size: 16px;
             text-indent: 2em;
         }
         .core-img {
@@ -125,14 +125,14 @@
                 background: rgba(22, 68, 68, 0.3);
                 border-radius: 10px;
                 text-align: center;
-                font-size: 16px;
+                font-size: 18px;
                 img {
                     width: 30px;
                     margin-right: 20px;
                 }
             }
             p {
-                font-size: 14px;
+                font-size: 16px;
                 margin: 1em 0;
             }
             .img {
@@ -158,17 +158,17 @@
             }
             .title {
                 margin: 20px 0;
-                font-size: 16px;
+                font-size: 17px;
                 text-align: center;
             }
             .details {
-                font-size: 14px;
+                font-size: 16px;
                 text-indent: 2em;
             }
         }
         li {
             margin: 15px 0;
-            font-size: 14px;
+            font-size: 16px;
             &:before {
                 content: url("~@/images/core/point.png");
                 margin: 0 5px;
@@ -188,7 +188,8 @@
                     color: @color-active;
                 }
                 p {
-                    font-size: 14px;
+                    font-size: 15px;
+                    line-height: 2em;
                 }
             }
             .text-right {

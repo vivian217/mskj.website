@@ -2,7 +2,7 @@
 @index-width: 1320px;
 @color-active: #93fcfc;
 @color-highlight: #0ff;
-@font-color: #c6c6c6;
+@font-color: #fff;
 // 统一样式
 h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
@@ -70,21 +70,21 @@ ul {
       padding-right: 5px;
     }
     .ivu-menu-item-active, .ivu-menu-item:hover, .ivu-menu-submenu-active, .ivu-menu-submenu:hover {
-      color: @color-active;
-      border-bottom-color: @color-active;
+      color: @color-highlight;
+      border-bottom-color: @color-highlight;
     }
     .ivu-select-dropdown {
       background-color: rgba(6, 24, 52, 0.7);
       .ivu-menu-item {
         color: @font-color;
         &:hover {
-          color: @color-active;
+          color: @color-highlight;
           background-color: #515a6e;
         }
       }
       .ivu-menu-item-selected {
         &, &:hover {
-          color: @color-active;
+          color: @color-highlight;
         }
       }
     }
@@ -102,7 +102,7 @@ ul {
   //min-height: calc(~'100% - 261px'); //less的计算方式跟calc方法有重叠，两者在一起有冲突，需要用~进行转义
   margin: 0 auto;
   color: @font-color;
-  font-size: 14px;
+  font-size: 16px;
 }
 // 页面内banner图
 .main-banner {
@@ -123,9 +123,9 @@ ul {
         height: 5px;
         width: 98%;
         margin-top: 10px;
-        border-top: 1px solid @color-active;
+        border-top: 1px solid @color-highlight;
         margin-bottom: 20px;
-        border-bottom: 1px dashed @color-active;
+        border-bottom: 1px dashed @color-highlight;
     }
 }
 // 底部
@@ -134,6 +134,7 @@ ul {
   position: absolute;
   bottom: 0;
   background-color: rgba(6, 24, 52, 0.7);
+  color: #c6c6c6;
   footer {
     width: @main-width;
     margin: 0 auto;
@@ -210,17 +211,17 @@ ul {
                 background-color: rgba(9, 78, 101, 0.5);
             }
             &:hover {
-                color: @color-active;
+                color: @color-highlight;
             }
         }
         .ivu-radio-wrapper-checked {
-            color: @color-active;
-            border-color: @color-active;
+            color: @color-highlight;
+            border-color: @color-highlight;
             &:first-child {
-                border-color: @color-active;
+                border-color: @color-highlight;
             }
             &:before {
-                background: @color-active;
+                background: @color-highlight;
                 opacity: 1;
             }
         }

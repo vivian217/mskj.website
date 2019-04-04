@@ -30,7 +30,7 @@
                                :progress="false"
                                :url="uploadUrl"
                                :maxSize="maxSize"
-                               :format="['jpg','jpeg']"></pr-upload>
+                               :format="['jpg','jpeg','JPG','JPEG','jPG','jpG']"></pr-upload>
                     <template v-if="showSourceProgress">
                       <Progress class="upload-progress" v-if="sourceProgress < 100" :percent="sourceProgress" :stroke-width="5" />
                       <Progress class="upload-progress" v-else :percent="100" :stroke-width="5">
@@ -50,6 +50,9 @@
                     <pr-image-responsive v-if="showCompress"
                                          :preview="true"
                                          :url="compress['compress_preview']"/>
+                </div>
+                <div class="img-down" v-if="showCompress">
+                    <Icon type="md-download" size="30" color="#93fcfc" @click="download(compress['compress_preview'])"/>
                 </div>
             </div>
             <div class="loading-box bottom-center">

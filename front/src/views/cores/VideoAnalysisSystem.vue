@@ -23,7 +23,7 @@
             </Col>
         </Row>
         <Row type="flex" justify="center" align="middle">
-            <Col span="6">
+            <Col span="8">
                 <div class="core-img">
                     <img src="@/images/core/faceRecognition.png" alt="人脸识别">
                 </div>
@@ -187,7 +187,8 @@
                     font-size: 18px;
                 }
                 p {
-                    font-size: 14px;
+                    font-size: 15px;
+                    line-height: 2em;
                 }
             }
         }
