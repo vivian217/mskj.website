@@ -6,7 +6,7 @@
                     <pr-image-responsive v-if="showSource"
                                          :preview="true"
                                          :url="source['preview']"/>
-                    <div class="img-remove" v-show="showSource || showSource">
+                    <div class="img-remove" v-show="showSource">
                         <Icon type="md-close" size="30" color="#93fcfc" @click="removeSource"/>
                     </div>
                 </div>
@@ -170,6 +170,7 @@
                 }
             },
             removeSource() {
+                this.$refs['source'].removeAll();
                 this.source = {};
                 this.showSource = false;
                 this.sourceProgress = 0;
@@ -180,6 +181,7 @@
                 }
             },
             removeTarget() {
+                this.$refs['target-upload'].removeAll();
                 this.target = {};
                 this.showTarget = false;
                 this.targetProgress = 0;
