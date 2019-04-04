@@ -118,7 +118,7 @@
                 if (this.disabled) {
                   this.$Message.error({
                     content: '比对服务未开启, 请检查系统配置',
-                    duration: 3,
+                    duration: 5,
                     closable: true
                   });
                   return
@@ -126,14 +126,14 @@
                 if (!this.source['preview'] || this.source['preview'] === '') {
                     this.$Message.error({
                         content: '请选择源文件',
-                        duration: 3,
+                        duration: 5,
                         closable: true
                     });
                     return
                 } else if (!this.target['preview'] || this.target['preview'] === '') {
                     this.$Message.error({
                         content: '请选择目标文件',
-                        duration: 3,
+                        duration: 5,
                         closable: true
                     });
                     return
@@ -154,7 +154,7 @@
                         } else if (dataRes['code'] === 400 || dataRes['code'] === 500) {
                             this.$Message.error({
                                 content: dataRes['msg'],
-                                duration: 3,
+                                duration: 5,
                                 closable: true
                             });
                             this.loadingText = '比对失败';
@@ -162,7 +162,7 @@
                     } else {
                         this.$Message.error({
                             content: '网络错误',
-                            duration: 3,
+                            duration: 5,
                             closable: true
                         });
                         this.loadingText = '比对失败';
@@ -173,7 +173,7 @@
                     if (message === 'Network Error') {
                         this.$Message.error({
                             content: '网络错误',
-                            duration: 3,
+                            duration: 5,
                             closable: true
                         });
                     } else if (response) {
@@ -181,7 +181,7 @@
                         if (dataRes && (dataRes['code'] === 400 || dataRes['code'] === 500)) {
                             this.$Message.error({
                                 content: dataRes['msg'],
-                                duration: 3,
+                                duration: 5,
                                 closable: true
                             });
                         }

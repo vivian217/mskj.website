@@ -3,10 +3,16 @@
         <div class="choice">
             <div class="btn-group">
                 <span>选择压缩品质：</span>
-                <RadioGroup v-model="buttonSize" type="button">
-                    <Radio label="large">高</Radio>
-                    <Radio label="default">中</Radio>
-                    <Radio label="small">低</Radio>
+                <RadioGroup v-model="mode" @on-change="modeChange" type="button">
+                  <Tooltip :content="getQuality(0)">
+                    <Radio :label="0">高</Radio>
+                  </Tooltip>
+                  <Tooltip :content="getQuality(1)">
+                    <Radio :label="1">中</Radio>
+                  </Tooltip>
+                  <Tooltip :content="getQuality(2)">
+                    <Radio :label="2">低</Radio>
+                  </Tooltip>
                 </RadioGroup>
             </div>
         </div>
@@ -51,7 +57,10 @@
                 <p class="title">压缩结果</p>
                 <div class="detail">
                     <p v-for="item in compressResult" :key="item.key">
-                        {{item.name+'：'+item.value}}
+                        <Row>
+                          <Col span="9">{{item.name}}</Col>
+                          <Col span="15" style="font-weight: bolder">{{item.value}}</Col>
+                        </Row>
                     </p>
                 </div>
             </div>
@@ -85,7 +94,8 @@
                 loadingText: '',
                 compressResult: [],
                 showCompressResult: false,
-                buttonSize: 'large'
+                // 压缩模式
+                mode: 0
             }
         },
         methods: {
@@ -98,9 +108,20 @@
                     this.showSource = false;
                 }
             },
+            modeChange(){
+                if (!this.source['preview'] || this.source['preview'] === '') {
+                  return
+                }
+                // 执行压缩
+                this.doCompress();
+            },
             removeSource() {
                 this.source = {};
                 this.showSource = false;
+                this.clearResult();
+            },
+            // 清除压缩结果
+            clearResult(){
                 this.compress = {};
                 this.showCompress = false;
                 this.loadingText = '';
@@ -109,7 +130,9 @@
             },
             // 开始压缩
             doCompress() {
-                if (!this.source['preview'] || this.source['preview'] === '') {
+              // 压缩前清除之前的压缩记录
+              this.clearResult();
+              if (!this.source['preview'] || this.source['preview'] === '') {
                     this.$Message.error({
                         content: '请选择源文件',
                         duration: 10,
@@ -117,33 +140,35 @@
                     });
                     return
                 }
-                //console.log('开始压缩');
-                this.loadingText = '压缩中'
+                this.loadingText = '压缩中';
                 axios({
-                    url: this.source['compress'],
+                    url: this.source['compress'] + '?mode=' + this.mode,
                 }).then(resp => {
                     let dataRes = resp['data'];
                     if (dataRes && dataRes['code'] === 200) {
-                        //console.log(dataRes['data']);
                         this.compress = dataRes['data'];
                         this.showCompress = true;
-                        this.loadingText = dataRes['data']['compress_ratio'] + '<br>压缩率'
+                        this.loadingText = dataRes['data']['compress_ratio'] + '<br>压缩率';
                         this.compressResult.push({
-                            name: '压缩前',
+                            name: '压缩前：',
                             value: dataRes['data']['before_compress_size_format']
-                        })
+                        });
                         this.compressResult.push({
-                            name: '压缩后',
+                            name: '压缩后：',
                             value: dataRes['data']['after_compress_size_format']
-                        })
+                        });
                         this.compressResult.push({
-                            name: '节约空间',
+                            name: '节省空间：',
                             value: dataRes['data']['save_size_format']
-                        })
+                        });
                         this.compressResult.push({
-                            name: '压缩率',
+                            name: '压缩率：',
                             value: dataRes['data']['compress_ratio']
-                        })
+                        });
+                        this.compressResult.push({
+                            name: '画质：',
+                            value: this.getQuality(this.mode)
+                        });
                         this.showCompressResult = true
                     } else {
                         this.compress = {};
@@ -156,7 +181,7 @@
                     if (message === 'Network Error') {
                         this.$Message.error({
                             content: '网络错误',
-                            duration: 3,
+                            duration: 5,
                             closable: true
                         });
                     } else if (response) {
@@ -164,13 +189,24 @@
                         if (dataRes && (dataRes['code'] === 400 || dataRes['code'] === 500)) {
                             this.$Message.error({
                                 content: dataRes['msg'],
-                                duration: 3,
+                                duration: 5,
                                 closable: true
                             });
                         }
                     }
                     this.loadingText = '压缩失败'
                 });
+            },
+            // 获取画质
+            getQuality(mode){
+              switch (mode) {
+                case 0:
+                  return '高保真, 压缩率低';
+                case 1:
+                  return '相似度, 压缩率适中';
+                case 2:
+                  return '相似度低, 压缩率高';
+              }
             }
         }
     }
