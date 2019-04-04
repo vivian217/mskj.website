@@ -15,6 +15,7 @@
       :max-size="maxSize"
       :before-upload="beforeUpload"
       :on-success="success"
+      :on-progress="uploading"
       :on-preview="preview"
       :on-remove="remove"
       :on-format-error="errorFormat"
@@ -110,6 +111,7 @@
           })
           return false
         }
+        this.$emit('beforeUpload');
         return true
       },
       // 上传成功
@@ -119,6 +121,12 @@
           // 加入文件列表
           this.files.push(fileInfo)
         }
+        this.$emit('uploaded');
+      },
+      // 上传进度
+      uploading(event, file, fileList) {
+        this.$emit('uploading', event, file, fileList);
+        return true;
       },
       // 点击预览
       preview(file) {
@@ -131,7 +139,8 @@
           content: '文件格式有误, 允许的格式有: ' + this.format.join(' '),
           duration: 3,
           closable: true
-        })
+        });
+        this.$emit('errorFormat');
       },
       // 大小错误
       errorSize(file) {

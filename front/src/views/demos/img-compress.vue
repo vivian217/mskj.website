@@ -20,17 +20,28 @@
             <div class="img-box">
                 <div class="img-box-inner">
                     <pr-upload v-if="!showSource"
+                               v-show="!showSourceProgress"
                                ref="source"
                                @fileChange="sourceChange"
+                               @beforeUpload="sourceBeforeUpload"
+                               @uploading="sourceUploading"
+                               @uploaded="sourceUploaded"
+                               @errorFormat="sourceErrorFormat"
                                :progress="false"
                                :url="uploadUrl"
                                :maxSize="maxSize"
                                :format="['jpg','jpeg']"></pr-upload>
+                    <template v-if="showSourceProgress">
+                      <Progress class="upload-progress" v-if="sourceProgress < 100" :percent="sourceProgress" :stroke-width="5" />
+                      <Progress class="upload-progress" v-else :percent="100" :stroke-width="5">
+                        <span>处理中</span>
+                      </Progress>
+                    </template>
                     <pr-image-responsive v-if="showSource"
                                          :preview="true"
                                          :url="source['preview']"/>
                 </div>
-                <div class="img-remove" v-show="showSource">
+                <div class="img-remove" v-show="showSourceProgress || showSource">
                     <Icon type="md-close" size="30" color="#93fcfc" @click="removeSource"/>
                 </div>
             </div>
@@ -89,6 +100,8 @@
                 uploadUrl: 'http://online.mengshankeji.com/api/v1/upload/file',
                 showSource: false,
                 source: {},
+                showSourceProgress: false,
+                sourceProgress: 0,
                 showCompress: false,
                 compress: {},
                 loadingText: '',
@@ -108,6 +121,22 @@
                     this.showSource = false;
                 }
             },
+            // 上传之前
+            sourceBeforeUpload(){
+                this.showSourceProgress = true;
+            },
+            // 上传进度
+            sourceUploading(event){
+                this.sourceProgress = Math.round(event.percent*100)/100;
+            },
+            // 上传进度
+            sourceUploaded(){
+                this.showSourceProgress = false;
+            },
+            // 错误格式
+            sourceErrorFormat(){
+                this.showSourceProgress = false;
+            },
             modeChange(){
                 if (!this.source['preview'] || this.source['preview'] === '') {
                   return
@@ -118,6 +147,8 @@
             removeSource() {
                 this.source = {};
                 this.showSource = false;
+                this.sourceProgress = 0;
+                this.showSourceProgress = false;
                 this.clearResult();
             },
             // 清除压缩结果
@@ -194,7 +225,7 @@
                             });
                         }
                     }
-                    this.loadingText = '压缩失败'
+                    this.loadingText = '压缩失败';
                 });
             },
             // 获取画质
@@ -238,6 +269,9 @@
             position: relative;
             margin: 0 auto;
             bottom: 100px;
+        }
+        .upload-progress{
+          width: 80%;
         }
     }
 </style>

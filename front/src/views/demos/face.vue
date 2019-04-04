@@ -4,29 +4,51 @@
             <div class="img-box">
                 <div class="img-box-inner">
                     <pr-upload v-if="!showSource"
+                               v-show="!showSourceProgress"
                                ref="source"
                                @fileChange="sourceChange"
+                               @beforeUpload="sourceBeforeUpload"
+                               @uploading="sourceUploading"
+                               @uploaded="sourceUploaded"
+                               @errorFormat="sourceErrorFormat"
                                :progress="false"
                                :url="uploadUrl"
                                :maxSize="maxSize"
                                :format="['jpg','jpeg']"></pr-upload>
+                    <template v-if="showSourceProgress">
+                      <Progress class="upload-progress" v-if="sourceProgress < 100" :percent="sourceProgress" :stroke-width="5" />
+                      <Progress class="upload-progress" v-else :percent="100" :stroke-width="5">
+                        <span>处理中</span>
+                      </Progress>
+                    </template>
                     <pr-image-responsive v-if="showSource"
                                          :preview="true"
                                          :url="source['preview']"/>
                 </div>
-                <div class="img-remove" v-show="showSource">
+                <div class="img-remove" v-show="showSource || showSource">
                     <Icon type="md-close" size="30" color="#93fcfc" @click="removeSource"/>
                 </div>
             </div>
             <div class="img-box">
                 <div class="img-box-inner">
                     <pr-upload v-if="!showTarget"
+                               v-show="!showTargetProgress"
                                ref="target-upload"
                                @fileChange="targetChange"
+                               @beforeUpload="targetBeforeUpload"
+                               @uploading="targetUploading"
+                               @uploaded="targetUploaded"
+                               @errorFormat="targetErrorFormat"
                                :progress="false"
                                :url="uploadUrl"
                                :maxSize="maxSize"
                                :format="['jpg','jpeg']"></pr-upload>
+                    <template v-if="showTargetProgress">
+                      <Progress class="upload-progress" v-if="targetProgress < 100" :percent="targetProgress" :stroke-width="5" />
+                      <Progress class="upload-progress" v-else :percent="100" :stroke-width="5">
+                        <span>处理中</span>
+                      </Progress>
+                    </template>
                     <pr-image-responsive v-if="showTarget"
                                          :preview="true"
                                          :url="target['preview']"/>
@@ -79,8 +101,12 @@
                 compareUrl: 'http://online.mengshankeji.com/api/v1/compare',
                 showSource: false,
                 source: {},
+                showSourceProgress: false,
+                sourceProgress: 0,
                 showTarget: false,
                 target: {},
+                showTargetProgress: false,
+                targetProgress: 0,
                 loadingText: ''
             }
         },
@@ -94,6 +120,38 @@
                     this.showSource = false
                 }
             },
+            // 上传之前
+            sourceBeforeUpload(){
+              this.showSourceProgress = true;
+            },
+            // 上传进度
+            sourceUploading(event){
+              this.sourceProgress = Math.round(event.percent*100)/100;
+            },
+            // 上传进度
+            sourceUploaded(){
+              this.showSourceProgress = false;
+            },
+            // 错误格式
+            sourceErrorFormat(){
+              this.showSourceProgress = false;
+            },
+            // 上传之前
+            targetBeforeUpload(){
+              this.showTargetProgress = true;
+            },
+            // 上传进度
+            targetUploading(event){
+              this.targetProgress = Math.round(event.percent*100)/100;
+            },
+            // 上传进度
+            targetUploaded(){
+              this.showTargetProgress = false;
+            },
+            // 错误格式
+            targetErrorFormat(){
+              this.showTargetProgress = false;
+            },
             targetChange(files) {
                 if (files && files.length === 1) {
                     this.target = files[0];
@@ -105,12 +163,16 @@
             },
             removeSource() {
                 this.source = {};
-                this.showSource = false
+                this.showSource = false;
+                this.sourceProgress = 0;
+                this.showSourceProgress = false;
                 this.loadingText = ''
             },
             removeTarget() {
                 this.target = {};
-                this.showTarget = false
+                this.showTarget = false;
+                this.targetProgress = 0;
+                this.showTargetProgress = false;
                 this.loadingText = ''
             },
             // 开始比对
@@ -139,7 +201,7 @@
                     return
                 }
                 // console.log('开始比对');
-                this.loadingText = '比对中'
+                this.loadingText = '比对中';
                 axios({
                     url: this.compareUrl,
                     params: {
@@ -233,6 +295,9 @@
                 right: 0;
                 margin: 0 auto;
             }
+        }
+        .upload-progress{
+          width: 80%;
         }
     }
 </style>
