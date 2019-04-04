@@ -20,10 +20,13 @@
       :on-remove="remove"
       :on-format-error="errorFormat"
       :on-exceeded-size="errorSize">
-      <div style="padding: 20px 0">
+      <div style="padding: 20px 0" v-if="!showInMobile">
         <Icon type="ios-add-circle-outline" size="52" style="color: #c6c6c6"></Icon>
         <p>点击上传图片</p>
         <p>或将图片拖拽到此区域</p>
+      </div>
+      <div class="pr-upload-mobile" v-if="showInMobile">
+        <p>点击上传图片</p>
       </div>
     </Upload>
     <div v-if="disabled">
@@ -79,6 +82,10 @@
       // 文件最大个数5
       maxNumber: {
         default: 1
+      },
+      // 是否手机端显示
+      showInMobile: {
+         default: false
       }
     },
     data() {
@@ -199,3 +206,14 @@
     }
   }
 </script>
+<style lang="less" scoped>
+  .pr-upload {
+    text-align: center;
+    .pr-upload-mobile {
+      padding: 10px 0;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.35) inset;
+      margin: 10px 0;
+      border-radius: 5px;
+    }
+  }
+</style>

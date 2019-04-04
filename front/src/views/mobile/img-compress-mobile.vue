@@ -1,81 +1,101 @@
 <template>
     <div class="img-compress">
-        <div class="choice">
-            <div class="btn-group">
-                <span>选择压缩品质：</span>
-                <RadioGroup v-model="mode" @on-change="modeChange" type="button">
-                  <Tooltip :content="getQuality(0)">
-                    <Radio :label="0">高</Radio>
-                  </Tooltip>
-                  <Tooltip :content="getQuality(1)">
-                    <Radio :label="1">中</Radio>
-                  </Tooltip>
-                  <Tooltip :content="getQuality(2)">
-                    <Radio :label="2">低</Radio>
-                  </Tooltip>
-                </RadioGroup>
-            </div>
-        </div>
-        <div class="face-box">
-            <div class="img-box">
-                <div class="img-box-inner">
-                    <pr-upload v-if="!showSource"
-                               v-show="!showSourceProgress"
-                               ref="source"
-                               @fileChange="sourceChange"
-                               @beforeUpload="sourceBeforeUpload"
-                               @uploading="sourceUploading"
-                               @uploaded="sourceUploaded"
-                               @errorFormat="sourceErrorFormat"
-                               :progress="false"
-                               :url="uploadUrl"
-                               :maxSize="maxSize"
-                               :format="['jpg','jpeg']"></pr-upload>
-                    <template v-if="showSourceProgress">
-                      <Progress class="upload-progress" v-if="sourceProgress < 100" :percent="sourceProgress" :stroke-width="5" />
-                      <Progress class="upload-progress" v-else :percent="100" :stroke-width="5">
-                        <span>处理中</span>
-                      </Progress>
-                    </template>
-                    <pr-image-responsive v-if="showSource"
-                                         :preview="true"
-                                         :url="source['preview']"/>
+        <Row>
+            <Col>
+                <div class="choice">
+                    <div class="btn-group">
+                        <span>选择压缩品质：</span>
+                        <RadioGroup v-model="mode" @on-change="modeChange" type="button">
+                            <Tooltip :content="getQuality(0)">
+                                <Radio :label="0">高</Radio>
+                            </Tooltip>
+                            <Tooltip :content="getQuality(1)">
+                                <Radio :label="1">中</Radio>
+                            </Tooltip>
+                            <Tooltip :content="getQuality(2)">
+                                <Radio :label="2">低</Radio>
+                            </Tooltip>
+                        </RadioGroup>
+                    </div>
                 </div>
+            </Col>
+        </Row>
+        <Row :gutter="16">
+            <Col span="12">
+                <div class="img-box">
+                <pr-image-responsive v-if="showSource"
+                                     :preview="true"
+                                     :url="source['preview']"/>
                 <div class="img-remove" v-show="showSourceProgress || showSource">
                     <Icon type="md-close" size="30" color="#93fcfc" @click="removeSource"/>
                 </div>
             </div>
-            <div class="img-box">
-                <div class="img-box-inner">
+                <pr-upload v-show="!showSourceProgress"
+                           ref="source"
+                           :showInMobile="true"
+                           @fileChange="sourceChange"
+                           @beforeUpload="sourceBeforeUpload"
+                           @uploading="sourceUploading"
+                           @uploaded="sourceUploaded"
+                           @errorFormat="sourceErrorFormat"
+                           :progress="false"
+                           :url="uploadUrl"
+                           :maxSize="maxSize"
+                           :format="['jpg','jpeg']"></pr-upload>
+                <template v-if="showSourceProgress">
+                    <Progress class="upload-progress" v-if="sourceProgress < 100" :percent="sourceProgress" :stroke-width="5" />
+                    <Progress class="upload-progress" v-else :percent="100" :stroke-width="5">
+                        <span>处理中</span>
+                    </Progress>
+                </template>
+            </Col>
+            <Col span="12">
+                <div class="img-box">
                     <pr-image-responsive v-if="showCompress"
                                          :preview="true"
                                          :url="compress['compress_preview']"/>
                 </div>
-            </div>
-            <div class="loading-box bottom-center">
-                <loading-status :innerText="loadingText"></loading-status>
-                <Button class="center"
-                        v-show="!loadingText"
-                        @click="doCompress">开始压缩
-                </Button>
-            </div>
-        </div>
-        <div class="prompt">
-            <p>* 图片只支持jpg、jpeg格式</p>
-        </div>
-        <div class="after-comparison" v-show="showCompressResult">
-            <div class="inner">
-                <p class="title">压缩结果</p>
-                <div class="detail">
-                    <p v-for="item in compressResult" :key="item.key">
-                        <Row>
-                          <Col span="9">{{item.name}}</Col>
-                          <Col span="15" style="font-weight: bolder">{{item.value}}</Col>
-                        </Row>
-                    </p>
+               <div class="download-prompt">
+                   长按图片下载
+               </div>
+            </Col>
+        </Row>
+        <Row>
+            <Col>
+                <div class="prompt">
+                    <p>* 图片只支持jpg、jpeg格式</p>
                 </div>
-            </div>
-        </div>
+            </Col>
+        </Row>
+        <Row type="flex" justify="center">
+            <Col>
+                <div class="loading-box">
+                    <loading-status :innerText="loadingText"></loading-status>
+                    <Button class="center"
+                            v-show="!loadingText"
+                            @click="doCompress">开始压缩
+                    </Button>
+                </div>
+
+            </Col>
+        </Row>
+        <Row type="flex" justify="center">
+            <Col>
+                <div class="after-comparison" v-show="showCompressResult">
+                    <div class="inner">
+                        <p class="title">压缩结果</p>
+                        <div class="detail">
+                            <p v-for="item in compressResult" :key="item.key">
+                                <Row>
+                                    <Col span="9">{{item.name}}</Col>
+                                    <Col span="15" style="font-weight: bolder">{{item.value}}</Col>
+                                </Row>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </Col>
+        </Row>
     </div>
 </template>
 
@@ -124,24 +144,24 @@
                 }
             },
             // 上传之前
-            sourceBeforeUpload(){
+            sourceBeforeUpload() {
                 this.showSourceProgress = true;
             },
             // 上传进度
-            sourceUploading(event){
-                this.sourceProgress = Math.round(event.percent*100)/100;
+            sourceUploading(event) {
+                this.sourceProgress = Math.round(event.percent * 100) / 100;
             },
             // 上传进度
-            sourceUploaded(){
+            sourceUploaded() {
                 this.showSourceProgress = false;
             },
             // 错误格式
-            sourceErrorFormat(){
+            sourceErrorFormat() {
                 this.showSourceProgress = false;
             },
-            modeChange(){
+            modeChange() {
                 if (!this.source['preview'] || this.source['preview'] === '') {
-                  return
+                    return
                 }
                 // 执行压缩
                 this.doCompress();
@@ -151,13 +171,13 @@
                 this.showSource = false;
                 this.sourceProgress = 0;
                 this.showSourceProgress = false;
-                if (typeof this.compressCancel === 'function'){
-                  this.compressCancel();
+                if (typeof this.compressCancel === 'function') {
+                    this.compressCancel();
                 }
                 this.clearResult();
             },
             // 清除压缩结果
-            clearResult(){
+            clearResult() {
                 this.compress = {};
                 this.showCompress = false;
                 this.loadingText = '';
@@ -166,12 +186,12 @@
             },
             // 开始压缩
             doCompress() {
-              if (typeof this.compressCancel === 'function'){
-                this.compressCancel();
-              }
-              // 压缩前清除之前的压缩记录
-              this.clearResult();
-              if (!this.source['preview'] || this.source['preview'] === '') {
+                if (typeof this.compressCancel === 'function') {
+                    this.compressCancel();
+                }
+                // 压缩前清除之前的压缩记录
+                this.clearResult();
+                if (!this.source['preview'] || this.source['preview'] === '') {
                     this.$Message.error({
                         content: '请选择源文件',
                         duration: 10,
@@ -182,8 +202,8 @@
                 this.loadingText = '压缩中';
                 axios({
                     url: this.source['compress'] + '?mode=' + this.mode,
-                    cancelToken: new axios.CancelToken((c)=>{
-                      this.compressCancel = c;
+                    cancelToken: new axios.CancelToken((c) => {
+                        this.compressCancel = c;
                     })
                 }).then(resp => {
                     let dataRes = resp['data'];
@@ -221,9 +241,9 @@
                     const response = error['response'];
                     const message = error['message'];
                     if (axios.isCancel(error)) {
-                      console.warn('用户手动取消请求');
-                      this.loadingText = '';
-                      return
+                        console.warn('用户手动取消请求');
+                        this.loadingText = '';
+                        return
                     }
                     if (message === 'Network Error') {
                         this.$Message.error({
@@ -246,78 +266,38 @@
                 });
             },
             // 获取画质
-            getQuality(mode){
-              switch (mode) {
-                case 0:
-                  return '高保真, 压缩率低';
-                case 1:
-                  return '相似度, 压缩率适中';
-                case 2:
-                  return '相似度低, 压缩率高';
-              }
-            },
-            // 下载图片
-            downloadImg(imgsrc, name) {//下载图片地址和图片名
-                let image = new Image();
-                // 解决跨域 Canvas 污染问题
-                image.setAttribute("crossOrigin", "anonymous");
-                image.onload = function () {
-                    let canvas = document.createElement("canvas");
-                    canvas.width = image.width;
-                    canvas.height = image.height;
-                    let context = canvas.getContext("2d");
-                    context.drawImage(image, 0, 0, image.width, image.height);
-                    let url = canvas.toDataURL("image/png"); //得到图片的base64编码数据
-
-                    let a = document.createElement("a"); // 生成一个a元素
-                    let event = new MouseEvent("click"); // 创建一个单击事件
-                    a.download = name || "photo"; // 设置图片名称
-                    a.href = url; // 将生成的URL设置为a.href属性
-                    a.dispatchEvent(event); // 触发a的单击事件
-                };
-                image.src = imgsrc;
-            },
-            download(imgSrc) {
-                this.downloadImg(imgSrc, 'pic')
+            getQuality(mode) {
+                switch (mode) {
+                    case 0:
+                        return '高保真, 压缩率低';
+                    case 1:
+                        return '相似度, 压缩率适中';
+                    case 2:
+                        return '相似度低, 压缩率高';
+                }
             }
         },
-        destroyed(){
-          if (typeof this.compressCancel === 'function'){
-            this.compressCancel();
-          }
+        destroyed() {
+            if (typeof this.compressCancel === 'function') {
+                this.compressCancel();
+            }
         }
     }
 </script>
 
 <style lang="less" scoped>
     .img-compress {
-        .face-box {
-            display: flex;
-            justify-content: space-between;
-            position: relative;
-            .loading-box {
-                width: 280px;
-                height: 280px;
-                .ivu-btn {
-                    background: transparent;
-                    border: none;
-                    color: #93fcfc;
-                    font-size: 30px;
-                    z-index: 20;
-                    left: 65px;
-                    &:focus {
-                        box-shadow: none;
-                    }
-                }
-            }
-        }
         .after-comparison {
             position: relative;
             margin: 0 auto;
-            bottom: 100px;
+            bottom: 42px;
         }
-        .upload-progress{
-          width: 80%;
+        .download-prompt {
+            padding: 10px 0;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.35) inset;
+            margin: 10px 0;
+            border-radius: 5px;
+            text-align: center;
         }
     }
 </style>

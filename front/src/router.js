@@ -98,6 +98,31 @@ const routers = [
             }
         ]
     },
-
+    {
+        path: '/demos-mobile',
+        name: 'demos-mobile',
+        meta: {
+            title: ''
+        },
+        component: (resolve) => require(['./views/mobile/demos-mobile.vue'], resolve),
+        redirect:'/face-mobile',
+        children: [
+            {
+                path: '/face-mobile',
+                name: 'face-mobile',
+                meta: {
+                    title: ''
+                },
+                component: (resolve) => require(['./views/mobile/face-mobile.vue'], resolve)
+            }, {
+                path: '/img-compress-mobile',
+                name: 'img-compress-mobile',
+                meta: {
+                    title: ''
+                },
+                component: (resolve) => require(['./views/mobile/img-compress-mobile.vue'], resolve)
+            }
+        ]
+    },
 ];
 export default routers;
