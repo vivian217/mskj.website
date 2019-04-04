@@ -69,14 +69,24 @@ const routers = [
                     title: ''
                 },
                 component: (resolve) => require(['./views/news.vue'], resolve),
-            },
-            {
-                path: '/news/detail/:nid',
-                name: 'news_details',
-                meta: {
-                    title: ''
-                },
-                component: (resolve) => require(['./views/news-detail.vue'], resolve),
+                children:[
+                    {
+                        path: '',
+                        name: '',
+                        meta: {
+                            title: ''
+                        },
+                        component: (resolve) => require(['./views/news/news-main.vue'], resolve)
+                    },
+                    {
+                        path: '/news-detail',
+                        name: 'news_details',
+                        meta: {
+                            title: ''
+                        },
+                        component: (resolve) => require(['./views/news/news-detail.vue'], resolve)
+                    },
+                ]
             },
             {
                 path: '/about',

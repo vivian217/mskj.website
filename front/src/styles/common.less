@@ -46,7 +46,7 @@ ul {
   width: 100%;
   position: fixed;
   z-index: 1000;
-  background-color: rgba(6, 24, 52, 0.7);
+  background-color: rgba(6, 24, 52, 0.2);
   header {
     width: @main-width;
     margin: 0 auto;
@@ -111,8 +111,9 @@ ul {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    color: #fff;
     h2 {
-        color: @color-highlight;
+        margin-top: 24px;
         font-size: 40px;
     }
     h3 {
@@ -202,6 +203,9 @@ ul {
             background-color: transparent;
             border-color: rgba(9, 78, 101, 0.5);
             color: @font-color;
+            &:first-child {
+                border-color: rgba(9, 78, 101, 0.5);
+            }
             &:before {
                 background-color: rgba(9, 78, 101, 0.5);
             }
@@ -212,6 +216,9 @@ ul {
         .ivu-radio-wrapper-checked {
             color: @color-active;
             border-color: @color-active;
+            &:first-child {
+                border-color: @color-active;
+            }
             &:before {
                 background: @color-active;
                 opacity: 1;
