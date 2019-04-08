@@ -2,12 +2,12 @@
     <div class="face-mobile">
         <Row :gutter="16">
             <Col span="12">
-                <div class="img-box">
+                <div class="img-box" :class="showSource?'':'source-bg'">
                     <pr-image-responsive v-if="showSource"
                                          :preview="true"
                                          :url="source['preview']"/>
                     <div class="img-remove" v-show="showSource">
-                        <Icon type="md-close" size="30" color="#93fcfc" @click="removeSource"/>
+                        <Icon type="md-close" size="25" color="#93fcfc" @click="removeSource"/>
                     </div>
                 </div>
                 <pr-upload v-show="!showSourceProgress"
@@ -31,12 +31,12 @@
                 </template>
             </Col>
             <Col span="12">
-                <div class="img-box">
+                <div class="img-box" :class="showTarget?'':'target-bg'">
                     <pr-image-responsive v-if="showTarget"
                                          :preview="true"
                                          :url="target['preview']"/>
                     <div class="img-remove" v-show="showTarget">
-                        <Icon type="md-close" size="30" color="#93fcfc" @click="removeTarget"/>
+                        <Icon type="md-close" size="25" color="#93fcfc" @click="removeTarget"/>
                     </div>
                 </div>
                 <pr-upload v-show="!showTargetProgress"
@@ -63,8 +63,7 @@
         <Row>
             <Col>
                 <div class="prompt">
-                    <p>* 上传两张人脸图片，建议每张大小不超过5M，保证露出五官，提高对比精度。</p>
-                    <p>* 图片只支持jpg、jpeg格式</p>
+                    <p>* 请上传jpg、jpeg格式的图片</p>
                 </div>
             </Col>
         </Row>
@@ -123,6 +122,7 @@
                 if (files && files.length === 1) {
                     this.source = files[0];
                     this.showSource = true;
+                    this.loadingText = '';
                 } else {
                     this.source = {};
                     this.showSource = false
@@ -164,6 +164,7 @@
                 if (files && files.length === 1) {
                     this.target = files[0];
                     this.showTarget = true
+                    console.log(this.target)
                 } else {
                     this.target = {};
                     this.showTarget = false
@@ -289,6 +290,7 @@
                     console.error('比对服务初始化失败, 请检查配置');
                 } else if (response) {
                     this.disabled = false;
+                    this.loadingText = '100%<br>相似度';
                 }
             });
         },

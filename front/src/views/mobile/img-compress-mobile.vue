@@ -22,12 +22,12 @@
         </Row>
         <Row :gutter="16">
             <Col span="12">
-                <div class="img-box">
+                <div class="img-box" :class="showSource?'':'compress-bg1'">
                 <pr-image-responsive v-if="showSource"
                                      :preview="true"
                                      :url="source['preview']"/>
                 <div class="img-remove" v-show="showSourceProgress || showSource">
-                    <Icon type="md-close" size="30" color="#93fcfc" @click="removeSource"/>
+                    <Icon type="md-close" size="25" color="#93fcfc" @click="removeSource"/>
                 </div>
             </div>
                 <pr-upload v-show="!showSourceProgress"
@@ -50,7 +50,7 @@
                 </template>
             </Col>
             <Col span="12">
-                <div class="img-box">
+                <div class="img-box" :class="showCompress?'':'compress-bg2'">
                     <pr-image-responsive v-if="showCompress"
                                          :preview="true"
                                          :url="compress['compress_preview']"/>
@@ -63,7 +63,7 @@
         <Row>
             <Col>
                 <div class="prompt">
-                    <p>* 图片只支持jpg、jpeg格式</p>
+                    <p>* 请上传jpg、jpeg格式的图片</p>
                 </div>
             </Col>
         </Row>

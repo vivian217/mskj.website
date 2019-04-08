@@ -45,14 +45,14 @@
         // 导航部分
         .ivu-menu-horizontal.ivu-menu-light {
             display: inline-block;
-            height: @header-height;
-            line-height: @header-height;
+            height: 30px;
+            line-height: 30px;
             background-color: transparent;
             .ivu-menu-item, .ivu-menu-submenu {
-                margin: 0 @spacing;
+                margin: -3px @spacing 0;
                 padding: 0;
                 color: #fff;
-                font-size: 16px;
+                font-size: 15px;
             }
             .ivu-menu-item-active, .ivu-menu-item:hover, .ivu-menu-submenu-active, .ivu-menu-submenu:hover {
                 color: @color-active;
@@ -81,12 +81,24 @@
             box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
             .img-remove {
                 position: absolute;
-                top: 0;
-                right: 0;
+                top: -7px;
+                right: -7px;
                 .ivu-icon {
                     cursor: pointer;
                 }
             }
+        }
+        .source-bg {
+            background: url("~@/images/defaultSource.jpg") center e('/') cover no-repeat;
+        }
+        .target-bg {
+            background: url("~@/images/defaultTarget.jpg") center e('/') cover no-repeat;
+        }
+        .compress-bg1 {
+            background: url("~@/images/defaultCompress.jpg") center e('/') cover no-repeat;
+        }
+        .compress-bg2 {
+            background: url("~@/images/defaultCompress2.jpg") center e('/') cover no-repeat;
         }
         .loading-box {
             width: 220px;

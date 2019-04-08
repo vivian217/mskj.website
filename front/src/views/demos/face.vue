@@ -72,7 +72,7 @@
         </div>
         <div class="prompt">
             <p>* 上传两张人脸图片，建议每张大小不超过5M，保证露出五官，提高对比精度。</p>
-            <p>* 图片只支持jpg、jpeg格式</p>
+            <p>* 请上传jpg、jpeg格式的图片</p>
         </div>
     </div>
 </template>
