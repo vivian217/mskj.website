@@ -6,7 +6,7 @@
                     <pr-image-responsive v-if="showSource"
                                          :preview="true"
                                          :url="source['preview']"/>
-                    <div class="img-remove" v-show="showSource">
+                    <div class="img-remove" v-show="showSourceProgress || showSource">
                         <Icon type="md-close" size="25" color="#93fcfc" @click="removeSource"/>
                     </div>
                 </div>
@@ -35,12 +35,12 @@
                     <pr-image-responsive v-if="showTarget"
                                          :preview="true"
                                          :url="target['preview']"/>
-                    <div class="img-remove" v-show="showTarget">
+                    <div class="img-remove" v-show="showTargetProgress || showTarget">
                         <Icon type="md-close" size="25" color="#93fcfc" @click="removeTarget"/>
                     </div>
                 </div>
                 <pr-upload v-show="!showTargetProgress"
-                           ref="target-upload"
+                           ref="target"
                            :showInMobile="true"
                            @fileChange="targetChange"
                            @beforeUpload="targetBeforeUpload"
@@ -180,6 +180,10 @@
                 if (typeof this.compareCancel === 'function') {
                     this.compareCancel();
                 }
+                // 取消上传
+                if (this.$refs['source']){
+                  this.$refs['source'].cancelUpload();
+                }
             },
             removeTarget() {
                 this.$refs['target-upload'].removeAll();
@@ -190,6 +194,10 @@
                 this.loadingText = '';
                 if (typeof this.compareCancel === 'function') {
                     this.compareCancel();
+                }
+                // 取消上传
+                if (this.$refs['target']){
+                  this.$refs['target'].cancelUpload();
                 }
             },
             // 开始比对

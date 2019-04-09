@@ -88,7 +88,7 @@
       },
       // 是否手机端显示
       showInMobile: {
-         default: false
+        default: false
       }
     },
     data() {
@@ -99,6 +99,10 @@
         files: [],
         // 额外附加参数
         data: {},
+        // 取消上传
+        uploadCancelUids: [],
+        // 当前正在上传的文件uid
+        currentUid: ''
       }
     },
     methods: {
@@ -118,24 +122,46 @@
             content: '文件个数超出限制: ' + this.maxNumber,
             duration: 3,
             closable: true
-          })
+          });
           return false
         }
         this.$emit('beforeUpload');
         return true
       },
       // 上传成功
-      success(resp) {
+      success(resp, file) {
+        let cancel = false;
+        this.uploadCancelUids.forEach((value) => {
+          if (value === file['uid']) {
+            cancel = true;
+          }
+        });
         if (resp['code'] === 200) {
           let fileInfo = resp['data'];
-          // 加入文件列表
-          this.files.push(fileInfo)
+
+          if (!cancel) {
+            // 加入文件列表
+            this.files.push(fileInfo)
+          } else {
+            console.warn('用户手动取消上传请求');
+          }
         }
-        this.$emit('uploaded');
+        if (!cancel) {
+          this.$emit('uploaded');
+        }
       },
       // 上传进度
       uploading(event, file, fileList) {
-        this.$emit('uploading', event, file, fileList);
+        this.currentUid = file['uid'];
+        let cancel = false;
+        this.uploadCancelUids.forEach((value) => {
+          if (value === file['uid']) {
+            cancel = true;
+          }
+        });
+        if (!cancel) {
+          this.$emit('uploading', event, file, fileList);
+        }
         return true;
       },
       // 点击预览
@@ -170,7 +196,7 @@
       remove(file) {
         for (let i = 0, len = this.files.length; i < len; i++) {
           if (this.files[i]['uuid'] === file['uuid']) {
-            this.files.splice(i, 1)
+            this.files.splice(i, 1);
             break
           }
         }
@@ -178,9 +204,13 @@
       // 清理所有文件
       removeAll() {
         // 文件列表置空
-        this.files = []
+        this.files = [];
         // 删除组件内部文件
         this.$refs['upload'].clearFiles()
+      },
+      // 取消上传
+      cancelUpload() {
+        this.uploadCancelUids.push(this.currentUid);
       }
     },
     watch: {
@@ -193,7 +223,6 @@
     created() {
       // 添加附加参数
       this.data['rename'] = this.rename;
-
       axios({
         url: this.url,
         method: 'post',
@@ -212,7 +241,8 @@
 <style lang="less" scoped>
   .pr-upload {
     text-align: center;
-    .pr-upload-mobile,.upload-disabled {
+
+    .pr-upload-mobile, .upload-disabled {
       padding: 10px 0;
       box-shadow: 0 0 10px rgba(0, 255, 255, 0.35) inset;
       margin: 10px 0;

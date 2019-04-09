@@ -25,7 +25,7 @@
                                          :preview="true"
                                          :url="source['preview']"/>
                 </div>
-                <div class="img-remove" v-show="showSource || showSource">
+                <div class="img-remove" v-show="showSourceProgress || showSource">
                     <Icon type="md-close" size="30" color="#93fcfc" @click="removeSource"/>
                 </div>
             </div>
@@ -33,7 +33,7 @@
                 <div class="img-box-inner">
                     <pr-upload v-if="!showTarget"
                                v-show="!showTargetProgress"
-                               ref="target-upload"
+                               ref="target"
                                @fileChange="targetChange"
                                @beforeUpload="targetBeforeUpload"
                                @uploading="targetUploading"
@@ -53,7 +53,7 @@
                                          :preview="true"
                                          :url="target['preview']"/>
                 </div>
-                <div class="img-remove" v-show="showTarget">
+                <div class="img-remove" v-show="showTargetProgress || showTarget">
                     <Icon type="md-close" size="30" color="#93fcfc" @click="removeTarget"/>
                 </div>
             </div>
@@ -172,6 +172,10 @@
                 if (typeof this.compareCancel === 'function'){
                   this.compareCancel();
                 }
+                // 取消上传
+                if (this.$refs['source']){
+                  this.$refs['source'].cancelUpload();
+                }
             },
             removeTarget() {
                 this.target = {};
@@ -181,6 +185,10 @@
                 this.loadingText = '';
                 if (typeof this.compareCancel === 'function'){
                   this.compareCancel();
+                }
+                // 取消上传
+                if (this.$refs['target']){
+                  this.$refs['target'].cancelUpload();
                 }
             },
             // 开始比对

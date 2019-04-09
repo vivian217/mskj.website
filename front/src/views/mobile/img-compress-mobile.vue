@@ -175,6 +175,10 @@
                     this.compressCancel();
                 }
                 this.clearResult();
+                // 取消上传
+                if (this.$refs['source']){
+                  this.$refs['source'].cancelUpload();
+                }
             },
             // 清除压缩结果
             clearResult() {
