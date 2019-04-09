@@ -103,7 +103,7 @@
                 // 文件大小
                 maxSize: 102400,
                 uploadUrl: 'http://online.mengshankeji.com/api/v1/upload/file',
-                compareUrl: 'http://online.mengshankeji.com/api/v1/compare',
+                compareUrl: 'http://online.mengshankeji.com/api/v1/compare/face',
                 showSource: false,
                 source: {},
                 showSourceProgress: false,
