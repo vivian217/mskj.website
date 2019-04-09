@@ -29,7 +29,10 @@
         <p>点击上传图片</p>
       </div>
     </Upload>
-    <div v-if="disabled">
+    <div class="upload-disabled" v-if="showInMobile && disabled">
+      <p>上传服务不可用</p>
+    </div>
+    <div v-else-if="disabled">
       <p>上传服务不可用</p>
       <p>请检查系统配置</p>
     </div>
@@ -209,7 +212,7 @@
 <style lang="less" scoped>
   .pr-upload {
     text-align: center;
-    .pr-upload-mobile {
+    .pr-upload-mobile,.upload-disabled {
       padding: 10px 0;
       box-shadow: 0 0 10px rgba(0, 255, 255, 0.35) inset;
       margin: 10px 0;
