@@ -235,7 +235,7 @@
                     let dataRes = resp['data'];
                     if (dataRes) {
                         if (dataRes['code'] === 200) {
-                            this.loadingText = Math.ceil(dataRes['data']['similarity']) + '%<br>相似度'
+                            this.loadingText = Math.ceil(dataRes['data']['score']) + '%<br>相似度'
                         } else if (dataRes['code'] === 400 || dataRes['code'] === 500) {
                             this.$Message.error({
                                 content: dataRes['msg'],
