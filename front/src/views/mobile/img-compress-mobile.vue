@@ -55,8 +55,8 @@
                                          :preview="true"
                                          :url="compress['compress_preview']"/>
                 </div>
-               <div class="download-prompt">
-                   长按图片下载
+               <div class="download-prompt" @click="download(compress['compress_download'])">
+                   <p>保存到本地</p>
                </div>
             </Col>
         </Row>
@@ -275,6 +275,17 @@
                     case 2:
                         return '相似度低, 压缩率高';
                 }
+            },
+            download(imgSrc) {
+              if (imgSrc && imgSrc !== '') {
+                window.location.href = imgSrc
+              } else {
+                this.$Message.warning({
+                  content: '请先压缩图片',
+                  duration: 5,
+                  closable: true
+                });
+              }
             }
         },
         destroyed() {
@@ -293,6 +304,9 @@
             bottom: 42px;
         }
         .download-prompt {
+            &:hover {
+              cursor:pointer;
+            }
             padding: 10px 0;
             box-shadow: 0 0 10px rgba(0, 255, 255, 0.35) inset;
             margin: 10px 0;
