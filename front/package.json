@@ -15,11 +15,12 @@
   "dependencies": {
     "axios": "^0.18.0",
     "iview": "^3.0.0",
-    "photoswipe": "^4.1.2",
-    "vue": "^2.5.16",
-    "vue-router": "^2.8.1",
     "less": "^3.9.0",
-    "less-loader": "^4.1.0"
+    "less-loader": "^4.1.0",
+    "photoswipe": "^4.1.2",
+    "text-spinners": "^1.0.5",
+    "vue": "^2.5.16",
+    "vue-router": "^2.8.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
