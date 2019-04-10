@@ -18,6 +18,7 @@
                            @uploading="sourceUploading"
                            @uploaded="sourceUploaded"
                            @errorFormat="sourceErrorFormat"
+                           :compress="true"
                            :progress="false"
                            :url="uploadUrl"
                            :maxSize="maxSize"
@@ -47,6 +48,7 @@
                            @uploading="targetUploading"
                            @uploaded="targetUploaded"
                            @errorFormat="targetErrorFormat"
+                           :compress="true"
                            :progress="false"
                            :url="uploadUrl"
                            :maxSize="maxSize"
@@ -164,14 +166,12 @@
                 if (files && files.length === 1) {
                     this.target = files[0];
                     this.showTarget = true
-                    console.log(this.target)
                 } else {
                     this.target = {};
                     this.showTarget = false
                 }
             },
             removeSource() {
-                this.$refs['source'].removeAll();
                 this.source = {};
                 this.showSource = false;
                 this.sourceProgress = 0;
@@ -182,11 +182,11 @@
                 }
                 // 取消上传
                 if (this.$refs['source']){
+                  this.$refs['source'].removeAll();
                   this.$refs['source'].cancelUpload();
                 }
             },
             removeTarget() {
-                this.$refs['target-upload'].removeAll();
                 this.target = {};
                 this.showTarget = false;
                 this.targetProgress = 0;
@@ -197,6 +197,7 @@
                 }
                 // 取消上传
                 if (this.$refs['target']){
+                  this.$refs['target'].removeAll();
                   this.$refs['target'].cancelUpload();
                 }
             },
@@ -212,14 +213,14 @@
                 }
                 if (!this.source['preview'] || this.source['preview'] === '') {
                     this.$Message.error({
-                        content: '请选择源文件',
+                        content: '请上传图片一',
                         duration: 5,
                         closable: true
                     });
                     return
                 } else if (!this.target['preview'] || this.target['preview'] === '') {
                     this.$Message.error({
-                        content: '请选择目标文件',
+                        content: '请上传图片二',
                         duration: 5,
                         closable: true
                     });

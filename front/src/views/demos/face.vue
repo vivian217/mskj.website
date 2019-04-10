@@ -11,6 +11,7 @@
                                @uploading="sourceUploading"
                                @uploaded="sourceUploaded"
                                @errorFormat="sourceErrorFormat"
+                               :compress="true"
                                :progress="false"
                                :url="uploadUrl"
                                :maxSize="maxSize"
@@ -39,6 +40,7 @@
                                @uploading="targetUploading"
                                @uploaded="targetUploaded"
                                @errorFormat="targetErrorFormat"
+                               :compress="true"
                                :progress="false"
                                :url="uploadUrl"
                                :maxSize="maxSize"
@@ -203,14 +205,14 @@
                 }
                 if (!this.source['preview'] || this.source['preview'] === '') {
                     this.$Message.error({
-                        content: '请选择源文件',
+                        content: '请上传图片一',
                         duration: 5,
                         closable: true
                     });
                     return
                 } else if (!this.target['preview'] || this.target['preview'] === '') {
                     this.$Message.error({
-                        content: '请选择目标文件',
+                        content: '请上传图片二',
                         duration: 5,
                         closable: true
                     });

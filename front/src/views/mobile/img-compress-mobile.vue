@@ -197,7 +197,7 @@
                 this.clearResult();
                 if (!this.source['preview'] || this.source['preview'] === '') {
                     this.$Message.error({
-                        content: '请选择源文件',
+                        content: '请上传一张图片',
                         duration: 10,
                         closable: true
                     });

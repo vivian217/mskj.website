@@ -2,7 +2,6 @@
 <template>
   <div class="pr-upload">
     <Upload
-      v-if="!disabled"
       ref="upload"
       :action="url"
       :name="name"
@@ -17,6 +16,7 @@
       :on-success="success"
       :on-progress="uploading"
       :on-preview="preview"
+      :on-error="error"
       :on-remove="remove"
       :on-format-error="errorFormat"
       :on-exceeded-size="errorSize">
@@ -29,18 +29,9 @@
         <p>点击上传图片</p>
       </div>
     </Upload>
-    <div class="upload-disabled" v-if="showInMobile && disabled">
-      <p>上传服务不可用</p>
-    </div>
-    <div v-else-if="disabled">
-      <p>上传服务不可用</p>
-      <p>请检查系统配置</p>
-    </div>
   </div>
 </template>
 <script>
-  import axios from 'axios';
-
   export default {
     name: 'pr-upload',
     props: {
@@ -55,6 +46,10 @@
       // 是否对文件重命名
       rename: {
         default: true
+      },
+      // 是否对文件进行压缩处理
+      compress: {
+        default: false
       },
       // 多文件上传
       multiple: {
@@ -93,8 +88,6 @@
     },
     data() {
       return {
-        // 是否可用
-        disabled: true,
         // 上传成功的文件列表
         files: [],
         // 额外附加参数
@@ -108,22 +101,8 @@
     methods: {
       // 上传之前
       beforeUpload() {
-        if (this.disabled) {
-          // 上传服务不可用
-          this.$Message.error({
-            content: '上传服务不可用',
-            duration: 3,
-            closable: true
-          });
-          return
-        }
         if (this.files.length + 1 > this.maxNumber) {
-          this.$Message.error({
-            content: '文件个数超出限制: ' + this.maxNumber,
-            duration: 3,
-            closable: true
-          });
-          return false
+          this.files = []
         }
         this.$emit('beforeUpload');
         return true
@@ -192,6 +171,16 @@
           closable: true
         })
       },
+      // 文件上传失败
+      error() {
+        this.$Message.error({
+          content: '上传文件失败',
+          duration: 3,
+          closable: true
+        });
+        this.$emit('uploaded');
+        this.$emit('error');
+      },
       // 点击删除
       remove(file) {
         for (let i = 0, len = this.files.length; i < len; i++) {
@@ -223,18 +212,7 @@
     created() {
       // 添加附加参数
       this.data['rename'] = this.rename;
-      axios({
-        url: this.url,
-        method: 'post',
-      }).catch((error) => {
-        const response = error['response'];
-        const message = error['message'];
-        if (message === 'Network Error') {
-          console.error('上传服务初始化失败, 请检查配置');
-        } else if (response) {
-          this.disabled = false;
-        }
-      })
+      this.data['compress'] = this.compress;
     }
   }
 </script>
@@ -242,7 +220,7 @@
   .pr-upload {
     text-align: center;
 
-    .pr-upload-mobile, .upload-disabled {
+    .pr-upload-mobile {
       padding: 10px 0;
       box-shadow: 0 0 10px rgba(0, 255, 255, 0.35) inset;
       margin: 10px 0;
