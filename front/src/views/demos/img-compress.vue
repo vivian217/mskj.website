@@ -56,7 +56,7 @@
                 </div>
             </div>
             <div class="loading-box bottom-center">
-                <loading-status :innerText="loadingText"></loading-status>
+                <loading-status :innerText="loadingText" :loading="isLoading"></loading-status>
                 <Button class="center"
                         v-show="!loadingText"
                         @click="doCompress">开始压缩
@@ -108,6 +108,7 @@
                 showCompress: false,
                 compress: {},
                 loadingText: '',
+                isLoading: false,
                 compressResult: [],
                 showCompressResult: false,
                 // 压缩模式
@@ -187,6 +188,7 @@
                     return
                 }
                 this.loadingText = '压缩中';
+                this.isLoading = true;
                 axios({
                     url: this.source['compress'] + '?mode=' + this.mode,
                     cancelToken: new axios.CancelToken((c)=>{
@@ -194,37 +196,48 @@
                     })
                 }).then(resp => {
                     let dataRes = resp['data'];
+                    this.isLoading = false;
                     if (dataRes && dataRes['code'] === 200) {
-                        this.compress = dataRes['data'];
-                        this.showCompress = true;
-                        this.loadingText = dataRes['data']['compress_ratio'] + '<br>压缩率';
-                        this.compressResult.push({
-                            name: '压缩前：',
-                            value: dataRes['data']['before_compress_size_format']
-                        });
-                        this.compressResult.push({
-                            name: '压缩后：',
-                            value: dataRes['data']['after_compress_size_format']
-                        });
-                        this.compressResult.push({
-                            name: '节省空间：',
-                            value: dataRes['data']['save_size_format']
-                        });
-                        this.compressResult.push({
-                            name: '压缩率：',
-                            value: dataRes['data']['compress_ratio']
-                        });
-                        this.compressResult.push({
-                            name: '画质：',
-                            value: this.getQuality(this.mode)
-                        });
-                        this.showCompressResult = true
+                        if (dataRes['data']['compress_ratio'] == '0.000%') {
+                            this.$Message.warning({
+                                content: '该图可能已经被压缩过，请更换',
+                                duration: 5,
+                                closable: true
+                            });
+                            this.loadingText = '压缩失败';
+                        }else{
+                            this.compress = dataRes['data'];
+                            this.showCompress = true;
+                            this.loadingText = dataRes['data']['compress_ratio'] + '<br>压缩率';
+                            this.compressResult.push({
+                                name: '压缩前：',
+                                value: dataRes['data']['before_compress_size_format']
+                            });
+                            this.compressResult.push({
+                                name: '压缩后：',
+                                value: dataRes['data']['after_compress_size_format']
+                            });
+                            this.compressResult.push({
+                                name: '节省空间：',
+                                value: dataRes['data']['save_size_format']
+                            });
+                            this.compressResult.push({
+                                name: '压缩率：',
+                                value: dataRes['data']['compress_ratio']
+                            });
+                            this.compressResult.push({
+                                name: '画质：',
+                                value: this.getQuality(this.mode)
+                            });
+                            this.showCompressResult = true;
+                        }
                     } else {
                         this.compress = {};
                         this.showCompress = false;
                         this.loadingText = '压缩失败'
                     }
                 }).catch((error) => {
+                    this.isLoading = false;
                     const response = error['response'];
                     const message = error['message'];
                     if (axios.isCancel(error)) {

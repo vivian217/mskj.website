@@ -60,7 +60,7 @@
                 </div>
             </div>
             <div class="loading-box bottom-center">
-                <loading-status :innerText="loadingText"></loading-status>
+                <loading-status :innerText="loadingText" :loading="isLoading"></loading-status>
                 <Button class="center"
                         @click="doCompare"
                         v-show="!loadingText"
@@ -110,6 +110,7 @@
                 showTargetProgress: false,
                 targetProgress: 0,
                 loadingText: '',
+                isLoading: false,
                 // 比对请求取消
                 compareCancel: null
             }
@@ -223,6 +224,7 @@
                 }
                 // console.log('开始比对');
                 this.loadingText = '比对中';
+                this.isLoading = true;
                 axios({
                     url: this.compareUrl,
                     params: {
@@ -234,6 +236,7 @@
                     })
                 }).then(resp => {
                     let dataRes = resp['data'];
+                    this.isLoading = false;
                     if (dataRes) {
                         if (dataRes['code'] === 200) {
                             this.loadingText = Math.ceil(dataRes['data']['score']) + '%<br>相似度'
@@ -254,6 +257,7 @@
                         this.loadingText = '比对失败';
                     }
                 }).catch((error) => {
+                    this.isLoading = false;
                     const response = error['response'];
                     const message = error['message'];
                     if (axios.isCancel(error)) {

@@ -13,13 +13,42 @@
         name: "loading-status",
         props: {
             innerText: {
-                default: '比对中'
+                default: ''
+            },
+            loading: {
+                default: false
+            }
+        },
+        watch: {
+            loading() {
+                let loadingBox = document.getElementsByClassName('loading-status')[0];
+                if (this.loading) {
+                    loadingBox.classList.add("is-loading")
+                } else {
+                    loadingBox.classList.remove("is-loading")
+                }
             }
         }
     }
 </script>
 
 <style scoped lang="less">
+    @keyframes run {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes change {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
     .loading-status {
         position: relative;
         z-index: 10;
@@ -56,6 +85,14 @@
             align-items: center;
             justify-content: center;
             text-align: center;
+        }
+        &.is-loading {
+            .outer-border {
+                animation: change 2s linear infinite;
+            }
+            .loading-border {
+                animation: run 3s linear infinite;
+            }
         }
     }
 </style>
